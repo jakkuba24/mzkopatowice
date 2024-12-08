@@ -1,0 +1,22 @@
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #FACCCC;
+    color: black;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #555;
+    text-align: center;
+    padding: 8px;
+}

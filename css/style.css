@@ -1,0 +1,264 @@
+/* Kod .css dla MZK OPATOWICE*/
+/* Copyright © MZK OPATOWICE 2024 */
+
+/* Głowne ustawienia strony */
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('font.ttf') format('truetype');
+}
+
+body {
+    font-family: 'CustomFont';
+    background-color: #f0f0f5; /* Subtelne tło */
+    color: #333; /* Uniwersalny kolor tekstu */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin-top: 50px;
+}
+
+.logo {
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+}
+
+/* Pasek nawigacji */
+
+header {
+    background-color: #1f2f6d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+	width: 100%;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+	padding: 0 3%;
+}
+
+header a:hover {
+    color: #cccccc;
+}
+
+/* Kontener przycisków */
+
+.buttons-container {
+    display: flex;
+    gap: 25px;
+}
+
+/* Dodatkowe */
+
+.rounded-box {
+    background-color: #1f2f6d;
+    color: white;
+    border-radius: 15px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.rounded-box:hover {
+    background-color: #16264e;
+}
+
+.map-icon, .calendar-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+}
+
+/* Przycisk linii */
+
+.line-button {
+    background-color: #24378d;
+    height: 50px;
+	width: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+	text-align: center;
+	line-height: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+	border-radius: 50%;
+	float: left;
+	margin: 6% 7px 0 7px;
+}
+.line-button a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+	padding: 0 3%;
+}
+.line-button:hover {
+    background-color: #1b2a65;
+    transform: scale(1.02);
+}
+
+/* Przycisk mapek */
+
+.menu-mapka {
+	background-color: #24378d;
+	border: 2px solid #555555;
+	border-radius: 5px;
+	width: 9.9%;
+	color: white;
+	float: left;
+}
+
+.menu-mapka button {
+	background-color: #24378d;
+	border: none;
+	text-align: left;
+	width: 95%;
+	color: white;
+	font-weight: bold;
+}
+
+.menu-mapka button:hover {
+	background-color: #1b2a65;
+	transform: scale(1.01);
+}
+
+.menu-mapka p {
+	margin-left: 5px;
+	font-size: 13px;
+}
+
+/* Strona główna */
+
+.aktualnosci {
+	margin-left: 10%;
+	margin-right: 10%;
+	border: 3px solid #0088ee;
+	border-bottom: 3px dotted #0088ee;
+}
+
+.aktualnosci p, .aktualnosci li, .aktualnosci h1, .aktualnosci h2, .aktualnosci h3, .aktualnosci h4, .aktualnosci h5, .aktualnosci h6 {
+	margin-left: 1%;
+}
+
+.aktualnosci li {
+	margin-bottom: 0.5%;
+}
+
+.aktualnosci-text {
+	margin-left: 39%;
+	color: red;
+}
+
+.aktualnosci-img {
+	margin-top: 1%;
+	float: left;
+	margin-left: 8%;
+}
+
+/* Tabela */
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th, table td {
+    
+    padding: 8px;
+}
+table th {
+    background-color: #FACCCC;
+    color: black;
+}
+.tables-container::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+}
+
+/* tabelki rozkładowe*/
+
+.schedule-table {
+    float:left;
+    width:65%;
+    margin:auto;
+	margin-left: 1%;
+	text-align: center;
+}
+.schedule-table th, .schedule-table td {
+	border: 1px solid #000000;
+}
+.schedule-table td {
+    width: 40px;
+}
+
+/* */
+
+.stop-table {
+    float:left;
+    width:auto;
+    margin:auto;
+	margin-left: 1%;
+	margin-right: 1%;
+	border: 1px solid #000000;
+}
+.stop-table th {
+	text-align: left;
+}
+
+/* dymek */
+
+#dymek {
+	border: 2px solid #1f2f6d;
+	border-radius: 5px;
+	background-color: white;
+	padding: 4px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none; 
+	z-index: 10;
+	font-family: Arial, monospace;
+}
+
+/* kolory dla tekstów */
+
+.red-text {
+    color: red;
+}
+.green-text {
+    color: #009900;
+}
+
+
+
+.linie td {
+	border-bottom: 1px solid #ffffff;
+	padding-bottom: 0;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .ignore-on-mobile {
+        display: none;
+    }
+}
+

@@ -1,0 +1,20 @@
+.stop-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stop-table th, .stop-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.stop-table th {
+    background-color: #FACCCC;
+    color: black;
+}
+
+.stop-table td {
+    background-color: #fff;
+    color: #333;
+}
