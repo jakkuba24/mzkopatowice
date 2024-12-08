@@ -1,0 +1,12 @@
+<h2 class="aktualnosci-text">TYTUŁ</h2>
+<div class="aktualnosci">
+	<h5>DD.MM.YYYY HH:MM</h5>
+	<p>Zawartość</p>
+	---PRZYKŁADY---
+	<h3>Linia 2</h3> (lub <h4> ale gdy jest to coś innego niż zmiany w kursach)
+	<li>tędy i tamtędy</li>
+	<br>
+	<h3>Linia 5</h3>
+	<li>tędy i sramtędy</li>
+	--- ---
+	

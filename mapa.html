@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapka - MZK OPATOWICE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="zdjecia/mzk.png">
+</head>
+<body>
+    <header>
+		<a href="index.html">Strona główna</a>
+        <a href="niezbednik.html">Niezbędnik pasażera</a>
+        <a href="kontakt.html">Kontakt</a>
+    </header>
+	<div style="width:700px;height:143px;margin:0px auto">
+			<a href="index.html"><img src="zdjecia/mzk1.png" alt="Logo MZK" class="logo" style="float:left"></a>
+            <div class="line-button"><a href="linia_2.html">2</a></div>
+            <div class="line-button"><a href="linia_4.html">4</a></div>
+            <div class="line-button"><a href="linia_5.html">5</a></div>
+            <div class="line-button"><a href="linia_7.html">7</a></div>
+            <div class="line-button"><a href="linia_11.html">11</a></div>
+    </div>
+	<div class="menu-mapka">
+	<input type="checkbox" id="linia2" onclick="aktualizacja_mapki()">
+	<label for="linia2">Linia 2</label><br>
+	<input type="checkbox" id="linia4" onclick="aktualizacja_mapki()">
+	<label for="linia4">Linia 4</label><br>
+	<input type="checkbox" id="linia5" onclick="aktualizacja_mapki()">
+	<label for="linia5">Linia 5</label><br>
+	<input type="checkbox" id="linia7" onclick="aktualizacja_mapki()">
+	<label for="linia7">Linia 7</label><br>
+	<input type="checkbox" id="linia11" onclick="aktualizacja_mapki()">
+	<label for="linia11">Linia 11</label><br><br>
+	<button id="pokaz-all" onclick="pokaz_all()">Pokaż wszystko</button>
+	<button id="ukryj-all" onclick="ukryj_all()">Ukryj wszystko</button><br><br>
+	<button id="zoom">Powiększ</button>
+	
+	<p>Ostatnia aktualizacja: 29.11<p>
+	<p>© Copyright MZK Opatowice 2024  Sp. z o.o.
+	</div>
+	
+	<div style="width:1408px;height:1344px;position:relative;float:left" id="cala_mapka">
+	<img style="width:100%;height:100%;position:absolute;z-index:-1" src="zdjecia/mapka.png" id="mapka">
+	<img style="width:100%;height:100%;position:absolute;display:none" src="zdjecia/linia2.png" id="mapka_linia2">
+	<img style="width:100%;height:100%;position:absolute;display:none" src="zdjecia/linia4.png" id="mapka_linia4">
+	<img style="width:100%;height:100%;position:absolute;display:none" src="zdjecia/linia5.png" id="mapka_linia5">
+	<img style="width:100%;height:100%;position:absolute;display:none" src="zdjecia/linia7.png" id="mapka_linia7">
+	<img style="width:100%;height:100%;position:absolute;display:none" src="zdjecia/linia11.png" id="mapka_linia11">
+	</div>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const img = document.getElementById("mapka");
+    const container = document.getElementById("cala_mapka");
+    const toggleButton = document.getElementById("zoom");
+
+    let isEnlarged = false; // Flaga wskazująca, czy div jest powiększony
+
+    function adjustSizes() {
+		isEnlarged = false;
+		if (!isEnlarged) toggleButton.textContent = "Powiększ";
+		else toggleButton.textContent = "Zmniejsz";
+
+        // Ustawienie szerokości i wysokości zdjęcia na 90% szerokości strony
+        const imgWidth = window.innerWidth * 0.88;
+        img.style.width = `${imgWidth}px`;
+        img.style.height = "auto";
+
+        // Dopasowanie rozmiaru diva na podstawie zdjęcia
+        const { width, height } = img.getBoundingClientRect();
+        container.style.width = `${width}px`;
+        container.style.height = `${height}px`;
+		
+		img.style.width = "100%";
+        img.style.height = "100%";
+    }
+
+    function toggleSize() {
+        if (isEnlarged) {
+            const originalWidth = parseFloat(container.style.width) / 2;
+			const originalHeight = parseFloat(container.style.height) / 2;
+			container.style.width = `${originalWidth}px`;
+			container.style.height = `${originalHeight}px`;
+			toggleButton.textContent = "Powiększ";
+		} else {
+			// Podwojenie rozmiaru
+			const enlargedWidth = parseFloat(container.style.width) * 2;
+			const enlargedHeight = parseFloat(container.style.height) * 2;
+			container.style.width = `${enlargedWidth}px`;
+			container.style.height = `${enlargedHeight}px`;
+			toggleButton.textContent = "Zmniejsz";
+		}
+        isEnlarged = !isEnlarged; // Zmień flagę
+    }
+
+    // Wywołanie przy załadowaniu strony i przy zmianie rozmiaru okna
+    adjustSizes();
+    window.addEventListener("resize", adjustSizes);
+
+    // Obsługa kliknięcia przycisku
+    toggleButton.addEventListener("click", toggleSize);
+});
+function aktualizacja_mapki(){
+if (document.getElementById("linia2").checked) document.getElementById("mapka_linia2").style.display = "block";
+else document.getElementById("mapka_linia2").style.display = "none";
+if (document.getElementById("linia4").checked) document.getElementById("mapka_linia4").style.display = "block";
+else document.getElementById("mapka_linia4").style.display = "none";
+if (document.getElementById("linia5").checked) document.getElementById("mapka_linia5").style.display = "block";
+else document.getElementById("mapka_linia5").style.display = "none";
+if (document.getElementById("linia7").checked) document.getElementById("mapka_linia7").style.display = "block";
+else document.getElementById("mapka_linia7").style.display = "none";
+if (document.getElementById("linia11").checked) document.getElementById("mapka_linia11").style.display = "block";
+else document.getElementById("mapka_linia11").style.display = "none";
+}
+
+function pokaz_all(){
+document.getElementById("linia2").checked = true;
+document.getElementById("linia4").checked = true;
+document.getElementById("linia5").checked = true;
+document.getElementById("linia7").checked = true;
+document.getElementById("linia11").checked = true;
+aktualizacja_mapki();
+}
+function ukryj_all(){
+document.getElementById("linia2").checked = false;
+document.getElementById("linia4").checked = false;
+document.getElementById("linia5").checked = false;
+document.getElementById("linia7").checked = false;
+document.getElementById("linia11").checked = false;
+aktualizacja_mapki();
+}
+</script>
+</html>
