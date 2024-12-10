@@ -9,10 +9,10 @@ function wyswietldymek(h,m,typ,event) {
 	if (typ == '2a') i_p = 19;
 	if (typ == '2a_1') i_p = 24;
 	if (typ == '2b') {i_p = 21; offset = 28};
-	if (typ == '2b_1') {i_p = 26; offset= 23};
+	if (typ == '2b_1') {i_p = 26; offset = 23};
 	// ---Linia 4---------	
-	if (typ == '4a') i_p = 13;
-	if (typ == '4b') i_p = 16;
+	if (typ == '4a') i_p = 16;
+	if (typ == '4b') {i_p = 16; offset = 15};
 	// ---Linia 5---------
 	if (typ == '5a') i_p = 22;
 	if (typ == '5a_1') i_p = 25;
