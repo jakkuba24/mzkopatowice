@@ -149,20 +149,35 @@ header a:hover {
 	margin-left: 10%;
 	margin-right: 10%;
 	border: 3px solid #0088ee;
-	border-bottom: 3px dotted #0088ee;
 }
 
 .aktualnosci p, .aktualnosci li, .aktualnosci h1, .aktualnosci h2, .aktualnosci h3, .aktualnosci h4, .aktualnosci h5, .aktualnosci h6 {
 	margin-left: 1%;
 }
-
-.aktualnosci li {
+.aktualnosci ul {
+	list-style-type: none;
+	padding-left: 0.5%;
+}
+.aktualnosci li:before {
 	margin-bottom: 0.5%;
+	content: '\2794';
+	margin-right: 0.5%;
+	color: red;
+}
+.aktualnosci .li2:before {
+	content:'';
+}
+.aktualnosci .li2 {
+	list-style-type: disc;
+	color: orange;
+	margin-left: 3%;
 }
 
-.aktualnosci-text {
-	margin-left: 39%;
+.aktualnosci h2 {
 	color: red;
+}
+.aktualnosci h3 {
+	color: darkblue;
 }
 
 .aktualnosci-img {
