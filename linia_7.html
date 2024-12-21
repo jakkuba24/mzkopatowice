@@ -2,18 +2,680 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Rozkład Jazdy - Linia </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="mzk.png">
+    <title>Rozkład Jazdy - Linia 7</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="zdjecia/mzk.png">
 	<script src="kurs.js"></script>
 </head>
 <body>
+	<header>
+		<a href="index.html">Strona główna</a>
+        <a href="niezbednik.html">Niezbędnik pasażera</a>
+        <a href="kontakt.html">Kontakt</a>
+    </header>
+	<div style="width:700px;height:143px;margin:0px auto">
+			<a href="index.html"><img src="zdjecia/mzk1.png" alt="Logo MZK" class="logo" style="float:left"></a>
+            <div class="line-button"><a href="linia_2.html">2</a></div>
+            <div class="line-button"><a href="linia_4.html">4</a></div>
+            <div class="line-button"><a href="linia_5.html">5</a></div>
+            <div class="line-button"><a href="linia_7.html">7</a></div>
+            <div class="line-button"><a href="linia_11.html">11</a></div>
+    </div>
 	<div class="tables-container">
             <table class="schedule-table">
 					<tr>
 						<td style=""><b>Linia<br><span style="font-size:42px">7</span><br></b>miejska/dzienna</td>
 						<td style="border-right: 1px solid #ffffff"></td>
-						<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek: </b> <br><br><b>Kierunek:</b> </td>
+						<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek: </b>Osiedle Północ<br><br><b>Kierunek:</b> Centrum Handlowe Laksa</td>
+					</tr>
+                    <tr>
+						<th style="width:150px"></th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                        <th>11</th>
+                        <th>12</th>
+                        <th>13</th>
+                        <th>14</th>
+                        <th>15</th>
+                        <th>16</th>
+                        <th>17</th>
+                        <th>18</th>
+                        <th>19</th>
+                        <th>20</th>
+                        <th>21</th>
+                        <th>22</th>
+                        <th>23</th>
+                    </tr>
+                    <tr class="linie">
+                        <th rowspan="3" style="text-align:left">Dzień powszedni</td>
+                        <td>12S</td> <!-- 5 -->
+                        <td>12S</td>
+                        <td>12S</td>
+                        <td>12S</td> <!-- 8 -->
+                        <td>12S</td>
+                        <td>12S</td>
+                        <td>12S</td> <!-- 11 -->
+                        <td>12S</td>
+                        <td>12S</td>
+                        <td>12S</td> <!-- 14 -->
+                        <td>12S</td>
+                        <td>12S</td>
+                        <td>12</td> <!-- 17 -->
+                        <td>12</td>
+                        <td>02</td>
+                        <td>02D</td> <!-- 20 -->
+                        <td>02S</td>
+                        <td>02D</td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+                    <tr class="linie">
+                        <td>42D</td> <!-- 5 -->
+                        <td>32S</td>
+                        <td>32D</td>
+                        <td>32D</td> <!-- 8 -->
+                        <td>32D</td>
+                        <td>32</td>
+                        <td>32</td> <!-- 11 -->
+                        <td>32</td>
+                        <td>32</td>
+                        <td>32S</td> <!-- 14 -->
+                        <td>32S</td>
+                        <td>32</td>
+                        <td>32S</td> <!-- 17 -->
+                        <td>32</td>
+                        <td>32S</td>
+                        <td>32</td> <!-- 20 -->
+                        <td>32S</td>
+                        <td>32</td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr>
+                        <td></td> <!-- 5 -->
+                        <td>52D</td>
+                        <td>52D</td>
+                        <td>52</td> <!-- 8 -->
+                        <td>52</td>
+                        <td>52</td>
+                        <td>52</td> <!-- 11 -->
+                        <td>52</td>
+                        <td>52S</td>
+                        <td>52S</td> <!-- 14 -->
+                        <td>52S</td>
+                        <td>52S</td>
+                        <td>52</td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+                    <tr class="linie">
+                        <th rowspan="2" style="text-align:left">Sobota</th>
+                        <td>14S</td> <!-- 5 -->
+                        <td>14S</td>
+                        <td>14S</td>
+                        <td>12</td> <!-- 8 -->
+                        <td>12S</td>
+                        <td>12</td>
+                        <td>12S</td> <!-- 11 -->
+                        <td>12</td>
+                        <td>12S</td>
+                        <td>12S</td> <!-- 14 -->
+                        <td>12</td>
+                        <td>12</td>
+                        <td>12</td> <!-- 17 -->
+                        <td>12S</td>
+                        <td>42</td>
+                        <td>42D</td> <!-- 20 -->
+                        <td>42S</td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr>
+                        <td></td> <!-- 5 -->
+                        <td>52D</td>
+                        <td>42D</td>
+                        <td>42D</td> <!-- 8 -->
+                        <td>42</td>
+                        <td>42</td>
+                        <td>42</td> <!-- 11 -->
+                        <td>42</td>
+                        <td>42S</td>
+                        <td>42S</td> <!-- 14 -->
+                        <td>42S</td>
+                        <td>42S</td>
+                        <td>42D</td> <!-- 17 -->
+                        <td>42</td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+                    <tr class="linie">
+                        <th rowspan="3" style="text-align:left">Niedziela / Święta</th>
+                        <td>14S</td> <!-- 5 -->
+                        <td>14S</td>
+                        <td>14S</td>
+                        <td></td> <!-- 8 -->
+                        <td>10</td>
+                        <td>30D</td>
+                        <td>00</td> <!-- 11 -->
+                        <td>00</td>
+                        <td>00</td>
+                        <td>30S</td> <!-- 14 -->
+                        <td>10D</td>
+                        <td>00</td>
+                        <td>00</td> <!-- 17 -->
+                        <td>00D</td>
+                        <td>00</td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr class="linie">
+                        <td></td> <!-- 5 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 8 -->
+                        <td>50</td>
+                        <td></td>
+                        <td>30D</td> <!-- 11 -->
+                        <td>30D</td>
+                        <td>30D</td>
+                        <td></td> <!-- 14 -->
+                        <td></td>
+                        <td>30D</td>
+                        <td></td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr>
+                        <td></td> <!-- 5 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 8 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 11 -->
+                        <td></td>
+                        <td>56S</td>
+                        <td></td> <!-- 14 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr>
+						<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 14.12.2024</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #ffffff"></td>
+						<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #ffffff"></td>
+						<td colspan="15" style="border: 1px solid #ffffff;text-align:left">D - kurs do Dworca PKP</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #ffffff"></td>
+						<td colspan="15" style="border: 1px solid #ffffff;text-align:left">S - kurs do Strefy Ekonomicznej</td>
+					</tr>
+            </table>
+			
+		<div class="ignore-on-mobile">
+            <table class="stop-table">
+                <thead>
+                    <tr>
+                        <th>Przystanek</th>
+                        <th>M</th>
+                        <th>N</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Osiedle Północ</td>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Dębowa</td>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Krucza</td>
+                        <td>1</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Kwiatowa</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Jagodowa</td>
+                        <td>1</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Leśna</td>
+                        <td>1</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Leśna Szkoła</td>
+                        <td>1</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Cedrowa/Leśna</td>
+                        <td>1</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Reymonta</td>
+                        <td>1</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>Franciszkańska</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Gruntowa</td>
+                        <td>1</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>Mazowieckiego/Chrobrego</td>
+                        <td>1</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Liliowa</td>
+                        <td>1</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>Mazowieckiego/Chrobrego</td>
+                        <td>2</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>Waryńskiego/Zwycięstwa</td>
+                        <td>1</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>Zwycięstwa</td>
+                        <td>2</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Rynek</td>
+                        <td>2/1</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td><span class="red-text">-</span> Dworzec PKP</td>
+                        <td></td>
+                        <td>20</td>
+                    </tr>
+					<tr>
+						<td>Zwycięstwa/Wyszyńskiego</td>
+						<td>1</td>
+						<td>21</td>
+					</tr>
+					<tr>
+						<td>Węzeł Opatowice Zachód <span class="red-text">nż</span></td>
+						<td>2</td>
+						<td>22</td>
+					</tr>
+					<tr>
+						<td style="margin-left:10px"><span class="red-text"> - </span>Centrum Handlowe Laksa </td>
+						<td>2</td>
+						<td>24</td>
+					</tr>
+					<tr>
+                        <td style="margin-left:10px">Szczerbińska <span class="red-text">nż</span></td>
+                        <td>2</td>
+                        <td>26</td>
+                    </tr>
+					<tr>
+                        <td style="margin-left:10px">Lubelska <span class="red-text">nż</span></td>
+                        <td>1</td>
+                        <td>28</td>
+                    </tr>
+					<tr>
+                        <td style="margin-left:10px">Elektryczna <span class="red-text">nż</span></td>
+                        <td>1</td>
+                        <td>29</td>
+                    </tr>
+					<tr>
+                        <td style="margin-left:10px">Olejowa <span class="red-text">nż</span></td>
+                        <td>1</td>
+                        <td>30</td>
+                    </tr>
+					<tr>
+						<td style="margin-left:10px"><span class="red-text"> - </span>Strefa Ekonomiczna </td>
+						<td></td>
+						<td>31</td>
+					</tr>
+                </tbody>
+            </table>
+		</div>
+    </div>
+	<br>
+	<div class="tables-container">
+            <table class="schedule-table">
+					<tr>
+						<td style=""><b>Linia<br><span style="font-size:42px">7</span><br></b>miejska/dzienna</td>
+						<td style="border-right: 1px solid #ffffff"></td>
+						<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Centrum Handlowe Laksa<br><br><b>Kierunek:</b> Osiedle Północ</td>
+					</tr>
+                    <tr>
+						<th style="width:150px"></th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                        <th>11</th>
+                        <th>12</th>
+                        <th>13</th>
+                        <th>14</th>
+                        <th>15</th>
+                        <th>16</th>
+                        <th>17</th>
+                        <th>18</th>
+                        <th>19</th>
+                        <th>20</th>
+                        <th>21</th>
+                        <th>22</th>
+                        <th>23</th>
+                    </tr>
+                    <tr class="linie">
+                        <th rowspan="3" style="text-align:left">Dzień powszedni</td>
+                        <td>55</td> <!-- 5 -->
+                        <td>35</td>
+                        <td>15</td>
+                        <td>55</td> <!-- 8 -->
+                        <td>35</td>
+                        <td>35</td>
+                        <td>15</td> <!-- 11 -->
+                        <td>15</td>
+                        <td>15</td>
+                        <td>15</td> <!-- 14 -->
+                        <td>15</td>
+                        <td>15</td>
+                        <td>15</td> <!-- 17 -->
+                        <td>20</td>
+                        <td>15</td>
+                        <td>25</td> <!-- 20 -->
+                        <td>15</td>
+                        <td>23</td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+                    <tr class="linie">
+                        <td></td> <!-- 5 -->
+                        <td>55</td>
+                        <td>55</td>
+                        <td></td> <!-- 8 -->
+                        <td>55</td>
+                        <td>55</td>
+                        <td>35</td> <!-- 11 -->
+                        <td>35</td>
+                        <td>35</td>
+                        <td>35</td> <!-- 14 -->
+                        <td>35</td>
+                        <td>35</td>
+                        <td>35</td> <!-- 17 -->
+                        <td>45</td>
+                        <td>45</td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr>
+                        <td></td> <!-- 5 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 8 -->
+                        <td></td>
+                        <td></td>
+                        <td>55</td> <!-- 11 -->
+                        <td>55</td>
+                        <td>55</td>
+                        <td>55</td> <!-- 14 -->
+                        <td>55</td>
+                        <td>55</td>
+                        <td>55</td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+                    <tr class="linie">
+                        <th rowspan="2" style="text-align:left">Sobota</td>
+                        <td></td> <!-- 5 -->
+                        <td>23</td>
+                        <td>18</td>
+                        <td>18</td> <!-- 8 -->
+                        <td>28</td>
+                        <td>28</td>
+                        <td>28</td> <!-- 11 -->
+                        <td>28</td>
+                        <td>28</td>
+                        <td>28</td> <!-- 14 -->
+                        <td>28</td>
+                        <td>28</td>
+                        <td>28</td> <!-- 17 -->
+                        <td>58</td>
+                        <td>13</td>
+                        <td>13</td> <!-- 20 -->
+                        <td></td>
+                        <td>23</td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr>
+                        <td></td> <!-- 5 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 8 -->
+                        <td>58</td>
+                        <td></td>
+                        <td>58</td> <!-- 11 -->
+                        <td>58</td>
+                        <td>58</td>
+                        <td>58</td> <!-- 14 -->
+                        <td>58</td>
+                        <td>58</td>
+                        <td>58</td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+                    <tr>
+                        <th rowspan="1" style="text-align:left">Niedziela / Święta</td>
+                        <td></td> <!-- 5 -->
+                        <td>22</td>
+                        <td>22</td>
+                        <td>22</td> <!-- 8 -->
+                        <td>52</td>
+                        <td>22</td>
+                        <td>32</td> <!-- 11 -->
+                        <td>32</td>
+                        <td>32</td>
+                        <td>36</td> <!-- 14 -->
+                        <td>22</td>
+                        <td>32</td>
+                        <td>32</td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr>
+						<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 14.12.2024</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #ffffff"></td>
+						<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #ffffff"></td>
+						<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+					</tr>
+            </table>
+			
+		<div class="ignore-on-mobile">
+            <table class="stop-table">
+                <thead>
+                    <tr>
+                        <th>Przystanek</th>
+                        <th>M</th>
+                        <th>N</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Centrum Handlowe Laksa</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Węzeł Opatowice Zachód <span class="red-text">nż</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Zwycięstwa/Wyszyńskiego</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Rynek</td>
+                        <td>1</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Zwycięstwa</td>
+                        <td>2</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Waryńskiego/Zwycięstwa</td>
+                        <td>1</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Mazowieckiego/Chrobrego</td>
+                        <td>1</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>Liliowa</td>
+                        <td>2</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Mazowieckiego/Franciszkańska</td>
+                        <td>0</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Gruntowa</td>
+                        <td>1</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Franciszkańska</td>
+                        <td>1</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>Reymonta</td>
+                        <td>1</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>Cedrowa/Leśna</td>
+                        <td>1</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Leśna Szkoła</td>
+                        <td>1</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>Leśna</td>
+                        <td>1</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Jagodowa</td>
+                        <td>1</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>Kwiatowa</td>
+                        <td>1</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>Krucza</td>
+                        <td>2</td>
+                        <td>20</td>
+                    </tr>
+					<tr>
+						<td>Dębowa</td>
+						<td>1</td>
+						<td>22</td>
+					</tr>
+					<tr>
+						<td><span class="red-text"> - </span>Osiedle Północ</td>
+						<td></td>
+						<td>23</td>
+					</tr>
+					
+                </tbody>
+            </table>
+		</div>
+    </div>
+	<br>
+	<div class="tables-container">
+            <table class="schedule-table">
+					<tr>
+						<td style=""><b>Linia<br><span style="font-size:42px">7</span><br></b>miejska/dzienna</td>
+						<td style="border-right: 1px solid #ffffff"></td>
+						<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Dworzec PKP<br><br><b>Kierunek:</b> Osiedle Północ</td>
 					</tr>
                     <tr>
 						<th style="width:150px"></th>
@@ -40,9 +702,30 @@
                     <tr class="linie">
                         <th rowspan="2" style="text-align:left">Dzień powszedni</td>
                         <td></td> <!-- 5 -->
+                        <td>18</td>
+                        <td>38</td>
+                        <td>18</td> <!-- 8 -->
+                        <td>18</td>
+                        <td>18</td>
+                        <td></td> <!-- 11 -->
                         <td></td>
                         <td></td>
-                        <td></td> <!-- 8 -->
+                        <td></td> <!-- 14 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td>48</td> <!-- 20 -->
+                        <td></td>
+                        <td>56</td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+                    <tr>
+                        <td></td> <!-- 5 -->
+                        <td></td>
+                        <td></td>
+                        <td>38</td> <!-- 8 -->
                         <td></td>
                         <td></td>
                         <td></td> <!-- 11 -->
@@ -60,12 +743,13 @@
                         <td></td> <!-- 23 -->
                     </tr>
                     <tr>
+                        <th rowspan="1" style="text-align:left">Sobota</td>
                         <td></td> <!-- 5 -->
                         <td></td>
+                        <td>31</td>
+                        <td>31</td> <!-- 8 -->
                         <td></td>
-                        <td></td> <!-- 8 -->
-                        <td></td>
-                        <td></td>
+                        <td>31</td>
                         <td></td> <!-- 11 -->
                         <td></td>
                         <td></td>
@@ -76,50 +760,7 @@
                         <td></td>
                         <td></td>
                         <td></td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-                    <tr class="linie">
-                        <th rowspan="2" style="text-align:left">Sobota</td>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 8 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 11 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 14 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 17 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-					<tr>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 8 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 11 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 14 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 17 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 20 -->
-                        <td></td>
+                        <td>16</td>
                         <td></td>
                         <td></td> <!-- 23 -->
                     </tr>
@@ -131,14 +772,14 @@
                         <td></td> <!-- 8 -->
                         <td></td>
                         <td></td>
-                        <td></td> <!-- 11 -->
+                        <td>05</td> <!-- 11 -->
+                        <td>05</td>
+                        <td>05</td>
+                        <td>05</td> <!-- 14 -->
                         <td></td>
-                        <td></td>
-                        <td></td> <!-- 14 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 17 -->
-                        <td></td>
+                        <td>00</td>
+                        <td>05</td> <!-- 17 -->
+                        <td>35</td>
                         <td></td>
                         <td></td> <!-- 20 -->
                         <td></td>
@@ -146,7 +787,7 @@
                         <td></td> <!-- 23 -->
                     </tr>
 					<tr>
-						<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: </td>
+						<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 14.12.2024</td>
 					</tr>
 					<tr>
 						<td style="border: 1px solid #ffffff"></td>
@@ -169,120 +810,410 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
+                        <td>Dworzec PKP</td>
+                        <td>2</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Rynek</td>
+                        <td>1</td>
+                        <td>2</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Zwycięstwa</td>
+                        <td>2</td>
+                        <td>3</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Waryńskiego/Zwycięstwa</td>
+                        <td>1</td>
+                        <td>5</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Mazowieckiego/Chrobrego</td>
+                        <td>1</td>
+                        <td>6</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Liliowa</td>
+                        <td>2</td>
+                        <td>7</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Mazowieckiego/Franciszkańska</td>
+                        <td>0</td>
+                        <td>9</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Gruntowa</td>
+                        <td>1</td>
+                        <td>9</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Franciszkańska</td>
+                        <td>1</td>
+                        <td>10</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Reymonta</td>
+                        <td>1</td>
+                        <td>11</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Cedrowa/Leśna</td>
+                        <td>1</td>
+                        <td>12</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Leśna Szkoła</td>
+                        <td>1</td>
+                        <td>13</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Leśna</td>
+                        <td>1</td>
+                        <td>14</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Jagodowa</td>
+                        <td>1</td>
+                        <td>15</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Kwiatowa</td>
+                        <td>1</td>
+                        <td>16</td>
                     </tr>
                     <tr>
+                        <td>Krucza</td>
+                        <td>2</td>
+                        <td>17</td>
+                    </tr>
+					<tr>
+						<td>Dębowa</td>
+						<td>1</td>
+						<td>19</td>
+					</tr>
+					<tr>
+						<td><span class="red-text"> - </span>Osiedle Północ</td>
+						<td></td>
+						<td>20</td>
+					</tr>
+				
+                </tbody>
+            </table>
+		</div>
+    </div>
+	<br>
+	<div class="tables-container">
+            <table class="schedule-table">
+					<tr>
+						<td style=""><b>Linia<br><span style="font-size:42px">7</span><br></b>miejska/dzienna</td>
+						<td style="border-right: 1px solid #ffffff"></td>
+						<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Strefa Ekonomiczna<br><br><b>Kierunek:</b> Osiedle Północ</td>
+					</tr>
+                    <tr>
+						<th style="width:150px"></th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                        <th>11</th>
+                        <th>12</th>
+                        <th>13</th>
+                        <th>14</th>
+                        <th>15</th>
+                        <th>16</th>
+                        <th>17</th>
+                        <th>18</th>
+                        <th>19</th>
+                        <th>20</th>
+                        <th>21</th>
+                        <th>22</th>
+                        <th>23</th>
+                    </tr>
+                    <tr class="linie">
+                        <th rowspan="3" style="text-align:left">Dzień powszedni</td>
+                        <td>47</td> <!-- 5 -->
+                        <td>27</td>
+                        <td>07</td>
+                        <td>47</td> <!-- 8 -->
+                        <td>47</td>
+                        <td>47</td>
+                        <td>47</td> <!-- 11 -->
+                        <td>47</td>
+                        <td>47</td>
+                        <td>27</td> <!-- 14 -->
+                        <td>07</td>
+                        <td>07</td>
+                        <td>27</td> <!-- 17 -->
+                        <td>12</td>
+                        <td></td>
+                        <td>17</td> <!-- 20 -->
+                        <td>47</td>
+                        <td>15</td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+                    <tr class="linie">
+                        <td></td> <!-- 5 -->
+                        <td>47</td>
+                        <td>47</td>
+                        <td></td> <!-- 8 -->
                         <td></td>
                         <td></td>
+                        <td></td> <!-- 11 -->
                         <td></td>
+                        <td></td>
+                        <td>47</td> <!-- 14 -->
+                        <td>27</td>
+                        <td>27</td>
+                        <td></td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr>
+                        <td></td> <!-- 5 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 8 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 11 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 14 -->
+                        <td>47</td>
+                        <td>47</td>
+                        <td></td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+                    <tr class="linie">
+                        <th rowspan="2" style="text-align:left">Sobota</td>
+                        <td></td> <!-- 5 -->
+                        <td>15</td>
+                        <td>10</td>
+                        <td>10</td> <!-- 8 -->
+                        <td>50</td>
+                        <td></td>
+                        <td>50</td> <!-- 11 -->
+                        <td></td>
+                        <td>50</td>
+                        <td>20</td> <!-- 14 -->
+                        <td>20</td>
+                        <td>20</td>
+                        <td>20</td> <!-- 17 -->
+                        <td>50</td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td>15</td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr>
+                        <td></td> <!-- 5 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 8 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 11 -->
+                        <td></td>
+                        <td></td>
+                        <td>50</td> <!-- 14 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
                     </tr>
                     <tr>
+                        <th rowspan="1" style="text-align:left">Niedziela / Święta</td>
+                        <td></td> <!-- 5 -->
+                        <td>14</td>
+                        <td>14</td>
+                        <td>14</td> <!-- 8 -->
                         <td></td>
                         <td></td>
+                        <td></td> <!-- 11 -->
+                        <td></td>
+                        <td></td>
+                        <td>28</td> <!-- 14 -->
+                        <td>14</td>
+                        <td></td>
+                        <td></td> <!-- 17 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 20 -->
+                        <td></td>
+                        <td></td>
+                        <td></td> <!-- 23 -->
+                    </tr>
+					<tr>
+						<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 14.12.2024</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #ffffff"></td>
+						<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #ffffff"></td>
+						<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+					</tr>
+            </table>
+			
+		<div class="ignore-on-mobile">
+            <table class="stop-table">
+                <thead>
+                    <tr>
+                        <th>Przystanek</th>
+                        <th>M</th>
+                        <th>N</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<tr>
+                        <td> <span style="margin-left:10px"></span>Strefa Ekonomiczna</td>
+                        <td>1</td>
                         <td></td>
                     </tr>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
+                        <td> <span style="margin-left:10px"></span>Olejowa<span class="red-text"> nż</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+					<tr>
+                        <td> <span style="margin-left:10px"></span>Elektryczna<span class="red-text"> nż</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+					<tr>
+                        <td> <span style="margin-left:10px"></span>Lubelska<span class="red-text"> nż</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+					<tr>
+                        <td> <span style="margin-left:10px"></span>Szczerbińska<span class="red-text"> nż</td>
+                        <td>3</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Centrum Handlowe Laksa</td>
+                        <td>1</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Węzeł Opatowice Zachód <span class="red-text">nż</td>
+                        <td>2</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>Zwycięstwa/Wyszyńskiego</td>
+                        <td>2</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>Rynek</td>
+                        <td>1</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>Zwycięstwa</td>
+                        <td>2</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>Waryńskiego/Zwycięstwa</td>
+                        <td>1</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>Mazowieckiego/Chrobrego</td>
+                        <td>1</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Liliowa</td>
+                        <td>2</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>Mazowieckiego/Franciszkańska</td>
+                        <td>0</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Gruntowa</td>
+                        <td>1</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Franciszkańska</td>
+                        <td>1</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>Reymonta</td>
+                        <td>1</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>Cedrowa/Leśna</td>
+                        <td>1</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>Leśna Szkoła</td>
+                        <td>1</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>Leśna</td>
+                        <td>1</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Jagodowa</td>
+                        <td>1</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>Kwiatowa</td>
+                        <td>1</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>Krucza</td>
+                        <td>2</td>
+                        <td>28</td>
+                    </tr>
+					<tr>
+						<td>Dębowa</td>
+						<td>1</td>
+						<td>30</td>
 					</tr>
 					<tr>
+						<td><span class="red-text"> - </span>Osiedle Północ</td>
 						<td></td>
-						<td></td>
-						<td></td>
+						<td>31</td>
 					</tr>
-					<tr>
-						<td><span class="red-text"> - </span>  </td>
-						<td></td>
-						<td></td>
-					</tr>
-					
                 </tbody>
             </table>
 		</div>
     </div>
 </body>
 </html>
-
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-</tr>
