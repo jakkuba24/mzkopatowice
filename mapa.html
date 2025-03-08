@@ -36,9 +36,7 @@
 	<button id="zoom">Powiększ</button>
 	
 	<p>Ostatnia aktualizacja: 29.11<p>
-	<p>© Copyright MZK Opatowice 2024  Sp. z o.o.</p>
-	<p>Gdyby mapka się nie wczytowała, prosimy o</p>
-	<p><b>zaczekanie</b>!</p>
+	<p>© Copyright MZK Opatowice 2024  Sp. z o. o.</p>
 	</div>
 	
 	<div style="width:1408px;height:1344px;position:relative;float:left" id="cala_mapka">
@@ -61,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function adjustSizes() {
 		isEnlarged = false;
 		if (!isEnlarged) toggleButton.textContent = "Powiększ";
-		else toggleButton.textContent = "Zmniejsz";
+		else toggleButton.textContent = "Pomniejsz";
 
         // Ustawienie szerokości i wysokości zdjęcia na 90% szerokości strony
         const imgWidth = window.innerWidth * 0.88;
@@ -90,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const enlargedHeight = parseFloat(container.style.height) * 2;
 			container.style.width = `${enlargedWidth}px`;
 			container.style.height = `${enlargedHeight}px`;
-			toggleButton.textContent = "Zmniejsz";
+			toggleButton.textContent = "Pomniejsz";
 		}
         isEnlarged = !isEnlarged; // Zmień flagę
     }

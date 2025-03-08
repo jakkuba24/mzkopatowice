@@ -1,15 +1,15 @@
 function wyswietldymek(h,m,typ,event) {
 	// h = godzina; m = minuta; typ = typ kursu; i_p = ilosc przystanków
-	// 0 = trasa podstawowa ; 1 = trasa wariantowa
+	// xa_1 = trasa wariantowa
 	// a = trasa do celu z pierwszego przystanku ; b = trasa powrotna
 
 	var i_p = 0;
 	var offset = 0;
 	// ---Linia 2---------
-	if (typ == '2a') i_p = 19;
-	if (typ == '2a_1') i_p = 24;
-	if (typ == '2b') {i_p = 21; offset = 28};
-	if (typ == '2b_1') {i_p = 26; offset = 23};
+	if (typ == '2a') i_p = 18;
+	if (typ == '2a_1') i_p = 23;
+	if (typ == '2b') {i_p = 20; offset = 28};
+	if (typ == '2b_1') {i_p = 25; offset = 23};
 	// ---Linia 4---------	
 	if (typ == '4a') i_p = 16;
 	if (typ == '4b') {i_p = 16; offset = 15};
@@ -71,22 +71,21 @@ function wyswietldymek(h,m,typ,event) {
 	
 	
 	dymek.innerHTML = "<b>"+h+":"+(m < 10 ? "0" + m : m)+" </b>"+tablica_przystanki[0+offset] + "<br>";
-	//console.log(dymek);
 	for (let i = 1+offset; i < i_p+offset; i++) {
-    // Pobierz czas przejazdu między przystankami
-    let czas_przejazdu = parseInt(tablica_minuty[i-1]);
-    
-    // Dodaj czas przejazdu do bieżącej minuty
-    m += czas_przejazdu;
-
-    // Obsłuż przekroczenie 60 minut
-    if (m >= 60) {
-        h += Math.floor(m / 60); // Dodaj odpowiednią ilość godzin
-        m = m % 60;             // Oblicz pozostałe minuty
-    }
-    // Dodaj dane do "dymka"
-    dymek.innerHTML += "<b>" + h + ":" + (m < 10 ? "0" + m : m) + " </b>" + tablica_przystanki[i] + "<br>";
-	//console.log(dymek);
+		// Pobierz czas przejazdu między przystankami
+		let czas_przejazdu = parseInt(tablica_minuty[i-1]);
+		
+		// Dodaj czas przejazdu do bieżącej minuty
+		m += czas_przejazdu;
+		
+		// Obsłuż przekroczenie 60 minut
+		if (m >= 60) {
+			h += Math.floor(m / 60); // Dodaj odpowiednią ilość godzin
+			m = m % 60;             // Oblicz pozostałe minuty
+		}
+		// Dodaj dane do "dymka"
+		dymek.innerHTML += "<b>" + h + ":" + (m < 10 ? "0" + m : m) + " </b>" + tablica_przystanki[i] + "<br>";
+		//console.log(dymek);
 	}
 	
 	//kolorowanie nż i -
