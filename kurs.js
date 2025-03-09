@@ -19,18 +19,18 @@ function wyswietldymek(h,m,typ,event) {
 	if (typ == '5b') {i_p = 22; offset = 45};
 	if (typ == '5b_1') {i_p = 24; offset = 0};
 	// ---Linia 7---------
-	if (typ == '7a') i_p = 20; // centrum handlowe
+	if (typ == '7a') i_p = 20; // ch Laksa
 	if (typ == '7a_1') i_p = 18; // dworzec pkp
 	if (typ == '7a_2') i_p = 25; // strefa ekonomiczna
-	if (typ == '7b') i_p = 20; // z centrum handlowe
-	if (typ == '7b_1') i_p = 20; // z dworca pkp
-	if (typ == '7b_2') i_p = 25; // z strefa ekonomiczna
+	if (typ == '7b') {i_p = 20; offset = 30;} // z ch Laksa
+	if (typ == '7b_1') {i_p = 18; offset = 50;} // z dworca pkp
+	if (typ == '7b_2') {i_p = 25; offset = 25;} // z strefa ekonomiczna
 	// ---Linia 11---------
 	if (typ == '11a') i_p = 17; // czarnowo
-	if (typ == '11a_1') i_p = 17; // celinki
-	if (typ == '11a_2') i_p = 12; // bartoszewo rolna
-	if (typ == '11b') i_p = 17; // z czarnowa
-	if (typ == '11b_1') i_p = 19; // z celinek
+	if (typ == '11a_1') {i_p = 17; offset = 17;} // celinki
+	if (typ == '11a_2') {i_p = 12; offset = 17;} // bartoszewo rolna
+	if (typ == '11b') {i_p = 17; offset = 34;} // z czarnowa
+	if (typ == '11b_1') {i_p = 17; offset = 51;} // z celinek
 
 
 	// ---Pobieranie danych----------
