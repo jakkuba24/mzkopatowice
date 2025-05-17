@@ -17,7 +17,7 @@ function wyswietldymek(h,m,typ,event) {
 	if (typ == '5a') i_p = 23;
 	if (typ == '5a_1') {i_p = 24; offset = 22};
 	if (typ == '5b') {i_p = 22; offset = 45};
-	if (typ == '5b_1') {i_p = 24; offset = 0};
+	if (typ == '5b_1') {i_p = 23; offset = 67};
 	// ---Linia 7---------
 	if (typ == '7a') i_p = 20; // ch Laksa
 	if (typ == '7a_1') i_p = 18; // dworzec pkp
