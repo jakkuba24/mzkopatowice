@@ -7,19 +7,7 @@
     <link rel="icon" href="zdjecia/mzk.png">
 </head>
 <body>
-    <header>
-		<a href="index.html">Strona główna</a>
-        <a href="niezbednik.html">Niezbędnik pasażera</a>
-        <a href="kontakt.html">Kontakt</a>
-    </header>
-	<div style="width:700px;height:143px;margin:0px auto">
-			<a href="index.html"><img src="zdjecia/mzk1.png" alt="Logo MZK" class="logo" style="float:left"></a>
-            <div class="line-button"><a href="linia_2.html">2</a></div>
-            <div class="line-button"><a href="linia_4.html">4</a></div>
-            <div class="line-button"><a href="linia_5.html">5</a></div>
-            <div class="line-button"><a href="linia_7.html">7</a></div>
-            <div class="line-button"><a href="linia_11.html">11</a></div>
-    </div>
+    <header><script src="headerek.js"></script></div>
 	<div class="menu-mapka">
 	<input type="checkbox" id="linia2" onclick="aktualizacja_mapki()">
 	<label for="linia2">Linia 2</label><br>
@@ -100,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Obsługa kliknięcia przycisku
     toggleButton.addEventListener("click", toggleSize);
 });
+
 function aktualizacja_mapki(){
 if (document.getElementById("linia2").checked) document.getElementById("mapka_linia2").style.display = "block";
 else document.getElementById("mapka_linia2").style.display = "none";

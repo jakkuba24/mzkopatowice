@@ -85,8 +85,7 @@ header a:hover {
 
 /* Przycisk linii */
 
-.line-button {
-    background-color: #24378d;
+.line-button, .line-button_objazd {
     height: 50px;
 	width: 50px;
     text-decoration: none;
@@ -100,7 +99,7 @@ header a:hover {
 	float: left;
 	margin: 6% 7px 0 7px;
 }
-.line-button a {
+.line-button a, .line-button_objazd a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
@@ -112,6 +111,19 @@ header a:hover {
     background-color: #1b2a65;
     transform: scale(1.02);
 }
+
+.line-button {
+	background-color: #24378d;
+}
+.line-button_objazd {
+	background-color: #ff9900;
+}
+.line-button_objazd:hover {
+	background-color: #aa5500;
+	transform: scale(1.02);
+}
+
+
 
 /* Przycisk mapek */
 
@@ -194,7 +206,7 @@ table {
 }
 table th, table td {
     
-    padding: 8px;
+    padding: 4px;
 }
 table th {
     background-color: #FACCCC;
@@ -210,7 +222,7 @@ table th {
 
 .schedule-table {
     float:left;
-    width:65%;
+    width:auto;
     margin:auto;
 	margin-left: 1%;
 	text-align: center;
@@ -258,6 +270,9 @@ table th {
 }
 .green-text {
     color: #009900;
+}
+.objazd-text {
+	color: #ff9900;
 }
 
 
