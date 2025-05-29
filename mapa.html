@@ -52,8 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Ustawienie szerokości i wysokości zdjęcia na 90% szerokości strony
         const imgWidth = window.innerWidth * 0.88;
+		const imgHeight = window.innerHeight * 0.88;
         img.style.width = `${imgWidth}px`;
-        img.style.height = "auto";
+        img.style.height = `${imgHeight}px`;
 
         // Dopasowanie rozmiaru diva na podstawie zdjęcia
         const { width, height } = img.getBoundingClientRect();
