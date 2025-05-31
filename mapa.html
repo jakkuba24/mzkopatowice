@@ -23,9 +23,9 @@
 	<button id="ukryj-all" onclick="ukryj_all()">Ukryj wszystko</button><br><br>
 	<button id="zoom">Powiększ</button>
 	
+	<p><b>Na mapie nie są uwzględnione objazdy</b></p>
 	<p>Ostatnia aktualizacja: 18.05<p>
 	<p>© Copyright MZK Opatowice 2025  Sp. z o. o.</p>
-	<p><b>Mapa jest stała - objazdy nie zostaną tutaj zawarte!</b></p>
 	</div>
 	
 	<div style="width:1408px;height:1344px;position:relative;float:left" id="cala_mapka">
@@ -38,7 +38,7 @@
 	</div>
 </body>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+//document.addEventListener("DOMContentLoaded", () => {
     const img = document.getElementById("mapka");
     const container = document.getElementById("cala_mapka");
     const toggleButton = document.getElementById("zoom");
@@ -52,9 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Ustawienie szerokości i wysokości zdjęcia na 90% szerokości strony
         const imgWidth = window.innerWidth * 0.88;
-		const imgHeight = window.innerHeight * 0.88;
         img.style.width = `${imgWidth}px`;
-        img.style.height = `${imgHeight}px`;
+		img.style.height = `auto`;
 
         // Dopasowanie rozmiaru diva na podstawie zdjęcia
         const { width, height } = img.getBoundingClientRect();
@@ -89,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Obsługa kliknięcia przycisku
     toggleButton.addEventListener("click", toggleSize);
-});
+//});
 
 function aktualizacja_mapki(){
 if (document.getElementById("linia2").checked) document.getElementById("mapka_linia2").style.display = "block";
@@ -120,5 +119,6 @@ document.getElementById("linia7").checked = false;
 document.getElementById("linia11").checked = false;
 aktualizacja_mapki();
 }
+if(window.name!="stop"){window.name="stop"; location.reload();};
 </script>
 </html>
