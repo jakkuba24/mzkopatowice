@@ -1,6 +1,7 @@
 document.write('<a href="index.html">Strona główna</a>');
 document.write('<a href="niezbednik.html">Niezbędnik pasażera</a>');
 document.write('<a href="kontakt.html">Kontakt</a>');
+document.write('<a href="changelog.html">Historia</a>');
 document.write('</header>');
 document.write('<div style="width:700px;height:143px;margin:0px auto">');
 document.write('<a href="index.html"><img src="zdjecia/mzk1.png" alt="Logo MZK" class="logo" style="float:left"></a>');
