@@ -291,3 +291,13 @@ table th {
     }
 }
 
+.changelog {
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #676767;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-bottom: 3%;
+	padding-left: 1%;
+}
+
