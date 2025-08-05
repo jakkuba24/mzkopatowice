@@ -209,7 +209,7 @@ table th, table td {
     padding: 4px;
 }
 table th {
-    background-color: #FACCCC;
+    background-color: #C9DAF8;
     color: black;
 }
 .tables-container::after {
@@ -232,6 +232,16 @@ table th {
 }
 .schedule-table td {
     width: 40px;
+}
+
+.ramka_miejskie {
+	border: 4px solid #00B1EB;
+	font-size: 42px;
+	margin-left: 41.5px;
+	padding: 4px;
+	/* margin-right: 25%; */
+	width: 56px;
+	height: 56px;
 }
 
 /* */
