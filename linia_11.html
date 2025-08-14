@@ -8,917 +8,603 @@
 	<script src="kurs.js"></script>
 </head>
 <body>
-	<header><script src="headerek.js"></script></div>
-	<div class="tables-container">
-            <table class="schedule-table">
-					<tr style="border: 2px solid black">
-						<td style="border: 2px solid black;width:155px"><b>Linia<br><span style="font-size:42px">11</span><br></b>miejska/dzienna</td>
-						<td style="border-right: 1px solid #ffffff"></td>
-						<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Dworzec PKP<br><br><b>Kierunek:</b> Czarnowo</td>
-					</tr>
-                    <tr>
-						<th style="width:150px"></th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                        <th>9</th>
-                        <th>10</th>
-                        <th>11</th>
-                        <th>12</th>
-                        <th>13</th>
-                        <th>14</th>
-                        <th>15</th>
-                        <th>16</th>
-                        <th>17</th>
-                        <th>18</th>
-                        <th>19</th>
-                        <th>20</th>
-                        <th>21</th>
-                        <th>22</th>
-                        <th>23</th>
-                    </tr>
-                    <tr class="linie">
-                        <th rowspan="3" style="text-align:left">Dzień powszedni</td>
-                        <td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">12</td> <!-- 5 -->
-                        <td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">02C</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">02C</td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">02C</td> <!-- 17 -->
-                        <td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">02C</td> <!-- 20 -->
-                        <td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">02C</td>
-                        <td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-                    <tr class="linie">
-                        <td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">42</td> <!-- 5 -->
-                        <td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">22</td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">22</td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">22</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">32C</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">32C</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">32C</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">32</td>
-                        <td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">22</td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">22</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">22</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">22C</td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">22</td> <!-- 17 -->
-                        <td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">32C</td>
-                        <td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">32C</td>
-                        <td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">32</td> <!-- 20 -->
-                        <td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11a_2', event)" onmouseleave="dymek.style.display='none'">32B</td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-					<tr>
-                        <td></td> <!-- 5 -->
-                        <td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">42</td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">42</td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">42C</td> <!-- 8 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 11 -->
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">42</td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">42</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">42</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">42</td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a_2', event)" onmouseleave="dymek.style.display='none'">42B</td> <!-- 17 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-                    <tr class="linie">
-                        <th rowspan="2" style="text-align:left">Sobota</td>
-                        <td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">51</td> <!-- 5 -->
-                        <td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">46</td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">16C</td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">16C</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">16C</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">26C</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">26C</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">26C</td>
-                        <td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">26C</td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">06</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">06</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">06</td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">06C</td> <!-- 17 -->
-                        <td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">06C</td>
-                        <td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">16</td>
-                        <td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">16C</td> <!-- 20 -->
-                        <td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">16</td>
-                        <td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '11a_2', event)" onmouseleave="dymek.style.display='none'">16B</td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-					<tr>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">46</td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">46</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">46</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">56</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">56</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">56</td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">36C</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">36C</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">36C</td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">36</td> <!-- 17 -->
-                        <td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">36C</td>
-                        <td></td>
-                        <td></td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-                    <tr class="linie">
-                        <th rowspan="2" style="text-align:left">Niedziela / Święta</td>
-                        <td></td> <!-- 5 -->
-                        <td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">46</td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">46C</td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">46</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">46</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">26C</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">26C</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">26</td>
-                        <td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">26C</td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">06</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">06</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">06</td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">06</td> <!-- 17 -->
-                        <td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">06C</td>
-                        <td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">16</td>
-                        <td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11a_2', event)" onmouseleave="dymek.style.display='none'">16B</td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-					<tr>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 8 -->
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">56</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">56C</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">56C</td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">36C</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a_1', event)" onmouseleave="dymek.style.display='none'">36C</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a_2', event)" onmouseleave="dymek.style.display='none'">36B</td>
-                        <td></td> <!-- 17 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-					<tr>
-						<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 14.04.2025</td>
-					</tr>
-					<tr>
-						<td style="border: 1px solid #ffffff"></td>
-						<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
-					</tr>
-					<tr>
-						<td style="border: 1px solid #ffffff"></td>
-						<td colspan="15" style="border: 1px solid #ffffff;text-align:left">B - kurs do Bartoszewo Rolna przez Borkowice</td>
-					</tr>
-					<tr>
-						<td style="border: 1px solid #ffffff"></td>
-						<td colspan="15" style="border: 1px solid #ffffff;text-align:left">C - kurs do Celinek przez Borkowice i Bartoszewo</td>
-					</tr>
-					<tr><td style="border: 1px solid #ffffff"><br><br></td></tr>
-					<tr>
-						<td style="border: 1px solid #ffffff;background-color:#fff;text-align:right;font-size:100px;color:#ff9900">!</td>
-						<td colspan="18" style="border:4px solid #ff9900;background-color:#fce5cd;text-align:left;font-weight:bold">Objazd od 14.04.2025<br><br>
-						W związku z zamknięciem skrzyżowania ulic Koszalińska i Traugutta, od 14 kwietnia br. do odwołania zostaje wprowadzony objazd na linii 11 w wariancie z/do Celinek i do Bartoszewa w obu kierunkach przez ulice: Staszica i Macierzy, z pominięciem ulicy Koszalińskiej i Traugutta. Przystanki wyłączone z obsługi: Traugutta. Na trasie objazdu obowiązują wszystkie przystanki.</td>
-						<td style="border: 1px solid #ffffff;background-color:#fff"></td>
-					</tr>
-            </table>
+    <header><script src="headerek.js"></script></div>
+    <div class="tables-container">
+		<table class="rozklad_miejskie">
+			<tr style="border: 2px solid black">
+				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_miejskie">11</b></div>dzienna/miejska</td>
+				<td style="border-right: 1px solid #ffffff"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Osiedle Bukowe<br><br><b>Kierunek:</b> Osiedle Północ</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr class="linie">
+				<th rowspan="4" style="text-align:left">Dzień powszedni</th>
+				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td> <!-- 11 -->
+				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">00</td>
+				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">00</td>
+				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 20 -->
+				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">00</td>
+				<td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">30</td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td> <!-- 11 -->
+				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">30</td>
+				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">30</td> <!-- 20 -->
+				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">30</td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td></td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td> <!-- 8 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 11 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">40</td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">40</td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td></td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td> <!-- 8 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 11 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td></td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Sobota</th>
+				<td></td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">45</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">55</td>
+				<td></td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 11 -->
+				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">10</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">15</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">25</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">30</td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td>
+				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">40</td>
+				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">45</td> <!-- 20 -->
+				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Niedziela / Święta</th>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">45</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">50</td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">55</td>
+				<td></td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 11 -->
+				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">05</td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">10</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">15</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">25</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">30</td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">35</td>
+				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">40</td>
+				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11a', event)" onmouseleave="dymek.style.display='none'">45</td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 11.08.2025</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+			</tr>
+		</table>
 			
 		<div class="ignore-on-mobile">
-            <table class="stop-table">
-                <thead>
-                    <tr>
-                        <th>Przystanek</th>
-                        <th>M</th>
-                        <th>N</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="pr0">Dworzec PKP</td>
-                        <td id="mi0">2</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td id="pr1">Rynek</td>
-                        <td id="mi1">1</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td id="pr2">Niepodległosci/Mieszka I</td>
-                        <td id="mi2">2</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td id="pr3">Szymanowskiego</td>
-                        <td id="mi3">1</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td id="pr4">Staszica</td>
-                        <td id="mi4">1</td>
-                        <td>6</td>
-                    </tr>
-                    <tr class="objazd-text">
-                        <td id="pr21"><span style="margin-left:10px"></span>Macierzy/Staszica</td>
-                        <td id="mi21">1</td>
-                        <td>7</td>
-                    </tr>
-					<tr class="objazd-text">
-                        <td id="pr22"><span style="margin-left:10px"></span>Rondo Powstańców Śląskich</td>
-                        <td id="mi22">1</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td id="pr23"><span style="margin-left:10px"></span>Rondo Walezego</td>
-                        <td id="mi23">2</td>
-                        <td>9</td>
-                    </tr>
-                    <tr>
-                        <td id="pr24"><span style="margin-left:10px"></span>Borkowicka <span class="red-text">nż</span></td>
-                        <td id="mi24">1</td>
-                        <td>11</td>
-                    </tr>
-                    <tr>
-                        <td id="pr25"><span style="margin-left:10px"></span>Borkowice Główna <span class="red-text">nż</span></td>
-                        <td id="mi25">1</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td id="pr26"><span style="margin-left:10px"></span>Borkowice Boczna <span class="red-text">nż</span></td>
-                        <td id="mi26">1</td>
-                        <td>13</td>
-                    </tr>
-                    <tr>
-                        <td id="pr27"><span style="margin-left:10px"></span>Borkowice Działki <span class="red-text">nż</span></td>
-                        <td id="mi27">1</td>
-                        <td>14</td>
-                    </tr>
-					<tr>
-                        <td id="pr28"><span style="margin-left:10px"></span>Bartoszewo Rolna</td>
-						<td id="mi28">1</td>
-						<td>15</td>
-                    </tr>
-                    <tr>
-                        <td id="pr28_end"><span style="margin-left:10px"></span><span class="red-text"> - </span>Bartoszewo Rolna</td>
-						<td></td>
-						<td>15</td>
-                    </tr>
-                    <tr>
-                        <td id="pr29"><span style="margin-left:10px"></span>Bartoszewo Rynek</td>
-                        <td id="mi29">1</td>
-                        <td>16</td>
-                    </tr>
-                    <tr>
-                        <td id="pr30"><span style="margin-left:10px"></span>Bartoszewo Leśna <span class="red-text">nż</span></td>
-                        <td id="mi30">1</td>
-                        <td>17</td>
-                    </tr>
-                    <tr>
-                        <td id="pr31"><span style="margin-left:10px"></span>Celinki Bratków <span class="red-text">nż</span></td>
-                        <td id="mi31">1</td>
-                        <td>18</td>
-                    </tr>
-                    <tr>
-                        <td id="pr32"><span style="margin-left:10px"></span>Celinki Kościół</td>
-                        <td id="mi32">1</td>
-                        <td>19</td>
-                    </tr>
-                    <tr>
-                        <td id="pr33_end"><span style="margin-left:10px"></span><span class="red-text">-</span> Celinki</td>
-                        <td></td>
-                        <td>20</td>
-                    </tr>
-                    <tr class="objazd-text">
-                        <td id="pr5">Traugutta</td>
-                        <td id="mi5">1</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td id="pr6">Połczyńska</td>
-                        <td id="mi6">2</td>
-                        <td>8</td>
-                    </tr>
-					<tr>
-						<td id="pr7">Celinki Opatowicka <span class="red-text">nż</span></td>
-						<td id="mi7">1</td>
-						<td>10</td>
-					</tr>
-					<tr>
-						<td id="pr8">Celinki Bratków <span class="red-text">nż</span></td>
-						<td id="mi8">1</td>
-						<td>11</td>
-					</tr>
-					<tr>
-                        <td id="pr9">Bartoszewo Leśna <span class="red-text">nż</span></td>
-                        <td id="mi9">1</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td id="pr10">Bartoszewo Rynek</td>
-                        <td id="mi10">1</td>
-                        <td>13</td>
-                    </tr>
-					<tr>
-						<td id="pr11">Bartoszewo Rolna</td>
-						<td id="mi11">1</td>
-						<td>14</td>
-					</tr>
-					<tr>
-						<td id="pr12">Borkowice Działki <span class="red-text">nż</span></td>
-						<td id="mi12">1</td>
-						<td>15</td>
-					</tr>
-					<tr>
-						<td id="pr13">Borkowice Boczna <span class="red-text">nż</span></td>
-						<td id="mi13">2</td>
-						<td>16</td>
-					</tr>
-					<tr>
-						<td id="pr14">Karścino <span class="red-text">nż</span></td>
-						<td id="mi14">2</td>
-						<td>18</td>
-					</tr>
-					<tr>
-						<td id="pr15">Czarnowo Dębowa</td>
-						<td id="mi15">1</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td id="pr16_end"><span class="red-text"> - </span>Czarnowo</td>
-						<td></td>
-						<td>21</td>
-					</tr>
-					
-                </tbody>
-            </table>
-			<table style="display:none">
-					<tr>
-                        <td id="pr16">Dworzec PKP</td>
-                        <td id="mi16">2</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td id="pr17">Rynek</td>
-                        <td id="mi17">1</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td id="pr18">Niepodległosci/Mieszka I</td>
-                        <td id="mi18">2</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td id="pr19">Szymanowskiego</td>
-                        <td id="mi19">1</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td id="pr20">Staszica</td>
-                        <td id="mi20">1</td>
-                        <td>6</td>
-                    </tr>
-			</table>
+		<table class="przystanki_miejskie">
+			<tr>
+				<th>Przystanek</th>
+				<th>M</th>
+				<th>N</th>
+			</tr>
+			<tr>
+				<td id="pr0">Osiedle Bukowe</td>
+				<td id="mi0">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr1">Lelewela</td>
+				<td id="mi1">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr2">Śniadeckich</td>
+				<td id="mi2">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr3">Śniadeckich Politechnika</td>
+				<td id="mi3">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr4">Politechnika</td>
+				<td id="mi4">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr5">Dworzec PKP</td>
+				<td id="mi5">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr6">Rynek</td>
+				<td id="mi6">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr7">Zwycięstwa</td>
+				<td id="mi7">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr8">Monte Cassino/Zwycięstwa</td>
+				<td id="mi8">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr9">Zwycięstwa/Chrobrego</td>
+				<td id="mi9">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr10">Liliowa</td>
+				<td id="mi10">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr11">Zwycięstwa/Franciszkańska</td>
+				<td id="mi11">0</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr12">Komandorska</td>
+				<td id="mi12">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr13">Franciszkańska</td>
+				<td id="mi13">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr14">Reymonta</td>
+				<td id="mi14">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr15">Cedrowa/Leśna</td>
+				<td id="mi15">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr16">Leśna Szkoła</td>
+				<td id="mi16">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr17">Leśna</td>
+				<td id="mi17">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr18">Jagodowa</td>
+				<td id="mi18">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr19">Jabłoniowa</td>
+				<td id="mi19">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr20">Krucza</td>
+				<td id="mi20">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr21">Dębowa</td>
+				<td id="mi21">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr22_end"><span class="red-text"> - </span>Osiedle Północ</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
 		</div>
     </div>
-	<br>
+	<br><br><br>
 	<div class="tables-container">
-            <table class="schedule-table">
-					<tr style="border: 2px solid black">
-						<td style="border: 2px solid black;width:155px"><b>Linia<br><span style="font-size:42px">11</span><br></b>miejska/dzienna</td>
-						<td style="border-right: 1px solid #ffffff"></td>
-						<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Czarnowo<br><br><b>Kierunek:</b> Dworzec PKP</td>
-					</tr>
-                    <tr>
-						<th style="width:150px"></th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                        <th>9</th>
-                        <th>10</th>
-                        <th>11</th>
-                        <th>12</th>
-                        <th>13</th>
-                        <th>14</th>
-                        <th>15</th>
-                        <th>16</th>
-                        <th>17</th>
-                        <th>18</th>
-                        <th>19</th>
-                        <th>20</th>
-                        <th>21</th>
-                        <th>22</th>
-                        <th>23</th>
-                    </tr>
-                    <tr class="linie">
-                        <th rowspan="3" style="text-align:left">Dzień powszedni</td>
-                        <td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">40</td> <!-- 5 -->
-                        <td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">10</td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">30</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">30</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">30</td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">20</td> <!-- 17 -->
-                        <td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td>
-                        <td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">30</td>
-                        <td></td> <!-- 20 -->
-                        <td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td>
-                        <td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">30</td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-                    <tr class="linie">
-                        <td></td> <!-- 5 -->
-                        <td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">30</td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">20</td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">20</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">30</td>
-                        <td></td>
-                        <td></td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">55</td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">20</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">20</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">20</td>
-                        <td></td> <!-- 17 -->
-                        <td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">30</td>
-                        <td></td>
-                        <td></td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-					<tr>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">40</td>
-                        <td></td> <!-- 8 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 11 -->
-                        <td></td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">40</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">40</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">40</td>
-                        <td></td> <!-- 17 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-                    <tr>
-                        <th rowspan="1" style="text-align:left">Sobota</td>
-                        <td></td> <!-- 5 -->
-                        <td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">16</td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">16</td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">16</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">16</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">26</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">26</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">26</td>
-                        <td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">26</td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">36</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">36</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">36</td>
-                        <td></td> <!-- 17 -->
-                        <td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">06</td>
-                        <td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">46</td>
-                        <td></td> <!-- 20 -->
-                        <td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">46</td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-                    <tr>
-                        <th rowspan="1" style="text-align:left">Niedziela / Święta</td>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">11</td>
-                        <td></td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">16</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">26</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">26</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">56</td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">36</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">36</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">36</td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">36</td> <!-- 17 -->
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">46</td>
-                        <td></td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-					<tr>
-						<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 14.04.2025</td>
-					</tr>
-					<tr>
-						<td style="border: 1px solid #ffffff"></td>
-						<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
-					</tr>
-					<tr>
-						<td style="border: 1px solid #ffffff"></td>
-						<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
-					</tr>
-            </table>
+		<table class="rozklad_miejskie">
+			<tr style="border: 2px solid black">
+				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_miejskie">11</b></div>dzienna/miejska</td>
+				<td style="border-right: 1px solid #ffffff"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Osiedle Północ<br><br><b>Kierunek:</b> Osiedle Bukowe</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr class="linie">
+				<th rowspan="4" style="text-align:left">Dzień powszedni</th>
+				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">38</td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">08</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">08</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">08</td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">08</td>
+				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td> <!-- 11 -->
+				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">08</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">08</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">08</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">08</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">08</td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">13</td>
+				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">13</td>
+				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 20 -->
+				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td>
+				<td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td>
+				<td onmouseenter="wyswietldymek(23, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td></td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td>
+				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td> <!-- 11 -->
+				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">23</td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">33</td>
+				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">33</td>
+				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">30</td> <!-- 20 -->
+				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">30</td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td></td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">38</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">38</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">38</td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td>
+				<td></td>
+				<td></td> <!-- 11 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">38</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">38</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">38</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">38</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">38</td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td>
+				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td></td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td> <!-- 8 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 11 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">53</td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Sobota</th>
+				<td></td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">03</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">11</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">16</td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">21</td>
+				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">26</td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">31</td> <!-- 11 -->
+				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">36</td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">41</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">46</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">51</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">56</td>
+				<td></td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">01</td>
+				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">06</td>
+				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">11</td> <!-- 20 -->
+				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">16</td>
+				<td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">21</td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Niedziela / Święta</th>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td></td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">16</td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">21</td>
+				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">26</td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">31</td> <!-- 11 -->
+				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">36</td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">41</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">46</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">51</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">56</td>
+				<td></td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">01</td>
+				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">06</td>
+				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11b', event)" onmouseleave="dymek.style.display='none'">11</td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 11.08.2025</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+			</tr>
+		</table>
 			
 		<div class="ignore-on-mobile">
-            <table class="stop-table">
-                <thead>
-                    <tr>
-                        <th>Przystanek</th>
-                        <th>M</th>
-                        <th>N</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="pr34">Czarnowo</td>
-                        <td id="mi34">1</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td id="pr35">Czarnowo Dębowa</td>
-                        <td id="mi35">2</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td id="pr36">Karścino <span class="red-text">nż</span></td>
-                        <td id="mi36">2</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td id="pr37">Borkowice Boczna <span class="red-text">nż</span></td>
-                        <td id="mi37">1</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td id="pr38">Borkowice Działki <span class="red-text">nż</span></td>
-                        <td id="mi38">1</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td id="pr39">Bartoszewo Rolna</td>
-                        <td id="mi39">1</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td id="pr40">Bartoszewo Rynek</td>
-                        <td id="mi40">1</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td id="pr41">Bartoszewo Leśna <span class="red-text">nż</span></td>
-                        <td id="mi41">1</td>
-                        <td>9</td>
-                    </tr>
-                    <tr>
-                        <td id="pr42">Celinki Bratków <span class="red-text">nż</span></td>
-                        <td id="mi42">1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td id="pr43">Celiki Opatowicka <span class="red-text">nż</span></td>
-                        <td id="mi43">2</td>
-                        <td>11</td>
-                    </tr>
-                    <tr>
-                        <td id="pr44">Połczyńska</td>
-                        <td id="mi44">1</td>
-                        <td>13</td>
-                    </tr>
-                    <tr>
-                        <td id="pr45">Traugutta</td>
-                        <td id="mi45">1</td>
-                        <td>14</td>
-                    </tr>
-                    <tr>
-                        <td id="pr46">Staszica</td>
-                        <td id="mi46">2</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td id="pr47">Szymanowskiego</td>
-                        <td id="mi47">2</td>
-                        <td>17</td>
-                    </tr>
-                    <tr>
-                        <td id="pr48">Niepodległosci/Mieszka I</td>
-                        <td id="mi48">2</td>
-                        <td>19</td>
-                    </tr>
-                    <tr>
-                        <td id="pr49">Rynek</td>
-                        <td id="mi49">1</td>
-                        <td>21</td>
-                    </tr>
-					<tr>
-						<td id="pr50_end"><span class="red-text"> - </span>Dworzec PKP</td>
-						<td></td>
-						<td>22</td>
-					</tr>
-                </tbody>
-            </table>
-		</div>
-    </div>
-	<br>
-	<div class="tables-container">
-            <table class="schedule-table">
-					<tr style="border: 2px solid black">
-						<td style="border: 2px solid black;width:155px"><b>Linia<br><span style="font-size:42px">11</span><br></b>miejska/dzienna</td>
-						<td style="border-right: 1px solid #ffffff"></td>
-						<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Celinki<br><br><b>Kierunek:</b> Dworzec PKP</td>
-					</tr>
-                    <tr>
-						<th style="width:150px"></th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                        <th>9</th>
-                        <th>10</th>
-                        <th>11</th>
-                        <th>12</th>
-                        <th>13</th>
-                        <th>14</th>
-                        <th>15</th>
-                        <th>16</th>
-                        <th>17</th>
-                        <th>18</th>
-                        <th>19</th>
-                        <th>20</th>
-                        <th>21</th>
-                        <th>22</th>
-                        <th>23</th>
-                    </tr>
-                    <tr class="linie">
-                        <th rowspan="2" style="text-align:left">Dzień powszedni</td>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">42</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">22</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">22</td>
-                        <td></td> <!-- 14 -->
-                        <td></td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 17 -->
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">02</td>
-                        <td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 20 -->
-                        <td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">32</td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-                    <tr>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 8 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 11 -->
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">42</td>
-                        <td></td> <!-- 14 -->
-                        <td></td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">37</td> <!-- 17 -->
-                        <td></td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">32</td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-                    <tr class="linie">
-                        <th rowspan="2" style="text-align:left">Sobota</td>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">48</td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">48</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">48</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">58</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">58</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">58</td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">08</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">08</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">08</td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">08</td> <!-- 17 -->
-                        <td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">48</td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">48</td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-					<tr>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 8 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 11 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 14 -->
-                        <td></td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">38</td> <!-- 17 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-                    <tr>
-                        <th rowspan="1" style="text-align:left">Niedziela / Święta</td>
-                        <td></td> <!-- 5 -->
-                        <td></td>
-                        <td></td>
-                        <td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">18</td> <!-- 8 -->
-                        <td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">58</td>
-                        <td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">58</td>
-                        <td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">58</td> <!-- 11 -->
-                        <td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">28</td>
-                        <td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">28</td>
-                        <td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">08</td> <!-- 14 -->
-                        <td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">08</td>
-                        <td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">08</td>
-                        <td></td> <!-- 17 -->
-                        <td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '11b_1', event)" onmouseleave="dymek.style.display='none'">48</td>
-                        <td></td>
-                        <td></td> <!-- 20 -->
-                        <td></td>
-                        <td></td>
-                        <td></td> <!-- 23 -->
-                    </tr>
-					<tr>
-						<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 14.12.2024</td>
-					</tr>
-					<tr>
-						<td style="border: 1px solid #ffffff"></td>
-						<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
-					</tr>
-					<tr>
-						<td style="border: 1px solid #ffffff"></td>
-						<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
-					</tr>
-					<tr><td style="border: 1px solid #ffffff"><br><br></td></tr>
-					<tr>
-						<td style="border: 1px solid #ffffff;background-color:#fff;text-align:right;font-size:100px;color:#ff9900">!</td>
-						<td colspan="18" style="border:4px solid #ff9900;background-color:#fce5cd;text-align:left;font-weight:bold">Objazd od 14.04.2025<br><br>
-						W związku z zamknięciem skrzyżowania ulic Koszalińska i Traugutta, od 14 kwietnia br. do odwołania zostaje wprowadzony objazd na linii 11 w wariancie z/do Celinek i do Bartoszewa w obu kierunkach przez ulice: Staszica i Macierzy, z pominięciem ulicy Koszalińskiej i Traugutta. Przystanki wyłączone z obsługi: Traugutta. Na trasie objazdu obowiązują wszystkie przystanki.</td>
-						<td style="border: 1px solid #ffffff;background-color:#fff"></td>
-					</tr>
-            </table>
-			
-		<div class="ignore-on-mobile">
-            <table class="stop-table">
-                <thead>
-                    <tr>
-                        <th>Przystanek</th>
-                        <th>M</th>
-                        <th>N</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="pr51">Celinki</td>
-                        <td id="mi51">1</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td id="pr52">Celinki Kościół</td>
-                        <td id="mi52">1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td id="pr53">Celinki Bratków <span class="red-text">nż</span></td>
-                        <td id="mi53">1</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td id="pr54">Bartoszewo Leśna <span class="red-text">nż</span></td>
-                        <td id="mi54">1</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td id="pr55">Bartoszewo Rynek</td>
-                        <td id="mi55">1</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td id="pr56">Bartoszewo Rolna</td>
-                        <td id="mi56">1</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td id="pr57">Borkowice Działki <span class="red-text">nż</span></td>
-                        <td id="mi57">1</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td id="pr58">Borkowice Boczna <span class="red-text">nż</span></td>
-                        <td id="mi58">1</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td id="pr59">Borkowice Główna <span class="red-text">nż</span></td>
-                        <td id="mi59">2</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td id="pr60">Andersa</td>
-                        <td id="mi60">1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td id="pr61">Rondo Walezego</td>
-                        <td id="mi61">1</td>
-                        <td>11</td>
-                    </tr>
-                    <tr class="objazd-text">
-                        <td id="pr62">Rondo Powstańców Śląskich</td>
-                        <td id="mi62">1</td>
-                        <td>12</td>
-                    </tr>
-					<tr class="objazd-text">
-                        <td id="pr63">Macierzy/Staszica</td>
-                        <td id="mi63">1</td>
-                        <td>13</td>
-                    </tr>
-                    <tr>
-                        <td id="pr64">Staszica</td>
-                        <td id="mi64">2</td>
-                        <td>14</td>
-                    </tr>
-                    <tr>
-                        <td id="pr65">Szymanowskiego</td>
-                        <td id="mi65">2</td>
-                        <td>16</td>
-                    </tr>
-                    <tr>
-                        <td id="pr66">Niepodległosci/Mieszka I</td>
-                        <td id="mi66">2</td>
-                        <td>18</td>
-                    </tr>
-                    <tr>
-                        <td id="pr67">Rynek</td>
-                        <td id="mi67">1</td>
-                        <td>20</td>
-                    </tr>
-					<tr>
-						<td id="pr68_end"><span class="red-text"> - </span>Dworzec PKP</td>
-						<td></td>
-						<td>21</td>
-					</tr>
-                </tbody>
-            </table>
+		<table class="przystanki_miejskie">
+			<tr>
+				<th>Przystanek</th>
+				<th>M</th>
+				<th>N</th>
+			</tr>
+			<tr>
+				<td id="pr25">Osiedle Północ</td>
+				<td id="mi25">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr26">Dębowa</td>
+				<td id="mi26">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr27">Krucza</td>
+				<td id="mi27">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr28">Jabłoniowa</td>
+				<td id="mi28">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr29">Jagodowa</td>
+				<td id="mi29">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr30">Leśna</td>
+				<td id="mi30">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr31">Leśna Szkoła</td>
+				<td id="mi31">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr32">Cedrowa/Leśna</td>
+				<td id="mi32">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr33">Reymonta</td>
+				<td id="mi33">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr34">Franciszkańska</td>
+				<td id="mi34">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr35">Komandorska</td>
+				<td id="mi35">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr36">Zwycięstwa/Franciszkańska</td>
+				<td id="mi36">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr37">Liliowa</td>
+				<td id="mi37">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr38">Zwycięstwa/Chrobrego</td>
+				<td id="mi38">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr39">Monte Cassino/Zwycięstwa</td>
+				<td id="mi39">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr40">Zwycięstwa</td>
+				<td id="mi40">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr41">Rynek</td>
+				<td id="mi41">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr42">Dworzec PKP</td>
+				<td id="mi42">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr43">Politechnika</td>
+				<td id="mi43">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr44">Śniadeckich Politechnika</td>
+				<td id="mi44">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr45">Śniadeckich Hala</td>
+				<td id="mi45">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr46">Śniadeckich</td>
+				<td id="mi46">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr47">Lelewela</td>
+				<td id="mi47">0</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr48_end"><span class="red-text"> - </span>Osiedle Bukowe</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
 		</div>
     </div>
 	<div id="dymek"></div>

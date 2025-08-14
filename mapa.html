@@ -2,122 +2,175 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>MZK OPATOWICE - MAPKA</title>
+    <title>MZK OPATOWICE - Mapa linii</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="zdjecia/mzk.png">
 </head>
 <body>
     <header><script src="headerek.js"></script></div>
+	<div>
 	<div class="menu-mapka">
 	<input type="checkbox" id="linia2" onclick="aktualizacja_mapki()">
-	<label for="linia2">Linia 2</label><br>
+	<label for="linia2">Linia 2</label><hr style="background-color:#FF5000"><br>
+	<input type="checkbox" id="linia3" onclick="aktualizacja_mapki()">
+	<label for="linia3">Linia 3</label><hr style="background-color:#FFA000"><br>
 	<input type="checkbox" id="linia4" onclick="aktualizacja_mapki()">
-	<label for="linia4">Linia 4</label><br>
+	<label for="linia4">Linia 4</label><hr style="background-color:#FFF000"><br>
 	<input type="checkbox" id="linia5" onclick="aktualizacja_mapki()">
-	<label for="linia5">Linia 5</label><br>
-	<input type="checkbox" id="linia7" onclick="aktualizacja_mapki()">
-	<label for="linia7">Linia 7</label><br>
+	<label for="linia5">Linia 5</label><hr style="background-color:#AFF000"><br>
+	<input type="checkbox" id="linia8" onclick="aktualizacja_mapki()">
+	<label for="linia8">Linia 8</label><hr style="background-color:#4BBC00"><br>
+	<input type="checkbox" id="linia9" onclick="aktualizacja_mapki()">
+	<label for="linia9">Linia 9</label><hr style="background-color:#00A050"><br>
 	<input type="checkbox" id="linia11" onclick="aktualizacja_mapki()">
-	<label for="linia11">Linia 11</label><br><br>
-	<button id="pokaz-all" onclick="pokaz_all()">Pokaż wszystko</button>
-	<button id="ukryj-all" onclick="ukryj_all()">Ukryj wszystko</button><br><br>
-	<button id="zoom">Powiększ</button>
+	<label for="linia11">Linia 11</label><hr style="background-color:#00A0A0"><br>
+	<input type="checkbox" id="linia16" onclick="aktualizacja_mapki()">
+	<label for="linia16">Linia 16</label><hr style="background-color:#00A0F0"><br>
+	<input type="checkbox" id="linia29" onclick="aktualizacja_mapki()">
+	<label for="linia29">Linia 29</label><hr style="background-color:#78A0F0"><br>
+	<input type="checkbox" id="linia37" onclick="aktualizacja_mapki()">
+	<label for="linia37">Linia 37</label><hr style="background-color:#FF7F7F"><br>
+	<input type="checkbox" id="linia40" onclick="aktualizacja_mapki()">
+	<label for="linia40">Linia 40</label><hr style="background-color:#1E1E1E"><br>
+	<input type="checkbox" id="linia44" onclick="aktualizacja_mapki()">
+	<label for="linia44">Linia 44</label><hr style="background-color:#3F3F3F"><br><br>
+	
+	<button id="pokaz-all" onclick="pokaz_ukryjLinie()">Pokaż wszystkie linie</button><br><br>
+	<!--<button id="zoom" onclick="przyciskZoom()">Powiększ mapę</button>-->
 	
 	<p><b>Na mapie nie są uwzględnione objazdy</b></p>
-	<p>Ostatnia aktualizacja: 18.05<p>
-	<p>© Copyright MZK Opatowice 2025  Sp. z o. o.</p>
+	<p>Aktualizacja: 13.08.25<p>
+	<p>© MZK Opatowice 2025  Sp. z o. o.</p>
 	</div>
 	
-	<div style="width:1408px;height:1344px;position:relative;float:left" id="cala_mapka">
-	<img style="width:100%;height:100%;position:absolute;z-index:-1" src="zdjecia/mapka.png" id="mapka">
-	<img style="width:100%;height:100%;position:absolute;display:none" src="zdjecia/linia2.png" id="mapka_linia2">
-	<img style="width:100%;height:100%;position:absolute;display:none" src="zdjecia/linia4.png" id="mapka_linia4">
-	<img style="width:100%;height:100%;position:absolute;display:none" src="zdjecia/linia5.png" id="mapka_linia5">
-	<img style="width:100%;height:100%;position:absolute;display:none" src="zdjecia/linia7.png" id="mapka_linia7">
-	<img style="width:100%;height:100%;position:absolute;display:none" src="zdjecia/linia11.png" id="mapka_linia11">
+	<div id="cala_mapka">
+	<img src="zdjecia/linia2.png" id="mapka_linia2">
+	<img src="zdjecia/linia3.png" id="mapka_linia3">
+	<img src="zdjecia/linia4.png" id="mapka_linia4">
+	<img src="zdjecia/linia5.png" id="mapka_linia5">
+	<img src="zdjecia/linia8.png" id="mapka_linia8">
+	<img src="zdjecia/linia9.png" id="mapka_linia9">
+	<img src="zdjecia/linia11.png" id="mapka_linia11">
+	<img src="zdjecia/linia16.png" id="mapka_linia16">
+	<img src="zdjecia/linia29.png" id="mapka_linia29">
+	<img src="zdjecia/linia37.png" id="mapka_linia37">
+	<img src="zdjecia/linia40.png" id="mapka_linia40">
+	<img src="zdjecia/linia44.png" id="mapka_linia44">
 	</div>
-</body>
+	</div>
 <script>
-//document.addEventListener("DOMContentLoaded", () => {
-    const img = document.getElementById("mapka");
-    const container = document.getElementById("cala_mapka");
-    const toggleButton = document.getElementById("zoom");
+    const img = document.getElementById("podklad");
+    const calaMapka = document.getElementById("cala_mapka");
+    const zoom = document.getElementById("zoom");
 
-    let isEnlarged = false; // Flaga wskazująca, czy div jest powiększony
+    let duzyDiv = false; // Flaga wskazująca, czy div jest powiększony
+	let pokazWszystkie = false;
 
-    function adjustSizes() {
-		isEnlarged = false;
-		if (!isEnlarged) toggleButton.textContent = "Powiększ";
-		else toggleButton.textContent = "Pomniejsz";
+    function zmianaRozmiaruOkna() {
+		duzyDiv = false;
+		if (!duzyDiv) zoom.textContent = "Powiększ mapę";
+		else zoom.textContent = "Pomniejsz mapę";
 
         // Ustawienie szerokości i wysokości zdjęcia na 90% szerokości strony
-        const imgWidth = window.innerWidth * 0.88;
+        const imgWidth = window.innerWidth * 0.89;
+		const imgHeight = window.innerHeight * 0.89;
         img.style.width = `${imgWidth}px`;
-		img.style.height = `auto`;
+		img.style.height = `${imgHeight}px`;
 
         // Dopasowanie rozmiaru diva na podstawie zdjęcia
         const { width, height } = img.getBoundingClientRect();
-        container.style.width = `${width}px`;
-        container.style.height = `${height}px`;
+        calaMapka.style.width = `${width}px`;
+        calaMapka.style.height = `${height}px`;
 		
 		img.style.width = "100%";
         img.style.height = "100%";
     }
 
-    function toggleSize() {
-        if (isEnlarged) {
-            const originalWidth = parseFloat(container.style.width) / 2;
-			const originalHeight = parseFloat(container.style.height) / 2;
-			container.style.width = `${originalWidth}px`;
-			container.style.height = `${originalHeight}px`;
-			toggleButton.textContent = "Powiększ";
-		} else {
-			// Podwojenie rozmiaru
-			const enlargedWidth = parseFloat(container.style.width) * 2;
-			const enlargedHeight = parseFloat(container.style.height) * 2;
-			container.style.width = `${enlargedWidth}px`;
-			container.style.height = `${enlargedHeight}px`;
-			toggleButton.textContent = "Pomniejsz";
+    function przyciskZoom() {
+        if (duzyDiv) {
+            const originalWidth = parseFloat(calaMapka.style.width) / 2;
+			const originalHeight = parseFloat(calaMapka.style.height) / 2;
+			calaMapka.style.width = `${originalWidth}px`;
+			calaMapka.style.height = `${originalHeight}px`;
+			zoom.textContent = "Powiększ mapę";
+		} 
+		else {
+			const enlargedWidth = parseFloat(calaMapka.style.width) * 2;
+			const enlargedHeight = parseFloat(calaMapka.style.height) * 2;
+			calaMapka.style.width = `${enlargedWidth}px`;
+			calaMapka.style.height = `${enlargedHeight}px`;
+			zoom.textContent = "Pomniejsz mapę";
 		}
-        isEnlarged = !isEnlarged; // Zmień flagę
+        duzyDiv = !duzyDiv; // Zmień flagę
     }
 
     // Wywołanie przy załadowaniu strony i przy zmianie rozmiaru okna
-    adjustSizes();
-    window.addEventListener("resize", adjustSizes);
+    //zmianaRozmiaruOkna();
+    //window.addEventListener("resize", zmianaRozmiaruOkna);
 
-    // Obsługa kliknięcia przycisku
-    toggleButton.addEventListener("click", toggleSize);
-//});
 
 function aktualizacja_mapki(){
 if (document.getElementById("linia2").checked) document.getElementById("mapka_linia2").style.display = "block";
 else document.getElementById("mapka_linia2").style.display = "none";
+if (document.getElementById("linia3").checked) document.getElementById("mapka_linia3").style.display = "block";
+else document.getElementById("mapka_linia3").style.display = "none";
 if (document.getElementById("linia4").checked) document.getElementById("mapka_linia4").style.display = "block";
 else document.getElementById("mapka_linia4").style.display = "none";
 if (document.getElementById("linia5").checked) document.getElementById("mapka_linia5").style.display = "block";
 else document.getElementById("mapka_linia5").style.display = "none";
-if (document.getElementById("linia7").checked) document.getElementById("mapka_linia7").style.display = "block";
-else document.getElementById("mapka_linia7").style.display = "none";
+if (document.getElementById("linia8").checked) document.getElementById("mapka_linia8").style.display = "block";
+else document.getElementById("mapka_linia8").style.display = "none";
+if (document.getElementById("linia9").checked) document.getElementById("mapka_linia9").style.display = "block";
+else document.getElementById("mapka_linia9").style.display = "none";
 if (document.getElementById("linia11").checked) document.getElementById("mapka_linia11").style.display = "block";
 else document.getElementById("mapka_linia11").style.display = "none";
+if (document.getElementById("linia16").checked) document.getElementById("mapka_linia16").style.display = "block";
+else document.getElementById("mapka_linia16").style.display = "none";
+if (document.getElementById("linia29").checked) document.getElementById("mapka_linia29").style.display = "block";
+else document.getElementById("mapka_linia29").style.display = "none";
+if (document.getElementById("linia37").checked) document.getElementById("mapka_linia37").style.display = "block";
+else document.getElementById("mapka_linia37").style.display = "none";
+if (document.getElementById("linia40").checked) document.getElementById("mapka_linia40").style.display = "block";
+else document.getElementById("mapka_linia40").style.display = "none";
+if (document.getElementById("linia44").checked) document.getElementById("mapka_linia44").style.display = "block";
+else document.getElementById("mapka_linia44").style.display = "none";
 }
 
-function pokaz_all(){
-document.getElementById("linia2").checked = true;
-document.getElementById("linia4").checked = true;
-document.getElementById("linia5").checked = true;
-document.getElementById("linia7").checked = true;
-document.getElementById("linia11").checked = true;
-aktualizacja_mapki();
+function pokaz_ukryjLinie(){
+if (!pokazWszystkie) {
+	document.getElementById("linia2").checked = true;
+	document.getElementById("linia3").checked = true;
+	document.getElementById("linia4").checked = true;
+	document.getElementById("linia5").checked = true;
+	document.getElementById("linia8").checked = true;
+	document.getElementById("linia9").checked = true;
+	document.getElementById("linia11").checked = true;
+	document.getElementById("linia16").checked = true;
+	document.getElementById("linia29").checked = true;
+	document.getElementById("linia37").checked = true;
+	document.getElementById("linia40").checked = true;
+	document.getElementById("linia44").checked = true;
+	aktualizacja_mapki();
+	document.getElementById("pokaz-all").textContent = "Ukryj wszystkie linie";
+	pokazWszystkie = true;
+} else {
+	document.getElementById("linia2").checked = false;
+	document.getElementById("linia3").checked = false;
+	document.getElementById("linia4").checked = false;
+	document.getElementById("linia5").checked = false;
+	document.getElementById("linia8").checked = false;
+	document.getElementById("linia9").checked = false;
+	document.getElementById("linia11").checked = false;
+	document.getElementById("linia16").checked = false;
+	document.getElementById("linia29").checked = false;
+	document.getElementById("linia37").checked = false;
+	document.getElementById("linia40").checked = false;
+	document.getElementById("linia44").checked = false;
+	aktualizacja_mapki();
+	document.getElementById("pokaz-all").textContent = "Pokaż wszystkie linie";
+	pokazWszystkie = false;
 }
-function ukryj_all(){
-document.getElementById("linia2").checked = false;
-document.getElementById("linia4").checked = false;
-document.getElementById("linia5").checked = false;
-document.getElementById("linia7").checked = false;
-document.getElementById("linia11").checked = false;
-aktualizacja_mapki();
 }
 </script>
+</body>
 </html>

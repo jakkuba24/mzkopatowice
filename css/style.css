@@ -17,17 +17,18 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	margin-top: 50px;
+
 }
 
 .logo {
     filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
 }
 
-/* Pasek nawigacji */
+
+
+
+
+/* Pasek nawigacji HEADER + NAV */
 
 header {
     background-color: #1f2f6d;
@@ -51,15 +52,6 @@ header a:hover {
     color: #cccccc;
 }
 
-/* Kontener przycisków */
-
-.buttons-container {
-    display: flex;
-    gap: 25px;
-}
-
-/* Dodatkowe */
-
 .rounded-box {
     background-color: #1f2f6d;
     color: white;
@@ -82,12 +74,32 @@ header a:hover {
     height: 50px;
     margin-right: 12px;
 }
+.przycisk_mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin-top: 50px;
+    gap: 25px;
+}
 
-/* Przycisk linii */
 
-.line-button, .line-button_objazd {
+/* Przyciski wyboru linii */
+.wybor_linii {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+	margin-top: 50px;
+	height: 143px;
+	margin: 0px auto;
+}
+
+
+
+.line-button_miejskie, .line-button_podmiejskie, .line-button_pospieszne, .line-button_nocne, .line-button_objazd {
     height: 50px;
-	width: 50px;
+	min-width: 50px;
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
@@ -97,9 +109,9 @@ header a:hover {
     transition: background-color 0.3s ease, transform 0.2s ease;
 	border-radius: 50%;
 	float: left;
-	margin: 6% 7px 0 7px;
+	margin: 0 7px 0 7px;
 }
-.line-button a, .line-button_objazd a {
+.line-button_miejskie a, .line-button_podmiejskie a, .line-button_pospieszne a, .line-button_nocne a, .line-button_objazd a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
@@ -107,55 +119,102 @@ header a:hover {
     transition: color 0.3s ease;
 	padding: 0 3%;
 }
-.line-button:hover {
+
+.objazd {
+	background: linear-gradient(135deg, rgba(255,153,0,0) 0%,rgba(255,153,0,0) 49%,rgba(255,153,0,1) 50%,rgba(255,153,0,1) 100%);
+}
+
+.line-button_miejskie {
+	background-color: #0094ff;
+}
+.line-button_miejskie:hover {
+	background-color: #0047aa;
+	transform: scale(1.02);
+}
+
+.line-button_podmiejskie {
+	background-color: #24378d;
+}
+.line-button_podmiejskie:hover {
     background-color: #1b2a65;
     transform: scale(1.02);
 }
 
-.line-button {
-	background-color: #24378d;
+.line-button_pospieszne {
+	background-color: #ff0000;
 }
-.line-button_objazd {
-	background-color: #ff9900;
+.line-button_pospieszne:hover {
+	background-color: #aa0000;
+	transform: scale(1.02);
 }
-.line-button_objazd:hover {
-	background-color: #aa5500;
+
+.line-button_nocne {
+	background-color: #333;
+}
+.line-button_nocne:hover {
+	background-color: #000;
 	transform: scale(1.02);
 }
 
 
 
-/* Przycisk mapek */
+
+
+/* Mapka */
 
 .menu-mapka {
 	background-color: #24378d;
-	border: 2px solid #555555;
-	border-radius: 5px;
-	width: 9.9%;
+	padding: 0.2%;
+	max-width: 9.5%;
+	width: 105px;
 	color: white;
 	float: left;
 }
 
 .menu-mapka button {
-	background-color: #24378d;
-	border: none;
-	text-align: left;
-	width: 95%;
-	color: white;
+	background-color: #ccc;
+	border: 2px solid #000;
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 5px;
 	font-weight: bold;
-}
-
-.menu-mapka button:hover {
-	background-color: #1b2a65;
-	transform: scale(1.01);
 }
 
 .menu-mapka p {
 	margin-left: 5px;
-	font-size: 13px;
+	font-size: 12px;
+}
+.menu-mapka input, .menu-mapka label {
+	float: left;
+}
+.menu-mapka hr {
+	width: 15px;
+	height: 8px;
+	float: left;
+	margin: 6px 0 6px 7px;
+	border: 1px solid black;
 }
 
-/* Strona główna */
+#cala_mapka {
+	position: relative;
+	float: left;
+	background-image: url("../zdjecia/mapka.png");
+	width: 88%;
+	height: 1600px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#cala_mapka img {
+	position: absolute;
+	width: 100%;
+	display: none;
+}
+
+
+
+
+
+/* Strona główna AKTUALNOSCI */
 
 .aktualnosci {
 	margin-left: 10%;
@@ -198,18 +257,21 @@ header a:hover {
 	margin-left: 8%;
 }
 
-/* Tabela */
+
+
+
+
+/* ROZKLADY JAZDY */
+/* ustawienia tabel */
 
 table {
     border-collapse: collapse;
     margin-top: 20px;
 }
 table th, table td {
-    
     padding: 4px;
 }
 table th {
-    background-color: #C9DAF8;
     color: black;
 }
 .tables-container::after {
@@ -218,24 +280,36 @@ table th {
 	  display: table;
 }
 
-/* tabelki rozkładowe*/
+/* tabelki rozkładowe */
 
-.schedule-table {
+.rozklad_miejskie, .rozklad_podmiejskie, .rozklad_pospieszne, .rozklad_nocne {
     float:left;
     width:auto;
     margin:auto;
 	margin-left: 1%;
 	text-align: center;
 }
-.schedule-table th, .schedule-table td {
+.rozklad_miejskie th, .rozklad_podmiejskie th, .rozklad_pospieszne th, .rozklad_nocne th, .rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_nocne td {
 	border: 1px solid #000000;
 }
-.schedule-table td {
+.rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_nocne td {
     width: 40px;
 }
 
-.ramka_miejskie {
-	border: 4px solid #00B1EB;
+.rozklad_miejskie th, .przystanki_miejskie th {
+	background-color: #C9DAF8;
+}
+.rozklad_podmiejskie th, .przystanki_podmiejskie th {
+	background-color: #a4c2f4;
+}
+.rozklad_pospieszne th, .przystanki_pospieszne th {
+	background-color: #f4cccc;
+}
+.rozklad_nocne th, .przystanki_nocne th {
+	background-color: #d9d9d9;
+}
+
+.ramka_miejskie, .ramka_podmiejskie, .ramka_pospieszne, .ramka_nocne {
 	font-size: 42px;
 	margin-left: 41.5px;
 	padding: 4px;
@@ -243,10 +317,28 @@ table th {
 	width: 56px;
 	height: 56px;
 }
+.ramka_miejskie {
+	border: 4px solid #00B1EB;
+}
+.ramka_podmiejskie {
+	border: 4px solid #24378d;
+}
+.ramka_pospieszne {
+	border: 4px solid #ff0000;
+}
+.ramka_nocne {
+	border: 4px solid #000;
+}
 
-/* */
 
-.stop-table {
+.linie td {
+	border-bottom: 1px solid #ffffff;
+	padding-bottom: 0;
+}
+
+/* tabelki z przstankami */
+
+.przystanki_miejskie, .przystanki_podmiejskie, .przystanki_pospieszne, .przystanki_nocne {
     float:left;
     width:auto;
     margin:auto;
@@ -254,7 +346,7 @@ table th {
 	margin-right: 1%;
 	border: 1px solid #000000;
 }
-.stop-table th {
+.przystanki_miejskie th, .przystanki_podmiejskie th, .przystanki_pospieszne th, .przystanki_nocne th {
 	text-align: left;
 }
 
@@ -287,12 +379,6 @@ table th {
 
 
 
-.linie td {
-	border-bottom: 1px solid #ffffff;
-	padding-bottom: 0;
-}
-
-
 
 
 @media screen and (max-width: 768px) {
@@ -300,6 +386,11 @@ table th {
         display: none;
     }
 }
+
+
+
+
+
 
 .changelog {
 	justify-content: center;
