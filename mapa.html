@@ -10,14 +10,16 @@
     <header><script src="headerek.js"></script></div>
 	<div>
 	<div class="menu-mapka">
+	<input type="checkbox" id="linia1" onclick="aktualizacja_mapki()">
+	<label for="linia2">Linia 1</label><hr style="background-color:#7FFFC5"><br>
 	<input type="checkbox" id="linia2" onclick="aktualizacja_mapki()">
 	<label for="linia2">Linia 2</label><hr style="background-color:#FF5000"><br>
-	<input type="checkbox" id="linia3" onclick="aktualizacja_mapki()">
-	<label for="linia3">Linia 3</label><hr style="background-color:#FFA000"><br>
 	<input type="checkbox" id="linia4" onclick="aktualizacja_mapki()">
 	<label for="linia4">Linia 4</label><hr style="background-color:#FFF000"><br>
 	<input type="checkbox" id="linia5" onclick="aktualizacja_mapki()">
 	<label for="linia5">Linia 5</label><hr style="background-color:#AFF000"><br>
+	<input type="checkbox" id="linia6" onclick="aktualizacja_mapki()">
+	<label for="linia3">Linia 6</label><hr style="background-color:#FFA000"><br>
 	<input type="checkbox" id="linia8" onclick="aktualizacja_mapki()">
 	<label for="linia8">Linia 8</label><hr style="background-color:#4BBC00"><br>
 	<input type="checkbox" id="linia9" onclick="aktualizacja_mapki()">
@@ -39,15 +41,16 @@
 	<!--<button id="zoom" onclick="przyciskZoom()">Powiększ mapę</button>-->
 	
 	<p><b>Na mapie nie są uwzględnione objazdy</b></p>
-	<p>Aktualizacja: 06.10.25<p>
+	<p>Aktualizacja: 07.10.25<p>
 	<p>© MZK Opatowice 2025  Sp. z o. o.</p>
 	</div>
 	
 	<div id="cala_mapka">
+	<img src="zdjecia/linia1.png" id="mapka_linia1">
 	<img src="zdjecia/linia2.png" id="mapka_linia2">
-	<img src="zdjecia/linia3.png" id="mapka_linia3">
 	<img src="zdjecia/linia4.png" id="mapka_linia4">
 	<img src="zdjecia/linia5.png" id="mapka_linia5">
+	<img src="zdjecia/linia6.png" id="mapka_linia6">
 	<img src="zdjecia/linia8.png" id="mapka_linia8">
 	<img src="zdjecia/linia9.png" id="mapka_linia9">
 	<img src="zdjecia/linia11.png" id="mapka_linia11">
@@ -110,14 +113,16 @@
 
 
 function aktualizacja_mapki(){
+if (document.getElementById("linia1").checked) document.getElementById("mapka_linia1").style.display = "block";
+else document.getElementById("mapka_linia1").style.display = "none";
 if (document.getElementById("linia2").checked) document.getElementById("mapka_linia2").style.display = "block";
 else document.getElementById("mapka_linia2").style.display = "none";
-if (document.getElementById("linia3").checked) document.getElementById("mapka_linia3").style.display = "block";
-else document.getElementById("mapka_linia3").style.display = "none";
 if (document.getElementById("linia4").checked) document.getElementById("mapka_linia4").style.display = "block";
 else document.getElementById("mapka_linia4").style.display = "none";
 if (document.getElementById("linia5").checked) document.getElementById("mapka_linia5").style.display = "block";
 else document.getElementById("mapka_linia5").style.display = "none";
+if (document.getElementById("linia6").checked) document.getElementById("mapka_linia6").style.display = "block";
+else document.getElementById("mapka_linia6").style.display = "none";
 if (document.getElementById("linia8").checked) document.getElementById("mapka_linia8").style.display = "block";
 else document.getElementById("mapka_linia8").style.display = "none";
 if (document.getElementById("linia9").checked) document.getElementById("mapka_linia9").style.display = "block";
@@ -138,10 +143,11 @@ else document.getElementById("mapka_linia44").style.display = "none";
 
 function pokaz_ukryjLinie(){
 if (!pokazWszystkie) {
+	document.getElementById("linia1").checked = true;
 	document.getElementById("linia2").checked = true;
-	document.getElementById("linia3").checked = true;
 	document.getElementById("linia4").checked = true;
 	document.getElementById("linia5").checked = true;
+	document.getElementById("linia6").checked = true;
 	document.getElementById("linia8").checked = true;
 	document.getElementById("linia9").checked = true;
 	document.getElementById("linia11").checked = true;
@@ -154,10 +160,11 @@ if (!pokazWszystkie) {
 	document.getElementById("pokaz-all").textContent = "Ukryj wszystkie linie";
 	pokazWszystkie = true;
 } else {
+	document.getElementById("linia1").checked = false;
 	document.getElementById("linia2").checked = false;
-	document.getElementById("linia3").checked = false;
 	document.getElementById("linia4").checked = false;
 	document.getElementById("linia5").checked = false;
+	document.getElementById("linia6").checked = false;
 	document.getElementById("linia8").checked = false;
 	document.getElementById("linia9").checked = false;
 	document.getElementById("linia11").checked = false;
