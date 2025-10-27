@@ -252,6 +252,9 @@ header a:hover {
 	color: orange;
 	margin-left: 3%;
 }
+.aktualnosci .li2 span {
+	color: #333;
+}
 
 .aktualnosci h2 {
 	color: red;

@@ -6,7 +6,7 @@ document.write('<a href="index.html"><img src="zdjecia/mzk1.png" alt="Logo MZK" 
 document.write('<div class="wybor_linii">');
 document.write('<div class="line-button_miejskie"><a href="linia_1.html">1</a></div>');
 document.write('<div class="line-button_miejskie"><a href="linia_2.html">2</a></div>');
-document.write('<div class="line-button_miejskie"><a href="linia_4.html">4</a></div>');
+document.write('<div class="line-button_miejskie objazd"><a href="linia_4.html">4</a></div>');
 document.write('<div class="line-button_miejskie"><a href="linia_5.html">5</a></div>');
 document.write('<div class="line-button_miejskie"><a href="linia_6.html">6</a></div>');
 document.write('<div class="line-button_miejskie"><a href="linia_8.html">8</a></div>');
