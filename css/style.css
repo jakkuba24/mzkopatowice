@@ -1,25 +1,15 @@
-/* Kod .css dla MZK OPATOWICE*/
-/* Copyright © MZK OPATOWICE 2024 */
-
-/* GGłowne ustawienia strony */
+/* Głowne ustawienia strony */
 
 @font-face {
     font-family: 'CustomFont';
     src: url('font.ttf') format('truetype');
 }
-
 body {
     font-family: 'CustomFont';
-    /*background-color: #f0f0f5; /* Subtelne tło */
-    color: #333; /* Uniwersalny kolor tekstu */
+    color: #333;
     margin: 0;
     padding: 0;
 }
-
-.container {
-
-}
-
 .logo {
     filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
 }
@@ -204,20 +194,16 @@ header a:hover {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-@media (max-width: 1099px){
-#cala_mapka img {
+@media (max-width: 1099px){ #cala_mapka img {
 	position: absolute;
 	width: 100%;
 	display: none;
-}
-}
-@media (min-width: 1100px){
-#cala_mapka img {
+}}
+@media (min-width: 1100px){ #cala_mapka img {
 	position: absolute;
 	height: 100%;
 	display: none;
-}
-}
+}}
 
 
 
@@ -304,8 +290,11 @@ table th {
 .rozklad_miejskie th, .rozklad_podmiejskie th, .rozklad_pospieszne th, .rozklad_nocne th, .rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_nocne td {
 	border: 1px solid #000000;
 }
-.rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_nocne td {
+.rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td {
     width: 40px;
+}
+.rozklad_nocne td {
+    width: 60px;
 }
 
 .rozklad_miejskie th, .przystanki_miejskie th {
@@ -325,35 +314,35 @@ table th {
 	font-size: 42px;
 	margin-left: 41.5px;
 	padding: 4px;
-	/* margin-right: 25%; */
 	width: 56px;
 	height: 56px;
+	border: 4px solid;
 }
 .ramka_miejskie {
-	border: 4px solid #00B1EB;
+	border-color: #00B1EB;
 }
 .ramka_podmiejskie {
-	border: 4px solid #24378d;
+	border-color: #24378d;
 }
 .ramka_pospieszne {
-	border: 4px solid #ff0000;
+	border-color: #ff0000;
 }
 .ramka_nocne {
-	border: 4px solid #000;
+	border-color: #000;
 }
 
 
 .linie td {
-	border-bottom: 1px solid #ffffff;
+	border-bottom: hidden;
 	padding-bottom: 0;
 }
 
 /* tabelki z przstankami */
 
 .przystanki_miejskie, .przystanki_podmiejskie, .przystanki_pospieszne, .przystanki_nocne {
-    float:left;
-    width:auto;
-    margin:auto;
+    float: left;
+    width: auto;
+    margin: auto;
 	margin-left: 1%;
 	margin-right: 1%;
 	border: 1px solid #000000;
@@ -393,16 +382,7 @@ table th {
 
 
 
-@media screen and (max-width: 768px) {
-    .ignore-on-mobile {
-        display: none;
-    }
-}
-
-
-
-
-
+/* changelog */
 
 .changelog {
 	justify-content: center;
@@ -414,3 +394,12 @@ table th {
 	padding-left: 1%;
 }
 
+
+
+
+
+@media screen and (max-width: 768px) {
+    .ignore-on-mobile {
+        display: none;
+    }
+}

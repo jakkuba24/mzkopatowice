@@ -49,19 +49,20 @@ function wyswietldymek(h,m,typ,event) {
 	// ---Linia 16---
 	if (typ == '16a') i_p = 25;
 	if (typ == '16b') {i_p = 27; offset = 30};
-	// ---Linia 29---   OBJAZD
-	if (typ == '29a') i_p = 10; // czarnowo
-	if (typ == '29a_1') {i_p = 17; offset = 20;} // celinki
-	if (typ == '29a_2') {i_p = 12; offset = 20;} // bartoszewo rolna
-	if (typ == '29a_3') i_p = 12; // karścino
-	if (typ == '29a_4') {i_p = 18; offset = 90;} // czarnowo p. bartoszewo
-	if (typ == '29a_5') {i_p = 20; offset = 90;} // karścino p. bartoszewo
-	if (typ == '29b') {i_p = 10; offset = 50;} // z czarnowa
+	// ---Linia 23---
+	if (typ == '23a') i_p = 16;
+	if (typ == '23a_1') i_p = 14;
+	if (typ == '23b') {i_p = 16; offset = 20};
+	if (typ == '23b_1') {i_p = 15; offset = 40};
+	if (typ == '23b_2') {i_p = 13; offset = 20}; // wies - biblioteka
+	if (typ == '23b_3') {i_p = 12; offset = 40}; // dzialki - biblioteka
+	// ---Linia 29---
+	if (typ == '29a') i_p = 17; // czarnowo
+	if (typ == '29a_1') {i_p = 17; offset = 17;} // celinki
+	if (typ == '29a_2') {i_p = 12; offset = 17;} // bartoszewo rolna
+	if (typ == '29b') {i_p = 17; offset = 34;} // z czarnowa
 	if (typ == '29b_1') {i_p = 17; offset = 70;} // z celinek
-	if (typ == '29b_2') {i_p = 12; offset = 48;} // z karścina
-	if (typ == '29b_3') {i_p = 18; offset = 140;} // z czarnowa p. bartoszewo
-	if (typ == '29b_4') {i_p = 20; offset = 138;} // z karścina p. bartoszewo
-	if (typ == '29b_5') {i_p = 10; offset = 120;} // z celinek bezpośredni
+	if (typ == '29b_2') {i_p = 10; offset = 120;} // z celinek bezpośredni
 	// ---Linia 37---
 	if (typ == '37a') i_p = 25;
 	if (typ == '37b') {i_p = 23; offset = 25};
@@ -76,12 +77,7 @@ function wyswietldymek(h,m,typ,event) {
 	if (typ == '44b') {i_p = 21; offset = 25};
 	if (typ == '44b_1') {i_p = 28; offset = 25};
 /*
-LINIA 29 DEF
-if (typ == '29a') i_p = 17; // czarnowo
-	if (typ == '29a_1') {i_p = 17; offset = 17;} // celinki
-	if (typ == '29a_2') {i_p = 12; offset = 17;} // bartoszewo rolna
-	if (typ == '29b') {i_p = 17; offset = 34;} // z czarnowa
-	if (typ == '29b_1') {i_p = 17; offset = 51;} // z celinek
+
 */
 
 	// ---Pobieranie danych----------
