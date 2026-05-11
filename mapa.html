@@ -11,29 +11,35 @@
 	<div>
 	<div class="menu-mapka">
 	<input type="checkbox" id="linia1" onclick="aktualizacja_mapki()">
-	<label for="linia2">Linia 1</label><hr style="background-color:#a52a2a"><br>
+	<label for="linia1">Linia 1</label><hr style="background-color:#a52a2a"><br>
 	<input type="checkbox" id="linia2" onclick="aktualizacja_mapki()">
 	<label for="linia2">Linia 2</label><hr style="background-color:#FF0000"><br>
 	<input type="checkbox" id="linia4" onclick="aktualizacja_mapki()">
 	<label for="linia4">Linia 4</label><hr style="background-color:#0000ff"><br>
-	<input type="checkbox" id="linia5" onclick="aktualizacja_mapki()">
-	<label for="linia5">Linia 5</label><hr style="background-color:#C26988"><br>
 	<input type="checkbox" id="linia6" onclick="aktualizacja_mapki()">
-	<label for="linia3">Linia 6</label><hr style="background-color:#00AAAA"><br>
+	<label for="linia6">Linia 6</label><hr style="background-color:#00AAAA"><br>
 	<input type="checkbox" id="linia8" onclick="aktualizacja_mapki()">
 	<label for="linia8">Linia 8</label><hr style="background-color:#CCCC00"><br>
 	<input type="checkbox" id="linia9" onclick="aktualizacja_mapki()">
 	<label for="linia9">Linia 9</label><hr style="background-color:#880088"><br>
-	<input type="checkbox" id="linia11" onclick="aktualizacja_mapki()">
-	<label for="linia11">Linia 11</label><hr style="background-color:#00AE68"><br>
+	<input type="checkbox" id="linia12" onclick="aktualizacja_mapki()">
+	<label for="linia12">Linia 12</label><hr style="background-color:#C26988"><br>
+	<input type="checkbox" id="linia13" onclick="aktualizacja_mapki()">
+	<label for="linia13">Linia 13</label><hr style="background-color:#7F92FF"><br>
+	<input type="checkbox" id="linia14" onclick="aktualizacja_mapki()">
+	<label for="linia14">Linia 14</label><hr style="background-color:#D67FFF"><br>
+	<input type="checkbox" id="linia15" onclick="aktualizacja_mapki()">
+	<label for="linia15">Linia 15</label><hr style="background-color:#FF8080"><br>
 	<input type="checkbox" id="linia16" onclick="aktualizacja_mapki()">
 	<label for="linia16">Linia 16</label><hr style="background-color:#80BAFF"><br>
 	<input type="checkbox" id="linia23" onclick="aktualizacja_mapki()">
-	<label for="linia29">Linia 23</label><hr style="background-color:#009B00"><br>
+	<label for="linia23">Linia 23</label><hr style="background-color:#009B00"><br>
 	<input type="checkbox" id="linia29" onclick="aktualizacja_mapki()">
 	<label for="linia29">Linia 29</label><hr style="background-color:#BC96FF"><br>
 	<input type="checkbox" id="linia37" onclick="aktualizacja_mapki()">
 	<label for="linia37">Linia 37</label><hr style="background-color:#ff7f00"><br>
+	<input type="checkbox" id="linia38" onclick="aktualizacja_mapki()">
+	<label for="linia38">Linia 38</label><hr style="background-color:#BC5934"><br>
 	<input type="checkbox" id="linia40" onclick="aktualizacja_mapki()">
 	<label for="linia40">Linia 40</label><hr style="background-color:#CD8F7F"><br>
 	<input type="checkbox" id="linia44" onclick="aktualizacja_mapki()">
@@ -43,7 +49,7 @@
 	<!--<button id="zoom" onclick="przyciskZoom()">Powiększ mapę</button>-->
 	
 	<p><b>Na mapie nie są uwzględnione objazdy</b></p>
-	<p>Aktualizacja: 05.01.2026<p>
+	<p>Aktualizacja: 11.05.2026<p>
 	<p>© MZK Opatowice</p>
 	</div>
 	
@@ -51,15 +57,18 @@
 	<img src="zdjecia/linia1.png" id="mapka_linia1">
 	<img src="zdjecia/linia2.png" id="mapka_linia2">
 	<img src="zdjecia/linia4.png" id="mapka_linia4">
-	<img src="zdjecia/linia5.png" id="mapka_linia5">
 	<img src="zdjecia/linia6.png" id="mapka_linia6">
 	<img src="zdjecia/linia8.png" id="mapka_linia8">
 	<img src="zdjecia/linia9.png" id="mapka_linia9">
-	<img src="zdjecia/linia11.png" id="mapka_linia11">
+	<img src="zdjecia/linia12.png" id="mapka_linia12">
+	<img src="zdjecia/linia13.png" id="mapka_linia13">
+	<img src="zdjecia/linia14.png" id="mapka_linia14">
+	<img src="zdjecia/linia15.png" id="mapka_linia15">
 	<img src="zdjecia/linia16.png" id="mapka_linia16">
 	<img src="zdjecia/linia23.png" id="mapka_linia23">
 	<img src="zdjecia/linia29.png" id="mapka_linia29">
 	<img src="zdjecia/linia37.png" id="mapka_linia37">
+	<img src="zdjecia/linia38.png" id="mapka_linia38">
 	<img src="zdjecia/linia40.png" id="mapka_linia40">
 	<img src="zdjecia/linia44.png" id="mapka_linia44">
 	</div>
@@ -122,16 +131,20 @@ if (document.getElementById("linia2").checked) document.getElementById("mapka_li
 else document.getElementById("mapka_linia2").style.display = "none";
 if (document.getElementById("linia4").checked) document.getElementById("mapka_linia4").style.display = "block";
 else document.getElementById("mapka_linia4").style.display = "none";
-if (document.getElementById("linia5").checked) document.getElementById("mapka_linia5").style.display = "block";
-else document.getElementById("mapka_linia5").style.display = "none";
 if (document.getElementById("linia6").checked) document.getElementById("mapka_linia6").style.display = "block";
 else document.getElementById("mapka_linia6").style.display = "none";
 if (document.getElementById("linia8").checked) document.getElementById("mapka_linia8").style.display = "block";
 else document.getElementById("mapka_linia8").style.display = "none";
 if (document.getElementById("linia9").checked) document.getElementById("mapka_linia9").style.display = "block";
 else document.getElementById("mapka_linia9").style.display = "none";
-if (document.getElementById("linia11").checked) document.getElementById("mapka_linia11").style.display = "block";
-else document.getElementById("mapka_linia11").style.display = "none";
+if (document.getElementById("linia12").checked) document.getElementById("mapka_linia12").style.display = "block";
+else document.getElementById("mapka_linia12").style.display = "none";
+if (document.getElementById("linia13").checked) document.getElementById("mapka_linia13").style.display = "block";
+else document.getElementById("mapka_linia13").style.display = "none";
+if (document.getElementById("linia14").checked) document.getElementById("mapka_linia14").style.display = "block";
+else document.getElementById("mapka_linia14").style.display = "none";
+if (document.getElementById("linia15").checked) document.getElementById("mapka_linia15").style.display = "block";
+else document.getElementById("mapka_linia15").style.display = "none";
 if (document.getElementById("linia16").checked) document.getElementById("mapka_linia16").style.display = "block";
 else document.getElementById("mapka_linia16").style.display = "none";
 if (document.getElementById("linia23").checked) document.getElementById("mapka_linia23").style.display = "block";
@@ -140,6 +153,8 @@ if (document.getElementById("linia29").checked) document.getElementById("mapka_l
 else document.getElementById("mapka_linia29").style.display = "none";
 if (document.getElementById("linia37").checked) document.getElementById("mapka_linia37").style.display = "block";
 else document.getElementById("mapka_linia37").style.display = "none";
+if (document.getElementById("linia38").checked) document.getElementById("mapka_linia38").style.display = "block";
+else document.getElementById("mapka_linia38").style.display = "none";
 if (document.getElementById("linia40").checked) document.getElementById("mapka_linia40").style.display = "block";
 else document.getElementById("mapka_linia40").style.display = "none";
 if (document.getElementById("linia44").checked) document.getElementById("mapka_linia44").style.display = "block";
@@ -151,15 +166,18 @@ if (!pokazWszystkie) {
 	document.getElementById("linia1").checked = true;
 	document.getElementById("linia2").checked = true;
 	document.getElementById("linia4").checked = true;
-	document.getElementById("linia5").checked = true;
 	document.getElementById("linia6").checked = true;
 	document.getElementById("linia8").checked = true;
 	document.getElementById("linia9").checked = true;
-	document.getElementById("linia11").checked = true;
+	document.getElementById("linia12").checked = true;
+	document.getElementById("linia13").checked = true;
+	document.getElementById("linia14").checked = true;
+	document.getElementById("linia15").checked = true;
 	document.getElementById("linia16").checked = true;
 	document.getElementById("linia23").checked = true;
 	document.getElementById("linia29").checked = true;
 	document.getElementById("linia37").checked = true;
+	document.getElementById("linia38").checked = true;
 	document.getElementById("linia40").checked = true;
 	document.getElementById("linia44").checked = true;
 	aktualizacja_mapki();
@@ -169,15 +187,18 @@ if (!pokazWszystkie) {
 	document.getElementById("linia1").checked = false;
 	document.getElementById("linia2").checked = false;
 	document.getElementById("linia4").checked = false;
-	document.getElementById("linia5").checked = false;
 	document.getElementById("linia6").checked = false;
 	document.getElementById("linia8").checked = false;
 	document.getElementById("linia9").checked = false;
-	document.getElementById("linia11").checked = false;
+	document.getElementById("linia12").checked = false;
+	document.getElementById("linia13").checked = false;
+	document.getElementById("linia14").checked = false;
+	document.getElementById("linia15").checked = false;
 	document.getElementById("linia16").checked = false;
 	document.getElementById("linia23").checked = false;
 	document.getElementById("linia29").checked = false;
 	document.getElementById("linia37").checked = false;
+	document.getElementById("linia38").checked = false;
 	document.getElementById("linia40").checked = false;
 	document.getElementById("linia44").checked = false;
 	aktualizacja_mapki();

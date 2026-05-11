@@ -188,7 +188,7 @@ header a:hover {
 #cala_mapka {
 	position: relative;
 	float: left;
-	background-image: url("../zdjecia/mapka.png");
+	background-image: url("../zdjecia/whole.roadmap.png");
 	width: 88%;
 	height: 1600px;
 	background-size: contain;

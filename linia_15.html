@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rozkład Jazdy - Linia 15</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="zdjecia/mzk.png">
+	<script src="kurs.js"></script>
+</head>
+<body>
+    <header><script src="headerek.js"></script></div>
+    <div class="tables-container">
+		<table class="rozklad_miejskie">
+			<tr style="border: 2px solid black">
+				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_miejskie">15</div></b>dzienna/miejska</td>
+				<td style="border-right: 1px solid #ffffff"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Strefa Ekonomiczna<br><br><b>Kierunek:</b> Rondo Nila</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Dzień powszedni</th>
+				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '15a', event)" onmouseleave="dymek.style.display='none'">13</td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '15a', event)" onmouseleave="dymek.style.display='none'">13</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '15a', event)" onmouseleave="dymek.style.display='none'">13</td>
+				<td></td> <!-- 8 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 11 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '15a', event)" onmouseleave="dymek.style.display='none'">13</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '15a', event)" onmouseleave="dymek.style.display='none'">20</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '15a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '15a', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td></td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 11.05.2026</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+			</tr>
+		</table>
+			
+		<div class="ignore-on-mobile">
+		<table class="przystanki_miejskie">
+			<tr>
+				<th>Przystanek</th>
+				<th>M</th>
+				<th>N</th>
+			</tr>
+			<tr>
+				<td id="pr0">Strefa Ekonomiczna</td>
+				<td id="mi0">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr1">Olejowa <span class="red-text">nż</span></td>
+				<td id="mi1">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr2">Elektryczna <span class="red-text">nż</span></td>
+				<td id="mi2">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr3">Lubelska <span class="red-text">nż</span></td>
+				<td id="mi3">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr4">Szczerbińska <span class="red-text">nż</span></td>
+				<td id="mi4">3</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr5">Centrum Handlowe Laksa</td>
+				<td id="mi5">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr6">Węzeł Opatowice Centrum <span class="red-text">nż</span></td>
+				<td id="mi6">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr7">Zwycięstwa/Wyszyńskiego</td>
+				<td id="mi7">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr8">Rynek</td>
+				<td id="mi8">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr9">Dworzec PKP</td>
+				<td id="mi9">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr10">Politechnika</td>
+				<td id="mi10">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr11">Staszica</td>
+				<td id="mi11">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr12">Sikorskiego</td>
+				<td id="mi12">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr13">Wańkowicza</td>
+				<td id="mi13">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr14">Podgórna</td>
+				<td id="mi14">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr15">Rondo Lechitów</td>
+				<td id="mi15">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr16">Armii Krajowej/Franciszkańska</td>
+				<td id="mi16">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr17">Rondo WOŚP</td>
+				<td id="mi17">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr18">Energetyka</td>
+				<td id="mi18">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr19">Energetyków <span class="red-text">nż</span></td>
+				<td id="mi19">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr20">Urząd Skarbowy</td>
+				<td id="mi20">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr21">Urząd Celny <span class="red-text">nż</span></td>
+				<td id="mi21">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr22">BoWiD <span class="red-text">nż</span></td>
+				<td id="mi22">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr23">ZORD <span class="red-text">nż</span></td>
+				<td id="mi23">0</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr24">Grabskiego <span class="red-text">nż</span></td>
+				<td id="mi24_end">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr25_end"><span class="red-text"> - </span>Rondo Nila</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</div>
+    </div>
+	<br><br><br>
+	<div class="tables-container">
+		<table class="rozklad_miejskie">
+			<tr style="border: 2px solid black">
+				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_miejskie">15</div></b>dzienna/miejska</td>
+				<td style="border-right: 1px solid #ffffff"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Rondo Nila<br><br><b>Kierunek:</b> Strefa Ekonomiczna</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Dzień powszedni</th>
+				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '15b', event)" onmouseleave="dymek.style.display='none'">10</td> <!-- 5 -->
+				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '15b', event)" onmouseleave="dymek.style.display='none'">10</td>
+				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '15b', event)" onmouseleave="dymek.style.display='none'">10</td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '15b', event)" onmouseleave="dymek.style.display='none'">10</td> <!-- 8 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 11 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '15b', event)" onmouseleave="dymek.style.display='none'">10</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '15b', event)" onmouseleave="dymek.style.display='none'">10</td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '15b', event)" onmouseleave="dymek.style.display='none'">10</td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '15b', event)" onmouseleave="dymek.style.display='none'">10</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '15b', event)" onmouseleave="dymek.style.display='none'">10</td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 11.05.2026</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+			</tr>
+		</table>
+			
+		<div class="ignore-on-mobile">
+		<table class="przystanki_miejskie">
+			<tr>
+				<th>Przystanek</th>
+				<th>M</th>
+				<th>N</th>
+			</tr>
+			<tr>
+				<td id="pr50">Rondo Nila</td>
+				<td id="mi50">0</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr51">Grabskiego <span class="red-text">nż</span></td>
+				<td id="mi51">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr52">ZORD <span class="red-text">nż</span></td>
+				<td id="mi52">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr53">BoWiD <span class="red-text">nż</span></td>
+				<td id="mi53">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr54">Urząd Celny <span class="red-text">nż</span></td>
+				<td id="mi54">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr55">Przemysłowa</td>
+				<td id="mi55">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr56">Urząd Skarbowy</td>
+				<td id="mi56">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr57">Energetykó</td>
+				<td id="mi57">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr58">Rondo WOŚP</td>
+				<td id="mi58">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr59">Armii Krajowej/Franciszkańska</td>
+				<td id="mi59">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr60">Rondo Lechitów</td>
+				<td id="mi60">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr61">Podgórna</td>
+				<td id="mi61">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr62">Wańkowicza</td>
+				<td id="mi62">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr63">Jana Pawła II</td>
+				<td id="mi63">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr64">Staszica</td>
+				<td id="mi64">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr65">Politechnika</td>
+				<td id="mi65">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr66">Dworzec PKP</td>
+				<td id="mi66">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr67">Rynek</td>
+				<td id="mi67">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr68">Zwycięstwa/Wyszyńskiego</td>
+				<td id="mi68">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr69">Węzeł Opatowice Centrum <span class="red-text">nż</span></td>
+				<td id="mi69">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr70">Centrum Handlowe Laksa</td>
+				<td id="mi70">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr71">Szczerbińska <span class="red-text">nż</span></td>
+				<td id="mi71">2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr72">Lubelska <span class="red-text">nż</span></td>
+				<td id="mi72">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr73">Elektryczna <span class="red-text">nż</span></td>
+				<td id="mi73">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr74">Olejowa <span class="red-text">nż</span></td>
+				<td id="mi74_end">1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr75_end"><span class="red-text"> - </span>Strefa Ekonomiczna</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</div>
+    </div>
+	<br><br><br>
+	<div id="dymek"></div>
+	<footer>&copy MZK Opatowice</footer>
+</body>
+</html>
