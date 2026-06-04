@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rozkład Jazdy - Linia 1S</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="zdjecia/mzk.png">
+	<script src="kurs.js"></script>
+</head>
+<body>
+    <header><script src="headerek.js"></script></div>
+	<h2 style="text-align: center;">Statek Julek ponownie wypłynie na wody jeziora Jamno już 4 czerwca 2026 r. <br>Rejsy będą realizowane do 30 sierpnia 2026 r. Zapraszamy na pokład!</h2>
+	<h2 style="text-align: center;">Przystań Jamno obsługuje linia nr 51, która umożliwia przesiadkę pomiędzy autobusem a statkiem Julek.</h2>
+	<h2 style="text-align: center;">Poniżej znajduje się rozkład jazdy linii 1S, która będzie kursować pomiędzy przystaniami w Jamnie, Unieściu i Mielnie.</h2><br>
+    <div class="tables-container">
+		<table class="rozklad_specjalne">
+			<tr style="border: 2px solid black">
+				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_specjalne">1S</div></b>specjalna</td>
+				<td style="border-right: 1px solid #ffffff"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Jamno Przystań<br><br><b>Kierunek:</b> Mielno Przystań</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Codziennie</th>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td></td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '1Sa', event)" onmouseleave="dymek.style.display='none'">30</td> <!-- 8 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '1Sa', event)" onmouseleave="dymek.style.display='none'">30</td>
+				<td></td> <!-- 11 -->
+				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '1Sa', event)" onmouseleave="dymek.style.display='none'">30</td>
+				<td></td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '1Sa', event)" onmouseleave="dymek.style.display='none'">30</td> <!-- 14 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '1Sa', event)" onmouseleave="dymek.style.display='none'">30</td>
+				<td></td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '1Sa', event)" onmouseleave="dymek.style.display='none'">30</td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od 04.06.2026 do 30.08.2026</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+			</tr>
+		</table>
+			
+		<div class="ignore-on-mobile">
+		<table class="przystanki_specjalne">
+			<tr>
+				<th>Przystanek</th>
+				<th>M</th>
+				<th>N</th>
+			</tr>
+			<tr>
+				<td id="pr0">Jamno Przystań</td>
+				<td id="mi0">20</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr1">Unieście Przystań</td>
+				<td id="mi1_end">20</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td id="pr2_end"><span class="red-text"> - </span>Mielno Przystań</td>
+				<td></td>
+				<td>40</td>
+			</tr>
+		</table>
+		</div>
+    </div>
+	<br><br><br>
+
+	<div class="tables-container">
+		<table class="rozklad_specjalne">
+			<tr style="border: 2px solid black">
+				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_specjalne">1S</div></b>specjalna</td>
+				<td style="border-right: 1px solid #ffffff"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Unieście Przystań<br><br><b>Kierunek:</b> Mielno Przystań</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Codziennie</th>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td></td>
+				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '1Sa_1', event)" onmouseleave="dymek.style.display='none'">50</td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '1Sa_1', event)" onmouseleave="dymek.style.display='none'">30</td>
+				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '1Sa_1', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '1Sa_1', event)" onmouseleave="dymek.style.display='none'">30</td> <!-- 11 -->
+				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '1Sa_1', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '1Sa_1', event)" onmouseleave="dymek.style.display='none'">30</td>
+				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '1Sa_1', event)" onmouseleave="dymek.style.display='none'">50</td> <!-- 14 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '1Sa_1', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '1Sa_1', event)" onmouseleave="dymek.style.display='none'">30</td> <!-- 17 -->
+				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '1Sa_1', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od 04.06.2026 do 30.08.2026</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+			</tr>
+		</table>
+			
+		<div class="ignore-on-mobile">
+		<table class="przystanki_specjalne">
+			<tr>
+				<th>Przystanek</th>
+				<th>M</th>
+				<th>N</th>
+			</tr>
+			<tr>
+				<td>Unieście Przystań</td>
+				<td>20</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><span class="red-text"> - </span>Mielno Przystań</td>
+				<td></td>
+				<td>20</td>
+			</tr>
+		</table>
+		</div>
+    </div>
+	<br><br><br>	
+
+	<div class="tables-container">
+		<table class="rozklad_specjalne">
+			<tr style="border: 2px solid black">
+				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_specjalne">1S</div></b>specjalna</td>
+				<td style="border-right: 1px solid #ffffff"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Mielno Przystań<br><br><b>Kierunek:</b> Jamno Przystań</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr class="linie">
+				<th rowspan="2" style="text-align:left">Codziennie</th>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '1Sb_1', event)" onmouseleave="dymek.style.display='none'">10U</td>
+				<td></td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '1Sb_1', event)" onmouseleave="dymek.style.display='none'">10U</td> <!-- 11 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '1Sb_1', event)" onmouseleave="dymek.style.display='none'">10U</td>
+				<td></td> <!-- 14 -->
+				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '1Sb', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td></td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '1Sb_1', event)" onmouseleave="dymek.style.display='none'">10U</td> <!-- 17 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '1Sb', event)" onmouseleave="dymek.style.display='none'">20</td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 8 -->
+				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '1Sb', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td></td>
+				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '1Sb', event)" onmouseleave="dymek.style.display='none'">50</td> <!-- 11 -->
+				<td></td>
+				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '1Sb', event)" onmouseleave="dymek.style.display='none'">50</td>
+				<td></td> <!-- 14 -->
+				<td></td>
+				<td></td>
+				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '1Sb', event)" onmouseleave="dymek.style.display='none'">50</td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od 04.06.2026 do 30.08.2026</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid #ffffff"></td>
+				<td colspan="15" style="border: 1px solid #ffffff;text-align:left">U - rejs statku do przystani w Unieściu</td>
+			</tr>
+		</table>
+			
+		<div class="ignore-on-mobile">
+		<table class="przystanki_specjalne">
+			<tr>
+				<th>Przystanek</th>
+				<th>M</th>
+				<th>N</th>
+			</tr>
+			<tr>
+				<td id="pr5">Mielno Przystań</td><td id="pr10" style="display: none;">Mielno Przystań</td>
+				<td id="mi5_end" style="display: none;">30</td><td id="mi10_end" style="display: none;">20</td><td>30/20</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td id="pr11_end"><span style="margin-left:10px"></span><span class="red-text"> - </span>Unieście Przystań</td>
+				<td></td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td id="pr6_end"><span class="red-text"> - </span>Jamno Przystań</td>
+				<td></td>
+				<td>30</td>
+			</tr>
+		</table>
+		</div>
+    </div>
+	<br><br>
+	<h2 style="text-align: center;">Schemat trasy linii nr 1S, obsługiwanej przez statek Julek w Sezonie 2026.</h2>
+	<img src="zdjecia/Julek 2026.png" style="display: block; margin: 0 auto;"><br>
+	<h2 style="text-align: center;">Ważna informacja dotycząca realizacji rejsów statku Julek:</h2>
+	<h3>Rejsy statku Julek uzależnione są od warunków pogodowych. W przypadku silnego wiatru, burzy lub innych niekorzystnych zjawisk atmosferycznych rejs może zostać odwołany.<br>
+		Każdorazowo decyzję o realizacji rejsu podejmuje Kapitan statku, mając na uwadze przede wszystkim bezpieczeństwo pasażerów i załogi.<br>
+		W razie wątpliwości co do aktualnej sytuacji, zachęcamy do kontaktu telefonicznego bezpośrednio na statek: 887 041 957<br>
+		Dziękujemy za zrozumienie.</h3><br>
+	<br><br>
+	<div id="dymek"></div>
+	<footer>&copy MZK Opatowice</footer>
+</body>
+</html>

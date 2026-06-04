@@ -87,7 +87,7 @@ header a:hover {
 
 
 
-.line-button_miejskie, .line-button_podmiejskie, .line-button_pospieszne, .line-button_nocne, .line-button_objazd {
+.line-button_miejskie, .line-button_podmiejskie, .line-button_pospieszne, .line-button_nocne, .line-button_objazd, .line-button_specjalne {
     height: 50px;
 	min-width: 50px;
     text-decoration: none;
@@ -101,7 +101,7 @@ header a:hover {
 	float: left;
 	margin: 0 7px 0 7px;
 }
-.line-button_miejskie a, .line-button_podmiejskie a, .line-button_pospieszne a, .line-button_nocne a, .line-button_objazd a {
+.line-button_miejskie a, .line-button_podmiejskie a, .line-button_pospieszne a, .line-button_nocne a, .line-button_objazd a, .line-button_specjalne a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
@@ -143,6 +143,14 @@ header a:hover {
 }
 .line-button_nocne:hover {
 	background-color: #000;
+	transform: scale(1.02);
+}
+
+.line-button_specjalne {
+	background-color: #7F4A7F;
+}
+.line-button_specjalne:hover {
+	background-color: #5e2f5e;
 	transform: scale(1.02);
 }
 
@@ -280,17 +288,17 @@ table th {
 
 /* tabelki rozkładowe */
 
-.rozklad_miejskie, .rozklad_podmiejskie, .rozklad_pospieszne, .rozklad_nocne {
+.rozklad_miejskie, .rozklad_podmiejskie, .rozklad_pospieszne, .rozklad_nocne, .rozklad_specjalne {
     float:left;
     width:auto;
     margin:auto;
 	margin-left: 1%;
 	text-align: center;
 }
-.rozklad_miejskie th, .rozklad_podmiejskie th, .rozklad_pospieszne th, .rozklad_nocne th, .rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_nocne td {
+.rozklad_miejskie th, .rozklad_podmiejskie th, .rozklad_pospieszne th, .rozklad_nocne th, .rozklad_specjalne th, .rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_nocne td, .rozklad_specjalne td {
 	border: 1px solid #000000;
 }
-.rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td {
+.rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_specjalne td {
     width: 40px;
 }
 .rozklad_nocne td {
@@ -309,8 +317,11 @@ table th {
 .rozklad_nocne th, .przystanki_nocne th {
 	background-color: #d9d9d9;
 }
+.rozklad_specjalne th, .przystanki_specjalne th {
+	background-color: #d1a4d1;
+}
 
-.ramka_miejskie, .ramka_podmiejskie, .ramka_pospieszne, .ramka_nocne {
+.ramka_miejskie, .ramka_podmiejskie, .ramka_pospieszne, .ramka_nocne, .ramka_specjalne {
 	font-size: 42px;
 	margin-left: 41.5px;
 	padding: 4px;
@@ -330,7 +341,9 @@ table th {
 .ramka_nocne {
 	border-color: #000;
 }
-
+.ramka_specjalne {
+	border-color: #7F4A7F;
+}
 
 .linie td {
 	border-bottom: hidden;
@@ -339,7 +352,7 @@ table th {
 
 /* tabelki z przstankami */
 
-.przystanki_miejskie, .przystanki_podmiejskie, .przystanki_pospieszne, .przystanki_nocne {
+.przystanki_miejskie, .przystanki_podmiejskie, .przystanki_pospieszne, .przystanki_nocne, .przystanki_specjalne {
     float: left;
     width: auto;
     margin: auto;
@@ -347,7 +360,7 @@ table th {
 	margin-right: 1%;
 	border: 1px solid #000000;
 }
-.przystanki_miejskie th, .przystanki_podmiejskie th, .przystanki_pospieszne th, .przystanki_nocne th {
+.przystanki_miejskie th, .przystanki_podmiejskie th, .przystanki_pospieszne th, .przystanki_nocne th, .przystanki_specjalne th {
 	text-align: left;
 }
 

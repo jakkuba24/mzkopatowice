@@ -111,9 +111,15 @@ function wyswietldymek(h,m,typ,event) {
 	if (typ == '44a_1') {i_p = 30; offset=-8;}
 	if (typ == '44b') {i_p = 21; offset = 25};
 	if (typ == '44b_1') {i_p = 28; offset = 25};
-/*
+	// ---Linia 51---
+	if (typ == '51a') i_p = 25;
+	if (typ == '51b') {i_p = 25; offset = 50};
+	// ---Linia 1S---
+	if (typ == '1Sa') i_p = 3;
+	if (typ == '1Sa_1') {i_p = 2; offset = 1};
+	if (typ == '1Sb') {i_p = 2; offset = 5};
+	if (typ == '1Sb_1') {i_p = 2; offset = 10};
 
-*/
 
 	// ---Pobieranie danych----------
 	tablica_przystanki=[];

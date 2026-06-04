@@ -43,8 +43,11 @@
 	<input type="checkbox" id="linia40" onclick="aktualizacja_mapki()">
 	<label for="linia40">Linia 40</label><hr style="background-color:#CD8F7F"><br>
 	<input type="checkbox" id="linia44" onclick="aktualizacja_mapki()">
-	<label for="linia44">Linia 44</label><hr style="background-color:#B599A2"><br><br>
-	
+	<label for="linia44">Linia 44</label><hr style="background-color:#B599A2"><br>
+	<input type="checkbox" id="linia51" onclick="aktualizacja_mapki()">
+	<label for="linia51">Linia 51</label><hr style="background-color:#7F4A7F"><br>
+	<br><br>
+
 	<button id="pokaz-all" onclick="pokaz_ukryjLinie()">Pokaż wszystkie linie</button><br><br>
 	<!--<button id="zoom" onclick="przyciskZoom()">Powiększ mapę</button>-->
 	
@@ -71,6 +74,7 @@
 	<img src="zdjecia/linia38.png" id="mapka_linia38">
 	<img src="zdjecia/linia40.png" id="mapka_linia40">
 	<img src="zdjecia/linia44.png" id="mapka_linia44">
+	<img src="zdjecia/linia51.png" id="mapka_linia51">
 	</div>
 	</div>
 <script>
@@ -159,6 +163,8 @@ if (document.getElementById("linia40").checked) document.getElementById("mapka_l
 else document.getElementById("mapka_linia40").style.display = "none";
 if (document.getElementById("linia44").checked) document.getElementById("mapka_linia44").style.display = "block";
 else document.getElementById("mapka_linia44").style.display = "none";
+if (document.getElementById("linia51").checked) document.getElementById("mapka_linia51").style.display = "block";
+else document.getElementById("mapka_linia51").style.display = "none";
 }
 
 function pokaz_ukryjLinie(){
@@ -180,6 +186,7 @@ if (!pokazWszystkie) {
 	document.getElementById("linia38").checked = true;
 	document.getElementById("linia40").checked = true;
 	document.getElementById("linia44").checked = true;
+	document.getElementById("linia51").checked = true;
 	aktualizacja_mapki();
 	document.getElementById("pokaz-all").textContent = "Ukryj wszystkie linie";
 	pokazWszystkie = true;
@@ -201,6 +208,7 @@ if (!pokazWszystkie) {
 	document.getElementById("linia38").checked = false;
 	document.getElementById("linia40").checked = false;
 	document.getElementById("linia44").checked = false;
+	document.getElementById("linia51").checked = false;
 	aktualizacja_mapki();
 	document.getElementById("pokaz-all").textContent = "Pokaż wszystkie linie";
 	pokazWszystkie = false;
