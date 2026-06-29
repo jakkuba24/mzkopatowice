@@ -6,10 +6,10 @@ function wyswietldymek(h,m,typ,event) {
 	var i_p = 0;
 	var offset = 0;
 	// ---Linia 1---
-	if (typ == '1a') i_p = 18;
-	if (typ == '1a_1') {i_p = 17; offset = 20;}
-	if (typ == '1b') {i_p = 22; offset = 40;}
-	if (typ == '1b_1') {i_p = 21; offset = 65;}
+	if (typ == '1a') i_p = 19;
+	if (typ == '1a_1') {i_p = 18; offset = 20;}
+	if (typ == '1b') {i_p = 21; offset = 41;}
+	if (typ == '1b_1') {i_p = 20; offset = 66;}
 	// ---Linia 2---
 	if (typ == '2a') {i_p = 17; offset = 8;} //chelmoniewo - strefa
 	if (typ == '2a_1') {i_p = 20; offset = 5;} //dzierzecino - strefa
