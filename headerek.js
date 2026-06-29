@@ -21,6 +21,6 @@ document.write('<div class="line-button_pospieszne"><a href="linia_37.html">37</
 document.write('<div class="line-button_pospieszne"><a href="linia_38.html">38</a></div>');
 document.write('<div class="line-button_nocne"><a href="linia_40.html">40</a></div>');
 document.write('<div class="line-button_nocne"><a href="linia_44.html">44</a></div>');
-document.write('<div class="line-button_specjalne"><a href="linia_51w.html">51</a></div>');
+document.write('<div class="line-button_specjalne"><a href="linia_51.html">51</a></div>');
 document.write('<div class="line-button_specjalne2"><a href="linia_1S.html">1S <img src="zdjecia/koszalek.png"></a></div>');
 document.write('</div>');
