@@ -80,10 +80,10 @@ function wyswietldymek(h,m,typ,event) {
 	if (typ == '16a') i_p = 25;
 	if (typ == '16b') {i_p = 27; offset = 30};
 	// ---Linia 23---
-	if (typ == '23a') i_p = 16;
-	if (typ == '23a_1') i_p = 14;
-	if (typ == '23b') {i_p = 16; offset = 20};
-	if (typ == '23b_1') {i_p = 15; offset = 40};
+	if (typ == '23a') i_p = 20;
+	if (typ == '23a_1') i_p = 18;
+	if (typ == '23b') {i_p = 20; offset = 20};
+	if (typ == '23b_1') {i_p = 19; offset = 40};
 	if (typ == '23b_2') {i_p = 13; offset = 20}; // wies - biblioteka
 	if (typ == '23b_3') {i_p = 12; offset = 40}; // dzialki - biblioteka
 	// ---Linia 29---
