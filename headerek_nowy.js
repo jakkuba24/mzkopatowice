@@ -1,0 +1,13 @@
+document.write('<a href="index.html">Strona główna</a>');
+document.write('<a href="changelog.html">Historia</a>');
+document.write('</header>');
+document.write('<div>');
+document.write('<a href="index.html"><img src="zdjecia/mzk1.png" alt="Logo MZK" class="logo" style="float:left"></a>');
+document.write('<div class="wybor_linii">');
+document.write('<div class="line-button_specjalne"><a href="linia_51.html">51</a></div>');
+document.write('<div class="line-button_specjalne"><a href="linia_52.html">52</a></div>');
+document.write('<div class="line-button_specjalne"><a href="linia_53.html">53</a></div>');
+document.write('<div class="line-button_specjalne"><a href="linia_54.html">54</a></div>');
+document.write('<div class="line-button_specjalne"><a href="linia_55.html">55</a></div>');
+document.write('<div class="line-button_specjalne2"><a href="linia_1S.html">1S <img src="zdjecia/koszalek.png"></a></div>');
+document.write('</div>');
