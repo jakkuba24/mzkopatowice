@@ -6,14 +6,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="zdjecia/mzk.png">
 	<script src="kurs.js"></script>
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
 </head>
 <body>
     <header><script src="headerek.js"></script></div>
     <div class="tables-container">
 		<table class="rozklad_miejskie">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_miejskie">6</b></div>dzienna/miejska</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_miejskie">6</b></div>dzienna/miejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Osiedle Unii Europejskiej<br><br><b>Kierunek:</b> Dworzec PKP</td>
 			</tr>
 			<tr>
@@ -189,19 +194,19 @@
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 27.10.2025</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 27.10.2025</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left">S - kurs do Strefy Ekonomicznej</td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">S - kurs do Strefy Ekonomicznej</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
 			</tr>
 		</table>
 			
@@ -343,9 +348,9 @@
 	<br><br><br>
 	<div class="tables-container">
 		<table class="rozklad_miejskie">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_miejskie">6</b></div>dzienna/miejska</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_miejskie">6</b></div>dzienna/miejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> BIG Opatowice<br><br><b>Kierunek:</b> Dworzec PKP</td>
 			</tr>
 			<tr>
@@ -436,19 +441,19 @@
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 27.10.2025</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 27.10.2025</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left">S - kurs do Strefy Ekonomicznej</td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">S - kurs do Strefy Ekonomicznej</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
 			</tr>
 		</table>
 			
@@ -596,9 +601,9 @@
 	<br><br><br>
 	<div class="tables-container">
 		<table class="rozklad_miejskie">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_miejskie">6</b></div>dzienna/miejska</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_miejskie">6</b></div>dzienna/miejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Wąwozowa (Południowy PKP)<br><br><b>Kierunek:</b> Dworzec PKP</td>
 			</tr>
 			<tr>
@@ -795,19 +800,19 @@
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 27.10.2025</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 27.10.2025</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left">S - kurs do Strefy Ekonomicznej</td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">S - kurs do Strefy Ekonomicznej</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
 			</tr>
 		</table>
 			
@@ -909,9 +914,9 @@
 	<br><br><br>
 	<div class="tables-container">
 		<table class="rozklad_miejskie">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_miejskie">6</b></div>dzienna/miejska</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_miejskie">6</b></div>dzienna/miejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Dworzec PKP<br><br><b>Kierunek:</b> Osiedle Unii Europejskiej</td>
 			</tr>
 			<tr>
@@ -1087,23 +1092,23 @@
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 27.10.2025</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 27.10.2025</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left">B - kurs do Centrum Handlowego BIG Opatowice</td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">B - kurs do Centrum Handlowego BIG Opatowice</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left">W - kurs do przystanku Wąwozowa (Południowy PKP)</td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">W - kurs do przystanku Wąwozowa (Południowy PKP)</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
 			</tr>
 		</table>
 			
@@ -1215,9 +1220,9 @@
 	<br><br><br>
 	<div class="tables-container">
 		<table class="rozklad_miejskie">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_miejskie">6</b></div>dzienna/miejska</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_miejskie">6</b></div>dzienna/miejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Strefa Ekonomiczna<br><br><b>Kierunek:</b> Osiedle Unii Europejskiej</td>
 			</tr>
 			<tr>
@@ -1351,19 +1356,19 @@
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 27.10.2025</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 27.10.2025</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left">B - kurs do Centrum Handlowego BIG Opatowice</td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">B - kurs do Centrum Handlowego BIG Opatowice</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
 			</tr>
 		</table>
 			

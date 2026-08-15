@@ -5,12 +5,17 @@
     <title>MZK OPATOWICE</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="zdjecia/mzk.png">
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
 </head>
 <body>
     <header><script src="headerek.js"></script></div>
-        <div class="przycisk_mapa">
-            <a href="mapa.html" class="rounded-box">
-                <img src="zdjecia/mapa.png" alt="Mapa linii autobusowych" class="map-icon">
+        <div class="div_przycisk_mapa">
+            <a href="mapa.html" class="przycisk_mapa">
+                <img src="zdjecia/mapa.png" class="icon_mapa">
                 <span class="map-text">Mapka linii autobusowych</span>
             </a>
         </div>
@@ -18,10 +23,10 @@
 	<h1 style="text-align:center">Komunikaty</h1>
 
 	<!--<div class="aktualnosci">
-		<h2>Zmiany w kursowaniu autobusów w związku z Tour de Pologne 2026</h2>
-		<h5>30.07.2026</h5>
+		<h1>Zmiany w kursowaniu autobusów w związku z Tour de Pologne 2026</h1>
+		<p class="autoLinie">03.08.2026 1 2 4 6 8 9 12 13 14 15 16 23 29 37 38 40 44 51</p>
 
-		<div class="wybor_linii"><h2>ROZKŁADY JAZDY LINII SPECJALNYCH: </h2><div class="line-button_specjalne"><a href="MZK Opatowice - 51TdP.pdf">51</a></div><div class="line-button_specjalne"><a href="MZK Opatowice - 52TdP.pdf">52</a></div><div class="line-button_specjalne"><a href="MZK Opatowice - 53TdP.pdf">53</a></div><div class="line-button_specjalne"><a href="MZK Opatowice - 54TdP.pdf">54</a></div><div class="line-button_specjalne"><a href="MZK Opatowice - 55TdP.pdf">55</a></div></div>
+		<div class="div_wybor_linii"><h2>ROZKŁADY JAZDY LINII SPECJALNYCH: </h2><a href="MZK Opatowice - 51TdP.pdf" class="linia_specjalna">51</a><a href="MZK Opatowice - 52TdP.pdf" class="linia_specjalna">52</a><a href="MZK Opatowice - 53TdP.pdf" class="linia_specjalna">53</a><a href="MZK Opatowice - 54TdP.pdf" class="linia_specjalna">54</a><a href="MZK Opatowice - 55TdP.pdf" class="linia_specjalna">55</a></div>
 		<h3>W związku z organizacją wyścigu kolarskiego Tour de Pologne, dnia 03.08.2026 r. wprowadzona zostanie tymczasowa organizacja ruchu, która spowoduje zmiany w kursowaniu autobusów:</h3>
 		<ul>
 			<li>Obowiązuje objazd na ul. Zwycięstwa dla linii nr 2, 4, 6 i 15 wyłącznie w kierunku zachodnim przez cały dzień. Pozostałe linie kursują zgodnie z obowiązującym rozkładem jazdy</li>
@@ -35,15 +40,15 @@
 			</ul>
 			<li>Na trasach objazdów obowiązują wszystkie przystanki.</li>
 		</ul>
-		<table style="margin: 0 1% 1% 1%;width:98%">
-		<tr style="color:#0088ee;font-weight:bold;text-align:center"><td style="border:2px solid #0088ee; border-bottom: 0 solid #fff">OBJAZD DLA LINII 2, 4, 6 I 15 NA UL. ZWYCIĘSTWA<br><img src="zdjecia/TdP2026-1.jpg" style="max-width:55%"></td></tr>
-		<tr style="color:#0088ee;font-weight:bold;text-align:center"><td style="border:2px solid #0088ee">SCHEMAT LINII SPECJALNYCH 51, 52, 53, 54 I 55<br><img src="zdjecia/TdP2026-2.jpg" style="max-width:100%"></td></tr>
+		<table>
+		<tr><td style="border-bottom: none">OBJAZD DLA LINII 2, 4, 6 I 15 NA UL. ZWYCIĘSTWA<br><img src="zdjecia/TdP2026-1.jpg" style="max-width:55%"></td></tr>
+		<tr><td>SCHEMAT LINII SPECJALNYCH 51, 52, 53, 54 I 55<br><img src="zdjecia/TdP2026-2.jpg" style="max-width:100%"></td></tr>
 		</table>
-	</div><br><br><br>-->
+	</div>-->
 	
 	<div class="aktualnosci">
-		<h2>Objazd na liniach nr 9, 23 i 40</h2>
-		<h5>16.07.2026</h5>
+		<h1>Objazd na liniach nr 9, 23 i 40</h1>
+		<p class="autoLinie">16.07.2026 9 23 40</p>
 	
 		<h3>W związku z przebudową ul. Młyńskiej od 20.07.2026 roku (poniedziałek) wprowadza się objazdy ulicami dla linii nr:</h3>
 		<ul>
@@ -52,12 +57,12 @@
 			<li><b style="color: #CD8F7F;">40:</b> ... - Monte Cassino - Armii Krajowej - ...</li>
 		</ul>
 		<p>Zmianie ulegną rozkłady jazdy. Przystanek Plac Kilińskiego zostaje zawieszony. Na trasach objazdów obowiązują wszystkie przystanki.</p>
-		<img src="zdjecia/objazd_20.07.2026.jpg" style="max-width:99.5%">
-	</div><br><br><br>
+		<img src="zdjecia/objazd_20.07.2026.jpg">
+	</div>
 
 	<div class="aktualnosci">
-		<h2>Wprowadzenie wakacyjnych rozkładów jazdy dla linii nr 1, 4, 6, 14, 16 i 29 od 29 czerwca 2026 r.</h2>
-		<h5>25.06.2026</h5>
+		<h1>Wprowadzenie wakacyjnych rozkładów jazdy dla linii nr 1, 4, 6, 14, 16 i 29 od 29 czerwca 2026 r.</h1>
+		<p class="autoLinie">25.06.2026 1 4 6 14 16 29 51</p>
 		
 		<h3>W okresie wakacyjnym od 29 czerwca 2026 r. do 30 sierpnia 2026 r. zostaną wprowadzone nastepujące zmiany w rozkładach jazdy w dniu powszednim:</h3>
 		<ul>
@@ -73,16 +78,16 @@
 			<li>Linia 1: Zmiana statusu przystanku Sołecka na stały oraz zmiana przystanku końcowego z Zagrody Jamneńskiej na Sołecką</li>
 			<li>Linia 51: Zmiana statusu przystanku Sołecka na stały</li>
 		</ul>
-	</div><br><br><br>
+	</div>
 
 	<div class="aktualnosci">
-		<h2>Uruchomienie linii sezonowych</h2>
-		<h5>03.06.2026</h5>
+		<h1>Uruchomienie linii sezonowych</h1>
+		<p class="autoLinie">03.06.2026</p>
 	
 		<h2>Od 4 czerwca 2026 r. do 30 sierpnia 2026 r. zostaną uruchomione linie sezonowe:</h2>
 		<h3>51 relacji Osiedle Północ - Północna - Dworzec PKP - Wąwozowa - Jamno Przystań</h3>
 		<h3>1S relacji Jamno Przystań - Unieście Przystań - Mielno Przystań, którą będzie obsługiwał statek Julek</h3>
-	</div><br><br><br>
+	</div>
 
 	<!--<div class="aktualnosci">
 		<h2>Zmiany w kursowaniu autobusów od 11.05.2026</h2>
@@ -463,8 +468,8 @@
 	</div><br><br><br>-->
 
 	<div class="aktualnosci">
-		<h2 class="aktualnosci-text">Strona internetowa MZK Opatowice</h2>
-		<h5>18.11.2024</h5>
+		<h1>Strona internetowa MZK Opatowice</h1>
+		<p class="autoLinie">18.11.2024</p>
 	
 		<p>Zarząd MZK Opatowice wypuścił właśnie stronę internetową, w której możemy znaleźć takie rzeczy, jak:</p>
 		<ul>
@@ -474,6 +479,48 @@
 		<li>mapkę autobusową</li>
 		</ul>
 	</div>
-	<br>
+
+	<script>
+	const elementy = document.querySelectorAll(".autoLinie");
+
+	elementy.forEach(element => {
+		const regex = /(\b\d{2}\.\d{2}\.\d{4}\b|\S+)/g;
+		const fragmenty = element.innerText.match(regex);
+		if (!fragmenty) return;
+
+		let Data = "";
+		let Linie = "";
+
+		fragmenty.forEach(item => {
+			// Sprawdzamy, czy dany fragment jest datą DD.MM.YYYY
+   			const czyData = /^\d{2}\.\d{2}\.\d{4}$/.test(item);
+			if (czyData) {
+				Data += `<img src="css/kalendarz.png" class="img_invert"> ${item}`;
+				return;
+			}
+
+			const liczba = parseInt(item, 10);
+    		if (isNaN(liczba)) return; // Ignorujemy tekst niebędący liczbą
+
+			let klasa = "";
+
+			if (liczba >= 1 && liczba <= 19) {
+				klasa = "linia_miejska_text";
+			} else if (liczba >= 20 && liczba <= 29) {
+				klasa = "linia_podmiejska_text";
+			} else if (liczba >= 30 && liczba <= 39) {
+				klasa = "linia_pospieszna_text";
+			} else if (liczba >= 40 && liczba <= 49) {
+				klasa = "linia_nocna_text";
+			} else if (liczba >= 50 && liczba <= 59) {
+				klasa = "linia_specjalna_text";
+			} else { return; } // Ignoruje liczby spoza przedziału
+			Linie += `<span class="${klasa}">${liczba}</span>`;
+		});
+		// Warunek sprawdzający, czy znaleziono jakiekolwiek linie autobusowe
+		if (Linie !== "") element.innerHTML = `${Data} <span style="padding-right:30px"></span>Informacja dotyczy linii: ${Linie}`;
+		else element.innerHTML = Data;
+	});
+	</script>
 </body>
 </html>

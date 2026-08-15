@@ -6,14 +6,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="zdjecia/mzk.png">
 	<script src="kurs.js"></script>
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
 </head>
 <body>
     <header><script src="headerek.js"></script></div>
     <div class="tables-container">
 		<table class="rozklad_nocne">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_nocne">40</b></div>nocna</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_nocne">40</b></div>nocna</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Osiedle Północ<br><br><b>Kierunek:</b> Osiedle Bukowe</td>
 			</tr>
 			<tr>
@@ -47,20 +52,20 @@
 				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '40a', event)" onmouseleave="dymek.style.display='none'">10</td> <!-- 5 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 06.10.2025</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 06.10.2025</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
 			</tr>
-			<tr><td style="border: 1px solid #ffffff"><br><br></td></tr>
+			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"><br><br></td></tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"><b>W komunikacji nocnej wszystkie przystanki są na żądanie</b></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>W komunikacji nocnej wszystkie przystanki są na żądanie</b></td>
 			</tr>
 		</table>
 			
@@ -217,9 +222,9 @@
 	<br><br><br>
 	<div class="tables-container">
 		<table class="rozklad_nocne">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_nocne">40</b></div>nocna</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_nocne">40</b></div>nocna</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="8" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Os. Unii Lubelskiej<br><br><b>Kierunek:</b> Osiedle Bukowe</td>
 			</tr>
 			<tr>
@@ -253,20 +258,20 @@
 				<td></td> <!-- 5 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 06.10.2025</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 06.10.2025</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
 			</tr>
-			<tr><td style="border: 1px solid #ffffff"><br><br></td></tr>
+			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"><br><br></td></tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"><b>W komunikacji nocnej wszystkie przystanki są na żądanie</b></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>W komunikacji nocnej wszystkie przystanki są na żądanie</b></td>
 			</tr>
 		</table>
 		
@@ -478,9 +483,9 @@
 	<br><br><br>
 	<div class="tables-container">
 		<table class="rozklad_nocne">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_nocne">40</b></div>nocna</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_nocne">40</b></div>nocna</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="8" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Osiedle Bukowe<br><br><b>Kierunek:</b> Osiedle Północ</td>
 			</tr>
 			<tr>
@@ -514,20 +519,20 @@
 				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '40b', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 5 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od: 06.10.2025</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 06.10.2025</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left">U - kurs do przystanku Osiedle Unii Lubelskiej</td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">U - kurs do przystanku Osiedle Unii Lubelskiej</td>
 			</tr>
-			<tr><td style="border: 1px solid #ffffff"><br><br></td></tr>
+			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"><br><br></td></tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"><b>W komunikacji nocnej wszystkie przystanki są na żądanie</b></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>W komunikacji nocnej wszystkie przystanki są na żądanie</b></td>
 			</tr>
 		</table>
 		

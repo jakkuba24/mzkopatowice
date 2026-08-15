@@ -1,0 +1,434 @@
+/* Głowne ustawienia strony */
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('font.ttf') format('truetype');
+}
+body {
+    font-family: 'CustomFont';
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.logo {
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+}
+
+
+
+
+
+/* Pasek nawigacji HEADER + NAV */
+
+header {
+    background-color: #1f2f6d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+	width: 100%;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+	padding: 0 3%;
+}
+
+header a:hover {
+    color: #cccccc;
+}
+
+.rounded-box {
+    background-color: #1f2f6d;
+    color: white;
+    border-radius: 15px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.rounded-box:hover {
+    background-color: #16264e;
+}
+
+.map-icon, .calendar-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+}
+.przycisk_mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin-top: 50px;
+    gap: 25px;
+}
+
+
+/* Przyciski wyboru linii */
+.wybor_linii {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+	margin-top: 50px;
+	height: 143px;
+	margin: 0px auto;
+}
+
+
+
+.line-button_miejskie, .line-button_podmiejskie, .line-button_pospieszne, .line-button_nocne, .line-button_objazd, .line-button_specjalne, .line-button_specjalne2 {
+    height: 50px;
+	min-width: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+	text-align: center;
+	line-height: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+	border-radius: 50%;
+	float: left;
+	margin: 0 7px 0 7px;
+}
+.line-button_specjalne2 {
+	border-radius: 30px;
+	padding-right: 15px;
+	padding-left: 5px;
+}
+.line-button_specjalne2 a {
+	 display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    padding: 0 3%;
+}
+.line-button_miejskie a, .line-button_podmiejskie a, .line-button_pospieszne a, .line-button_nocne a, .line-button_objazd a, .line-button_specjalne a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+	padding: 0 3%;
+}
+
+.objazd {
+	background: linear-gradient(135deg, rgba(255,153,0,0) 0%,rgba(255,153,0,0) 49%,rgba(255,153,0,1) 50%,rgba(255,153,0,1) 100%);
+}
+
+.line-button_miejskie {
+	background-color: #0094ff;
+}
+.line-button_miejskie:hover {
+	background-color: #0047aa;
+	transform: scale(1.02);
+}
+
+.line-button_podmiejskie {
+	background-color: #24378d;
+}
+.line-button_podmiejskie:hover {
+    background-color: #1b2a65;
+    transform: scale(1.02);
+}
+
+.line-button_pospieszne {
+	background-color: #ff0000;
+}
+.line-button_pospieszne:hover {
+	background-color: #aa0000;
+	transform: scale(1.02);
+}
+
+.line-button_nocne {
+	background-color: #333;
+}
+.line-button_nocne:hover {
+	background-color: #000;
+	transform: scale(1.02);
+}
+
+.line-button_specjalne, .line-button_specjalne2 {
+	background-color: #7F4A7F;
+}
+.line-button_specjalne:hover, .line-button_specjalne2:hover {
+	background-color: #5e2f5e;
+	transform: scale(1.02);
+}
+
+
+
+
+
+/* Mapka */
+
+.menu-mapka {
+	background-color: #24378d;
+	padding: 0.2%;
+	max-width: 9.5%;
+	width: 105px;
+	color: white;
+	float: left;
+}
+
+.menu-mapka button {
+	background-color: #ccc;
+	border: 2px solid #000;
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.menu-mapka p {
+	margin-left: 5px;
+	font-size: 12px;
+}
+.menu-mapka input, .menu-mapka label {
+	float: left;
+}
+.menu-mapka hr {
+	width: 15px;
+	height: 8px;
+	float: left;
+	margin: 6px 0 6px 7px;
+	border: 1px solid black;
+}
+
+#cala_mapka {
+	position: relative;
+	float: left;
+	background-image: url("../zdjecia/whole.roadmap.png");
+	width: 88%;
+	height: 1600px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+@media (max-width: 1099px){ #cala_mapka img {
+	position: absolute;
+	width: 100%;
+	display: none;
+}}
+@media (min-width: 1100px){ #cala_mapka img {
+	position: absolute;
+	height: 100%;
+	display: none;
+}}
+
+
+
+
+
+/* Strona główna AKTUALNOSCI */
+
+.aktualnosci {
+	margin-left: 10%;
+	margin-right: 10%;
+	border: 3px solid #0088ee;
+}
+
+.aktualnosci p, .aktualnosci li, .aktualnosci h1, .aktualnosci h2, .aktualnosci h3, .aktualnosci h4, .aktualnosci h5, .aktualnosci h6 {
+	margin-left: 1%;
+}
+.aktualnosci ul {
+	list-style-type: none;
+	padding-left: 0.5%;
+}
+.aktualnosci li:before {
+	margin-bottom: 0.5%;
+	content: '\2794';
+	margin-right: 0.5%;
+	color: red;
+}
+.aktualnosci .li2:before {
+	content:'';
+}
+.aktualnosci .li2 {
+	list-style-type: disc;
+	color: orange;
+	margin-left: 3%;
+}
+.aktualnosci .li2 span {
+	color: #333;
+}
+
+.aktualnosci h2 {
+	color: red;
+}
+.aktualnosci h3 {
+	color: darkblue;
+}
+
+.aktualnosci-img {
+	margin-top: 1%;
+	float: left;
+	margin-left: 8%;
+}
+
+
+
+
+
+/* ROZKLADY JAZDY */
+/* ustawienia tabel */
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th, table td {
+    padding: 4px;
+}
+table th {
+    color: black;
+}
+.tables-container::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+}
+
+/* tabelki rozkładowe */
+
+.rozklad_miejskie, .rozklad_podmiejskie, .rozklad_pospieszne, .rozklad_nocne, .rozklad_specjalne {
+    float:left;
+    width:auto;
+    margin:auto;
+	margin-left: 1%;
+	text-align: center;
+}
+.rozklad_miejskie th, .rozklad_podmiejskie th, .rozklad_pospieszne th, .rozklad_nocne th, .rozklad_specjalne th, .rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_nocne td, .rozklad_specjalne td {
+	border: 1px solid #000000;
+}
+.rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_specjalne td {
+    width: 40px;
+}
+.rozklad_nocne td {
+    width: 60px;
+}
+
+.rozklad_miejskie th, .przystanki_miejskie th {
+	background-color: #C9DAF8;
+}
+.rozklad_podmiejskie th, .przystanki_podmiejskie th {
+	background-color: #a4c2f4;
+}
+.rozklad_pospieszne th, .przystanki_pospieszne th {
+	background-color: #f4cccc;
+}
+.rozklad_nocne th, .przystanki_nocne th {
+	background-color: #d9d9d9;
+}
+.rozklad_specjalne th, .przystanki_specjalne th {
+	background-color: #d1a4d1;
+}
+
+.ramka_miejskie, .ramka_podmiejskie, .ramka_pospieszne, .ramka_nocne, .ramka_specjalne {
+	font-size: 42px;
+	margin-left: 41.5px;
+	padding: 4px;
+	width: 56px;
+	height: 56px;
+	border: 4px solid;
+}
+.ramka_miejskie {
+	border-color: #00B1EB;
+}
+.ramka_podmiejskie {
+	border-color: #24378d;
+}
+.ramka_pospieszne {
+	border-color: #ff0000;
+}
+.ramka_nocne {
+	border-color: #000;
+}
+.ramka_specjalne {
+	border-color: #7F4A7F;
+}
+
+.linie td {
+	border-bottom: hidden;
+	padding-bottom: 0;
+}
+
+/* tabelki z przstankami */
+
+.przystanki_miejskie, .przystanki_podmiejskie, .przystanki_pospieszne, .przystanki_nocne, .przystanki_specjalne {
+    float: left;
+    width: auto;
+    margin: auto;
+	margin-left: 1%;
+	margin-right: 1%;
+	border: 1px solid #000000;
+}
+.przystanki_miejskie th, .przystanki_podmiejskie th, .przystanki_pospieszne th, .przystanki_nocne th, .przystanki_specjalne th {
+	text-align: left;
+}
+
+/* dymek */
+
+#dymek {
+	border: 2px solid #1f2f6d;
+	border-radius: 5px;
+	background-color: white;
+	padding: 4px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none; 
+	z-index: 10;
+	font-family: Arial, monospace;
+}
+
+/* kolory dla tekstów */
+
+.red-text {
+    color: red;
+}
+.green-text {
+    color: #009900;
+}
+.objazd-text {
+	color: #ff9900;
+}
+
+
+
+
+
+/* changelog */
+
+.changelog {
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #676767;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-bottom: 3%;
+	padding-left: 1%;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .ignore-on-mobile {
+        display: none;
+    }
+}

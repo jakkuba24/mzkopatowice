@@ -6,14 +6,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="zdjecia/mzk.png">
 	<script src="kurs.js"></script>
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
 </head>
 <body>
     <header><script src="headerek.js"></script></div>
     <div class="tables-container">
 		<table class="rozklad_podmiejskie">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_podmiejskie">29</div></b>dzienna/podmiejska</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_podmiejskie">29</div></b>dzienna/podmiejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Dworzec PKP<br><br><b>Kierunek:</b> Czarnowo</td>
 			</tr>
 			<tr>
@@ -147,24 +152,24 @@
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od 29.06.2026 do 30.08.2026</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od 29.06.2026 do 30.08.2026</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left">C - kurs do Celinek</td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">C - kurs do Celinek</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
 			</tr>
-			<tr><td style="border: 1px solid #ffffff"></td></tr>
+			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"></td></tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"><b>Rozkład wakacyjny</b></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>Rozkład wakacyjny</b></td>
 			</tr>
 		</table>
 		
@@ -353,9 +358,9 @@
 	<br><br><br>
 	<div class="tables-container">
 		<table class="rozklad_podmiejskie">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_podmiejskie">29</div></b>dzienna/podmiejska</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_podmiejskie">29</div></b>dzienna/podmiejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Czarnowo<br><br><b>Kierunek:</b> Dworzec PKP</td>
 			</tr>
 			<tr>
@@ -468,20 +473,20 @@
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od 29.06.2026 do 30.08.2026</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od 29.06.2026 do 30.08.2026</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
 			</tr>
-			<tr><td style="border: 1px solid #ffffff"><br></td></tr>
+			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"><br></td></tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"><b>Rozkład wakacyjny</b></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>Rozkład wakacyjny</b></td>
 			</tr>
 		</table>
 		
@@ -583,9 +588,9 @@
 	<br><br><br>
 	<div class="tables-container">
 		<table class="rozklad_podmiejskie">
-			<tr style="border: 2px solid black">
-				<td style="border: 2px solid black;min-width:155px"><b>Linia<br><div class="ramka_podmiejskie">29</div></b>dzienna/podmiejska</td>
-				<td style="border-right: 1px solid #ffffff"></td>
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_podmiejskie">29</div></b>dzienna/podmiejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
 				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Celinki<br><br><b>Kierunek:</b> Dworzec PKP</td>
 			</tr>
 			<tr>
@@ -719,24 +724,24 @@
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid #ffffff;text-align:right">Obowiązuje od 29.06.2026 do 30.08.2026</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od 29.06.2026 do 30.08.2026</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<th colspan="15" style="border: 1px solid #ffffff;text-align:left">Objaśnienia:</th>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left">D - kurs bezpośredni do Dworca PKP</td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">D - kurs bezpośredni do Dworca PKP</td>
 			</tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
 			</tr>
-			<tr><td style="border: 1px solid #ffffff"></td></tr>
+			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"></td></tr>
 			<tr>
-				<td style="border: 1px solid #ffffff"></td>
-				<td colspan="15" style="border: 1px solid #ffffff;text-align:left"><b>Rozkład wakacyjny</b></td>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>Rozkład wakacyjny</b></td>
 			</tr>
 		</table>
 		

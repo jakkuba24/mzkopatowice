@@ -1,17 +1,24 @@
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>MZK OPATOWICE - CHANGELOG</title>
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="icon" href="zdjecia/mzk.png">
-	</head>
-	<body>
-		<header><script src="headerek.js"></script></header></div>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>MZK OPATOWICE - Historia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="zdjecia/mzk.png">
+	<script src="kurs.js"></script>
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
+</head>
+<body>
+	<header><script src="headerek.js"></script></header></div>
 		<div class="changelog">
 			<h1>Opatowice v4.0</h1>
 			Lista zmian:
 			<ul>
-			<li>Linia 11 usunięta</li>
+			<li>Linia 5 i 11 usunięta</li>
 			<li>Linia 12 (Dworzec PKP -> Dzierżęcino (-> Chełmoniewo))</li>
 			<li>Linia 13 (Dworzec PKP -> Szpital (-> Osiedle Morskie))</li>
 			<li>Linia 14 (Osiedle Bukowe -> Osiedle Morskie)</li>
@@ -54,12 +61,12 @@
 				<li>Korekty rozkładów</li>
 				<li>Odświeżone rondo Lechitów</li>
 				<br>
-		<!--> 	<b style="font-size:22px;">3.1.1</b>
+			 	<b style="font-size:22px;">3.1.1</b>
 				<li>Dodanie specjalnych rozkładów jazdy na Wszystkich Świętych 2025</li>
 				<li>Dodanie otoczenia na południu Opatowic</li>
 				<li>Poprawka błędów</li>
 				<br>
-		<!-->   <b style="font-size:22px;">3.1.2</b>
+			    <b style="font-size:22px;">3.1.2</b>
 				<li>Dodanie specjalnych rozkładów jazdy na święta Bożego Narodzenia 2025 i po nich</li>
 				<li>Poprawka błędów</li>
 				<br>

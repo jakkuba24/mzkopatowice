@@ -1,50 +1,146 @@
-/* Głowne ustawienia strony */
+/* Zmiana motywu */
+input[type="checkbox"][role="switch"] {
+  appearance: none;
+  width: 38px;
+  background: #000;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
+input[type="checkbox"][role="switch"]:checked {
+  background: #ddd;
+}
+
+input[type="checkbox"][role="switch"]::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+/* MOTYW */
+input[type="checkbox"][role="switch"]:checked::before {
+  transform: translateX(20px);
+  background: #000;
+}
+:root[theme="ciemny"] {
+	--body-background-color: #161616;
+	--body-color: #fff;
+	--logo: drop-shadow(2px 4px 6px rgba(255,255,255,0.2));
+	--header-background-color: #0e1a47;
+	/* wybor linii */
+	--linia_nocna-border-color: #fff;
+	/* aktualnosci */
+	--aktualnosci-border-color: #00aaff;
+	--aktualnosci-li2-span-color: #fff;
+	--aktualnosci-h1-h2-color: #ff4040;
+	--aktualnosci-h3-color: #0088ee;
+	/* rozkłady jazdy */
+	--table-border-niewidoczny: var(--body-background-color);
+	--table-border-widoczny: #fff;
+	--rozklad_miejskie_th-background-color: #345b9f;
+	--rozklad_podmiejskie_th-background-color: #24378d;
+	--rozklad_pospieszne_th-background-color: #742727;
+	--rozklad_nocne_th-background-color: #373737;
+	--rozklad_specjalne_th-background-color: #7F4A7F;
+	--rozklad_objazd_info-background-color: #4c361e;
+	--ramka_nocne-border-color: #fff;
+	--dymek-border-color: #5c5cfc;
+	--dymek-background-color: #222;
+	--dymek-color: #fff;
+	/* Inne */
+	--img_invert: invert(0);
+}
+:root[theme="jasny"] {
+	--body-background-color: #fff;
+	--body-color: #000;
+	--logo: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+	--header-background-color: #1f2f6d;
+	/* wybor linii */
+	--linia_nocna-border-color: #777;
+	/* aktualnosci */
+	--aktualnosci-border-color: #0088ee;
+	--aktualnosci-li2-span-color: #333;
+	--aktualnosci-h1-h2-color: red;
+	--aktualnosci-h3-color: darkblue;
+	/* rozkłady jazdy */
+	--table-border-niewidoczny: #fff;
+	--table-border-widoczny: #000;
+	--table_th-color: #000;
+	--rozklad_miejskie_th-background-color: #C9DAF8;
+	--rozklad_podmiejskie_th-background-color: #a4c2f4;
+	--rozklad_pospieszne_th-background-color: #f4cccc;
+	--rozklad_nocne_th-background-color: #d9d9d9;
+	--rozklad_specjalne_th-background-color: #D1A4D1;
+	--rozklad_objazd_info-background-color: #fce5cd;
+	--ramka_nocne-border-color: #000;
+	--dymek-border-color: #1f2f6d;
+	--dymek-background-color: #fff;
+	--dymek-color: #000;
+	/* Inne */
+	--img_invert: invert(1);
+}
+:root {
+  --body-background-color: #161616;
+  --body-color: #fff;
+}
+
+/* Głowne ustawienia strony */
 @font-face {
     font-family: 'CustomFont';
     src: url('font.ttf') format('truetype');
 }
 body {
+	background-color: var(--body-background-color);
     font-family: 'CustomFont';
-    color: #333;
+    color: var(--body-color);
     margin: 0;
     padding: 0;
 }
 .logo {
-    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+    filter: var(--logo);
 }
 
 
 
-
-
 /* Pasek nawigacji HEADER + NAV */
-
 header {
-    background-color: #1f2f6d;
-    color: white;
+    background-color: var(--header-background-color);
+    color: #fff;
     display: flex;
     justify-content: center;
     padding: 15px 0;
 	width: 100%;
 }
-
 header a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
 	padding: 0 3%;
 }
-
 header a:hover {
     color: #cccccc;
 }
 
-.rounded-box {
+.div_przycisk_mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin-top: 50px;
+    gap: 25px;
+}
+.przycisk_mapa {
     background-color: #1f2f6d;
-    color: white;
+    color: #fff;
     border-radius: 15px;
     padding: 15px 25px;
     display: flex;
@@ -54,119 +150,85 @@ header a:hover {
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
-.rounded-box:hover {
+.przycisk_mapa:hover {
     background-color: #16264e;
 }
-
-.map-icon, .calendar-icon {
+.icon_mapa {
     width: 50px;
     height: 50px;
     margin-right: 12px;
 }
-.przycisk_mapa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	margin-top: 50px;
-    gap: 25px;
-}
 
 
 /* Przyciski wyboru linii */
-.wybor_linii {
+.div_wybor_linii {
 	display: flex;
 	justify-content: center;
 	align-items: center;
     flex-wrap: wrap;
     align-items: center;
+	text-align: center;
 	margin-top: 50px;
 	height: 143px;
 	margin: 0px auto;
 }
 
-
-
-.line-button_miejskie, .line-button_podmiejskie, .line-button_pospieszne, .line-button_nocne, .line-button_objazd, .line-button_specjalne, .line-button_specjalne2 {
-    height: 50px;
+.linia_miejska, .linia_podmiejska, .linia_pospieszna, .linia_nocna, .linia_specjalna, .linia_specjalna2 {
+	line-height: 35px;
 	min-width: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
-	text-align: center;
-	line-height: 50px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-	border-radius: 50%;
+	transition: background-color 0.3s ease, transform 0.2s ease;
 	float: left;
 	margin: 0 7px 0 7px;
+	background-color: #fff;
+	color: #000;
+    text-decoration: none;
+	font-weight: bold;
+	font-size: 26px;
+    letter-spacing: 0.5px;
 }
-.line-button_specjalne2 {
-	border-radius: 30px;
+.linia_nocna {
+	background-color: #333;
+	color: #fff;
+}
+.linia_specjalna2 {
 	padding-right: 15px;
 	padding-left: 5px;
-}
-.line-button_specjalne2 a {
-	 display: inline-flex;
+	line-height: 35px;
+	display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
-    padding: 0 3%;
-}
-.line-button_miejskie a, .line-button_podmiejskie a, .line-button_pospieszne a, .line-button_nocne a, .line-button_objazd a, .line-button_specjalne a{
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
-	padding: 0 3%;
 }
 
 .objazd {
-	background: linear-gradient(135deg, rgba(255,153,0,0) 0%,rgba(255,153,0,0) 49%,rgba(255,153,0,1) 50%,rgba(255,153,0,1) 100%);
+	background-color: #ff9900;
 }
 
-.line-button_miejskie {
-	background-color: #0094ff;
+.linia_miejska {
+	border: 4px solid #0094ff;
 }
-.line-button_miejskie:hover {
-	background-color: #0047aa;
+.linia_podmiejska {
+	border: 4px solid #24378d;
+}
+.linia_pospieszna {
+	border: 4px solid #ff0000;
+}
+.linia_nocna {
+	border: 4px solid var(--linia_nocna-border-color);
+}
+.linia_specjalna, .linia_specjalna2 {
+	border: 4px solid #7F4A7F;
+}
+
+.linia_miejska:hover, .linia_podmiejska:hover, .linia_pospieszna:hover, .linia_specjalna:hover, .linia_specjalna2:hover {
+	background-color: #ddd;
 	transform: scale(1.02);
 }
-
-.line-button_podmiejskie {
-	background-color: #24378d;
-}
-.line-button_podmiejskie:hover {
-    background-color: #1b2a65;
-    transform: scale(1.02);
-}
-
-.line-button_pospieszne {
-	background-color: #ff0000;
-}
-.line-button_pospieszne:hover {
-	background-color: #aa0000;
+.linia_nocna:hover {
+	background-color: #555;
 	transform: scale(1.02);
 }
-
-.line-button_nocne {
-	background-color: #333;
-}
-.line-button_nocne:hover {
-	background-color: #000;
-	transform: scale(1.02);
-}
-
-.line-button_specjalne, .line-button_specjalne2 {
-	background-color: #7F4A7F;
-}
-.line-button_specjalne:hover, .line-button_specjalne2:hover {
-	background-color: #5e2f5e;
+.objazd:hover {
+	background-color: #dd7700;
 	transform: scale(1.02);
 }
 
@@ -181,7 +243,7 @@ header a:hover {
 	padding: 0.2%;
 	max-width: 9.5%;
 	width: 105px;
-	color: white;
+	color: #fff;
 	float: left;
 }
 
@@ -236,13 +298,12 @@ header a:hover {
 /* Strona główna AKTUALNOSCI */
 
 .aktualnosci {
-	margin-left: 10%;
-	margin-right: 10%;
-	border: 3px solid #0088ee;
-}
-
-.aktualnosci p, .aktualnosci li, .aktualnosci h1, .aktualnosci h2, .aktualnosci h3, .aktualnosci h4, .aktualnosci h5, .aktualnosci h6 {
-	margin-left: 1%;
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-bottom: 60px;
+	border: 3px solid var(--aktualnosci-border-color);
+	padding-left: 0.75%;
+	padding-right: 0.75%;
 }
 .aktualnosci ul {
 	list-style-type: none;
@@ -263,20 +324,75 @@ header a:hover {
 	margin-left: 3%;
 }
 .aktualnosci .li2 span {
-	color: #333;
+	color: var(--aktualnosci-li2-span-color);
 }
 
-.aktualnosci h2 {
-	color: red;
+.aktualnosci h1, .aktualnosci h2 {
+	color: var(--aktualnosci-h1-h2-color);
 }
 .aktualnosci h3 {
-	color: darkblue;
+	color: var(--aktualnosci-h3-color);
+	/*color: #5c5cfc;*/
+}
+.aktualnosci img {
+	max-width: 99.5%;
+}
+.aktualnosci table {
+	margin: 0 1% 1% 1%;
+	width: 98%;
+}
+.aktualnosci table tr {
+	color: var(--aktualnosci-border-color);
+	font-weight: bold;
+	text-align: center;
+	font-size: 18px;
+	padding: 4px;
+}
+.aktualnosci table td {
+	border: 2px solid var(--aktualnosci-border-color);
 }
 
-.aktualnosci-img {
-	margin-top: 1%;
-	float: left;
-	margin-left: 8%;
+.linia_miejska_text, .linia_podmiejska_text, .linia_pospieszna_text, .linia_nocna_text, .linia_specjalna_text, .linia_specjalna2_text {
+	display: inline-block;
+	min-width: 40px;
+	margin: 0 7px 0 7px;
+	background-color: #fff;
+	color: #000;
+    text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+    letter-spacing: 0.5px;
+	text-align: center;
+	margin-bottom: 6px;
+}
+.linia_nocna_text {
+	background-color: #333;
+	color: #fff;
+}
+.linia_specjalna2_text {
+	padding-right: 15px;
+	padding-left: 5px;
+	height: 50px;
+	line-height: 50px;
+	display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.linia_miejska_text {
+	border: 3px solid #0094ff;
+}
+.linia_podmiejska_text {
+	border: 3px solid #24378d;
+}
+.linia_pospieszna_text {
+	border: 3px solid #ff0000;
+}
+.linia_nocna_text {
+	border: 3px solid var(--linia_nocna-border-color);
+}
+.linia_specjalna_text, .linia_specjalna2_text {
+	border: 3px solid #7F4A7F;
 }
 
 
@@ -294,12 +410,12 @@ table th, table td {
     padding: 4px;
 }
 table th {
-    color: black;
+    color: var(--table-border-widoczny);
 }
 .tables-container::after {
-	  content: "";
-	  clear: both;
-	  display: table;
+	content: "";
+	clear: both;
+	display: table;
 }
 
 /* tabelki rozkładowe */
@@ -312,7 +428,7 @@ table th {
 	text-align: center;
 }
 .rozklad_miejskie th, .rozklad_podmiejskie th, .rozklad_pospieszne th, .rozklad_nocne th, .rozklad_specjalne th, .rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_nocne td, .rozklad_specjalne td {
-	border: 1px solid #000000;
+	border: 1px solid var(--table-border-widoczny);
 }
 .rozklad_miejskie td, .rozklad_podmiejskie td, .rozklad_pospieszne td, .rozklad_specjalne td {
     width: 40px;
@@ -322,19 +438,19 @@ table th {
 }
 
 .rozklad_miejskie th, .przystanki_miejskie th {
-	background-color: #C9DAF8;
+	background-color: var(--rozklad_miejskie_th-background-color);
 }
 .rozklad_podmiejskie th, .przystanki_podmiejskie th {
-	background-color: #a4c2f4;
+	background-color: var(--rozklad_podmiejskie_th-background-color);
 }
 .rozklad_pospieszne th, .przystanki_pospieszne th {
-	background-color: #f4cccc;
+	background-color: var(--rozklad_pospieszne_th-background-color);
 }
 .rozklad_nocne th, .przystanki_nocne th {
-	background-color: #d9d9d9;
+	background-color: var(--rozklad_nocne_th-background-color);
 }
 .rozklad_specjalne th, .przystanki_specjalne th {
-	background-color: #d1a4d1;
+	background-color: var(--rozklad_specjalne_th-background-color);
 }
 
 .ramka_miejskie, .ramka_podmiejskie, .ramka_pospieszne, .ramka_nocne, .ramka_specjalne {
@@ -355,7 +471,7 @@ table th {
 	border-color: #ff0000;
 }
 .ramka_nocne {
-	border-color: #000;
+	border-color: var(--ramka_nocne-border-color);
 }
 .ramka_specjalne {
 	border-color: #7F4A7F;
@@ -374,7 +490,7 @@ table th {
     margin: auto;
 	margin-left: 1%;
 	margin-right: 1%;
-	border: 1px solid #000000;
+	border: 1px solid var(--table-border-widoczny);
 }
 .przystanki_miejskie th, .przystanki_podmiejskie th, .przystanki_pospieszne th, .przystanki_nocne th, .przystanki_specjalne th {
 	text-align: left;
@@ -383,9 +499,10 @@ table th {
 /* dymek */
 
 #dymek {
-	border: 2px solid #1f2f6d;
+	border: 2px solid var(--dymek-border-color);
 	border-radius: 5px;
-	background-color: white;
+	background-color: var(--dymek-background-color);
+	color: var(--dymek-color);
 	padding: 4px;
 	position: absolute;
 	left: 0;
@@ -395,7 +512,7 @@ table th {
 	font-family: Arial, monospace;
 }
 
-/* kolory dla tekstów */
+/* inne */
 
 .red-text {
     color: red;
@@ -405,6 +522,10 @@ table th {
 }
 .objazd-text {
 	color: #ff9900;
+}
+
+.img_invert {
+	filter: var(--img_invert);
 }
 
 
@@ -417,8 +538,8 @@ table th {
 	justify-content: center;
 	align-items: center;
 	border: 1px solid #676767;
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: 15%;
+	margin-right: 15%;
 	margin-bottom: 3%;
 	padding-left: 1%;
 }

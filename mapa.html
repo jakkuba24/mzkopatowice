@@ -5,6 +5,11 @@
     <title>MZK OPATOWICE - Mapa linii</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="zdjecia/mzk.png">
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
 </head>
 <body>
     <header><script src="headerek.js"></script></div>
