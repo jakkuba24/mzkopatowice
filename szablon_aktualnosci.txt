@@ -1,7 +1,6 @@
-	<div class="aktualnosci-img"><img src="zdjecia/aktualnosci-img.png"></div>
-	<div class="aktualnosci">
-		<h2>TYTUL</h2>
-		<h5>.202</h5>
-	
-		<p>Tresc</p>
-	</div><br><br><br>
+<div class="aktualnosci">
+	<h1></h1>
+	<p class="autoLinie"></p>
+
+	tresc
+</div>

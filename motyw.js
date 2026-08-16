@@ -3,14 +3,8 @@ const przycisk = document.getElementById('ZmianaMotywu');
 
 // Funkcja do ustawiania stanu przycisku na podstawie aktualnego motywu
 function przycisk_motyw() {
-    console.log(motyw);
-if (motyw == "jasny") {
-    console.log('b');
-    document.getElementById('zmianaMotywu').checked = true;
-} else {
-    console.log('c');
-    document.getElementById('zmianaMotywu').checked = false;
-}
+    if (motyw == "jasny") document.getElementById('zmianaMotywu').checked = true;
+    else document.getElementById('zmianaMotywu').checked = false;
 }
 // Funkcja do zmiany motywu
 function ZmienMotyw() {
@@ -31,14 +25,22 @@ function ZmienMotyw() {
         localStorage.setItem('motyw', nowyMotyw);
         motyw = "ciemny";
     }
+    aktualizujPrzyciskJasnosciMapy()
 }
 // czyszczenie localStorage po odświeżeniu strony
 window.addEventListener("DOMContentLoaded", () => {
-  const nav = performance.getEntriesByType("navigation")[0];
-  if (nav && nav.type === "reload") {
-    motyw = "ciemny";
-    document.documentElement.setAttribute('theme', motyw);
-    localStorage.clear('motyw');
-    przycisk_motyw();
-  }
+    const nav = performance.getEntriesByType("navigation")[0];
+    if (nav && nav.type === "reload") {
+        motyw = "ciemny";
+        document.documentElement.setAttribute('theme', motyw);
+        localStorage.clear('motyw');
+        przycisk_motyw();
+    }
 });
+
+function aktualizujPrzyciskJasnosciMapy() {
+    const przycisk = document.getElementById("jasnosc");
+    const ciemnyMotyw = document.documentElement.getAttribute("theme") === "ciemny";
+
+    przycisk.disabled = !ciemnyMotyw;
+}

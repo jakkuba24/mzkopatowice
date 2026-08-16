@@ -47,9 +47,9 @@ input[type="checkbox"][role="switch"]:checked::before {
 	--table-border-widoczny: #fff;
 	--rozklad_miejskie_th-background-color: #345b9f;
 	--rozklad_podmiejskie_th-background-color: #24378d;
-	--rozklad_pospieszne_th-background-color: #742727;
+	--rozklad_pospieszne_th-background-color: #6e0c0c;
 	--rozklad_nocne_th-background-color: #373737;
-	--rozklad_specjalne_th-background-color: #7F4A7F;
+	--rozklad_specjalne_th-background-color: #693c69;
 	--rozklad_objazd_info-background-color: #4c361e;
 	--ramka_nocne-border-color: #fff;
 	--dymek-border-color: #5c5cfc;
@@ -57,6 +57,8 @@ input[type="checkbox"][role="switch"]:checked::before {
 	--dymek-color: #fff;
 	/* Inne */
 	--img_invert: invert(0);
+	--mapa-background-color: #161616;
+	--cala_mapka-filter: brightness(0.7);
 }
 :root[theme="jasny"] {
 	--body-background-color: #fff;
@@ -86,6 +88,8 @@ input[type="checkbox"][role="switch"]:checked::before {
 	--dymek-color: #000;
 	/* Inne */
 	--img_invert: invert(1);
+	--mapa-background-color: #e6e6e6;
+	--cala_mapka-filter: brightness(1);
 }
 :root {
   --body-background-color: #161616;
@@ -104,8 +108,16 @@ body {
     margin: 0;
     padding: 0;
 }
+footer {
+	background-color: var(--header-background-color);
+	color: #fff;
+	margin-top: 40px;
+	text-align: center;
+	padding: 8px 0;
+}
 .logo {
     filter: var(--logo);
+	max-width: 35%;
 }
 
 
@@ -166,11 +178,8 @@ header a:hover {
 	justify-content: center;
 	align-items: center;
     flex-wrap: wrap;
-    align-items: center;
 	text-align: center;
-	margin-top: 50px;
-	height: 143px;
-	margin: 0px auto;
+	min-height: 143px;
 }
 
 .linia_miejska, .linia_podmiejska, .linia_pospieszna, .linia_nocna, .linia_specjalna, .linia_specjalna2 {
@@ -178,7 +187,7 @@ header a:hover {
 	min-width: 50px;
 	transition: background-color 0.3s ease, transform 0.2s ease;
 	float: left;
-	margin: 0 7px 0 7px;
+	margin: 25px 7px 0 7px;
 	background-color: #fff;
 	color: #000;
     text-decoration: none;
@@ -200,7 +209,22 @@ header a:hover {
 }
 
 .objazd {
-	background-color: #ff9900;
+	position: relative;
+}
+
+.objazd::before {
+    content: "Objazd";
+    position: absolute;
+    bottom: calc(100% + 3px);
+    left: -3.5px;
+    background-color: #ff9900;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 22px;
+    height: 22px;
+    padding: 0 3px;
+    white-space: nowrap;
 }
 
 .linia_miejska {
@@ -228,7 +252,7 @@ header a:hover {
 	transform: scale(1.02);
 }
 .objazd:hover {
-	background-color: #dd7700;
+	background-color: #dd9900;
 	transform: scale(1.02);
 }
 
@@ -239,7 +263,7 @@ header a:hover {
 /* Mapka */
 
 .menu-mapka {
-	background-color: #24378d;
+	background-color: var(--header-background-color);
 	padding: 0.2%;
 	max-width: 9.5%;
 	width: 105px;
@@ -262,6 +286,7 @@ header a:hover {
 }
 .menu-mapka input, .menu-mapka label {
 	float: left;
+	cursor: pointer;
 }
 .menu-mapka hr {
 	width: 15px;
@@ -272,20 +297,40 @@ header a:hover {
 }
 
 #cala_mapka {
-	position: relative;
-	float: left;
-	background-image: url("../zdjecia/whole.roadmap.png");
-	width: 88%;
-	height: 1600px;
-	background-size: contain;
-	background-repeat: no-repeat;
+    position: relative;
+    float: left;
+    width: 88%;
+    height: 2400px;
 }
-@media (max-width: 1099px){ #cala_mapka img {
+#cala_mapka::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../zdjecia/whole.roadmap.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: var(--cala_mapka-filter);
+    z-index: 0;
+}
+#cala_mapka.jasna_mapka::before {
+	filter: brightness(1);
+}
+#jasnosc:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+	/*display: none;*/
+}
+#cala_mapka > * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1449px){ #cala_mapka img {
 	position: absolute;
 	width: 100%;
 	display: none;
 }}
-@media (min-width: 1100px){ #cala_mapka img {
+@media (min-width: 1450px){ #cala_mapka img {
 	position: absolute;
 	height: 100%;
 	display: none;
@@ -404,13 +449,15 @@ header a:hover {
 
 table {
     border-collapse: collapse;
-    margin-top: 20px;
 }
 table th, table td {
     padding: 4px;
 }
 table th {
     color: var(--table-border-widoczny);
+}
+.tables-container {
+	margin-top: 60px;
 }
 .tables-container::after {
 	content: "";
@@ -482,14 +529,11 @@ table th {
 	padding-bottom: 0;
 }
 
-/* tabelki z przstankami */
+/* tabelki z przystankami */
 
 .przystanki_miejskie, .przystanki_podmiejskie, .przystanki_pospieszne, .przystanki_nocne, .przystanki_specjalne {
     float: left;
-    width: auto;
-    margin: auto;
 	margin-left: 1%;
-	margin-right: 1%;
 	border: 1px solid var(--table-border-widoczny);
 }
 .przystanki_miejskie th, .przystanki_podmiejskie th, .przystanki_pospieszne th, .przystanki_nocne th, .przystanki_specjalne th {
@@ -538,9 +582,7 @@ table th {
 	justify-content: center;
 	align-items: center;
 	border: 1px solid #676767;
-	margin-left: 15%;
-	margin-right: 15%;
-	margin-bottom: 3%;
+	margin: 3% 15% 3% 15%;
 	padding-left: 1%;
 }
 

@@ -11,9 +11,9 @@
 	</script>
 	<script src="motyw.js"></script>
 </head>
-<body>
+<body style="background-color: var(--mapa-background-color);">
     <header><script src="headerek.js"></script></div>
-	<div>
+	<div style="margin-top: 4%">
 	<div class="menu-mapka">
 	<input type="checkbox" id="linia1" onclick="aktualizacja_mapki()">
 	<label for="linia1">Linia 1</label><hr style="background-color:#a52a2a"><br>
@@ -53,9 +53,11 @@
 	<label for="linia51">Linia 51</label><hr style="background-color:#7F4A7F"><br>
 	<br><br>
 
-	<button id="pokaz-all" onclick="pokaz_ukryjLinie()">Pokaż wszystkie linie</button><br><br>
+	<button id="pokaz-all" onclick="pokaz_ukryjLinie()">Pokaż wszystkie linie</button>
+	<button id="jasnosc" onclick='const mapa = document.getElementById("cala_mapka");const przycisk = document.getElementById("jasnosc"); mapa.classList.toggle("jasna_mapka"); if (mapa.classList.contains("jasna_mapka")) przycisk.textContent = "Przyciemnij mapę"; else przycisk.textContent = "Rozjaśnij mapę";'>Rozjaśnij mapę</button><br><br>
 	<!--<button id="zoom" onclick="przyciskZoom()">Powiększ mapę</button>-->
 	
+
 	<p><b>Na mapie nie są uwzględnione objazdy</b></p>
 	<p>Aktualizacja: 16.07.2026<p>
 	<p>© MZK Opatowice</p>
@@ -219,6 +221,7 @@ if (!pokazWszystkie) {
 	pokazWszystkie = false;
 }
 }
+aktualizujPrzyciskJasnosciMapy()
 </script>
 </body>
 </html>
