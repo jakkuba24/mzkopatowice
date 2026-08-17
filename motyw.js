@@ -25,7 +25,7 @@ function ZmienMotyw() {
         localStorage.setItem('motyw', nowyMotyw);
         motyw = "ciemny";
     }
-    aktualizujPrzyciskJasnosciMapy()
+    if (document.getElementById("jasnosc")) aktualizujPrzyciskJasnosciMapy();
 }
 // czyszczenie localStorage po odświeżeniu strony
 window.addEventListener("DOMContentLoaded", () => {
