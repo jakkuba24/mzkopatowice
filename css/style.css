@@ -519,7 +519,7 @@ table th {
 	background-color: var(--zmiana-info-background-color);
 }
 .zmiana-info-ikona::before {
-	content: '';
+	content: 'i';
 	color: blue;
 }
 

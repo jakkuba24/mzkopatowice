@@ -1,24 +1,40 @@
 
 /*
 <script src="komunikaty.js"></script>
+
+{
+        linie: [],
+        tytul: "",
+        tresc: ""
+        }
 */
 
 /* BAZA KOMUNIKATÓW */
 const KOMUNIKATY = {
     objazd: [
-    {
-        linie: [9, 23, 40],
+        {
+        linie: [9],
         tytul: "Objazd od 20.07.2026",
         tresc: "W związku z przebudową ul. Młyńskiej zostaje wprowadzony objazd przez ul. Monte Cassino i Zwycięstwa. Z obsługi zostają wyłączone przystanki Plac Kilińskiego i Biblioteka (w kierunku Działkowa Działki). Na trasie objazdu obowiązują wszystkie przystanki."
-    }
+        },
+        {
+        linie: [23],
+        tytul: "Objazd od 20.07.2026",
+        tresc: "W związku z przebudową ul. Młyńskiej zostaje wprowadzony objazd przez ul. Kutrzeby, Gierczak, Kwiatkowskiego i Batalionów Chłopskich. Z obsługi zostają wyłączone przystanki Biblioteka, Plac Kilińskiego i Wańkowicza (w kierunku Niekłonic). Na trasie objazdu obowiązują wszystkie przystanki."
+        },
+        {
+        linie: [40],
+        tytul: "Objazd od 20.07.2026",
+        tresc: "W związku z przebudową ul. Młyńskiej zostaje wprowadzony objazd przez ul. Monte Cassino. Z obsługi zostają wyłączone przystanki Plac Kilińskiego, Lutyków i Poprzeczna. Na trasie objazdu obowiązują wszystkie przystanki."
+        }
     //...
     ],
     zmiana: [
-    {
+        {
         linie: [1, 4, 6, 14, 16, 29],
         tytul: "Wprowadzenie wakacyjnych rozkładów jazdy dla linii nr 1, 4, 6, 14, 16 i 29 od 29 czerwca 2026 r.",
         tresc: "W okresie wakacyjnym od 29 czerwca 2026 r. do 30 sierpnia 2026 r. zostaną wprowadzone zmiany w kursowaniu autobusów linii nr 1, 4, 6, 14, 16 i 29 w dniu powszednim w postaci zmniejszenia częstotliwości kursów."
-    }
+        }
     //...
     ]
 };
