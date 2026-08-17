@@ -46,15 +46,17 @@ input[type="checkbox"][role="switch"]:checked::before {
 	--table-border-niewidoczny: var(--body-background-color);
 	--table-border-widoczny: #fff;
 	--rozklad_miejskie_th-background-color: #345b9f;
-	--rozklad_podmiejskie_th-background-color: #24378d;
+	--rozklad_podmiejskie_th-background-color: #18286d;
 	--rozklad_pospieszne_th-background-color: #6e0c0c;
 	--rozklad_nocne_th-background-color: #373737;
 	--rozklad_specjalne_th-background-color: #693c69;
-	--rozklad_objazd_info-background-color: #4c361e;
 	--ramka_nocne-border-color: #fff;
-	--dymek-border-color: #5c5cfc;
 	--dymek-background-color: #222;
 	--dymek-color: #fff;
+	--objazd-info-background-color: #4c3011;
+	--objazd-info-border: #ff9900;
+	--zmiana-info-background-color: #0d1d62;
+	--zmiana-info-border: #0088ee;
 	/* Inne */
 	--img_invert: invert(0);
 	--mapa-background-color: #161616;
@@ -81,19 +83,17 @@ input[type="checkbox"][role="switch"]:checked::before {
 	--rozklad_pospieszne_th-background-color: #f4cccc;
 	--rozklad_nocne_th-background-color: #d9d9d9;
 	--rozklad_specjalne_th-background-color: #D1A4D1;
-	--rozklad_objazd_info-background-color: #fce5cd;
 	--ramka_nocne-border-color: #000;
-	--dymek-border-color: #1f2f6d;
 	--dymek-background-color: #fff;
 	--dymek-color: #000;
+	--objazd-info-background-color: #fce5cd;
+	--objazd-info-border: #ff9900;
+	--zmiana-info-background-color: #cbd4fd;
+	--zmiana-info-border: #0088ee;
 	/* Inne */
 	--img_invert: invert(1);
 	--mapa-background-color: #e6e6e6;
 	--cala_mapka-filter: brightness(1);
-}
-:root {
-  --body-background-color: #161616;
-  --body-color: #fff;
 }
 
 /* Głowne ustawienia strony */
@@ -465,12 +465,74 @@ table th {
 	display: table;
 }
 
+
+/* komunikaty */
+.info {
+	text-align: left;
+	font-weight: bold;
+	font-size: 18px;
+	margin: 25px 10%;
+}
+.info::before {
+	content: 'Komunikaty';
+	font-size: 30px;
+	font-weight: bold;
+	position: relative;
+	bottom: 20px;
+}
+.info-tytul {
+	grid-column: 2;
+	padding-bottom: 15px;
+	font-size: 22px;
+}
+.info-tresc {
+	grid-column: 2;
+}
+
+.objazd-info-ikona, .zmiana-info-ikona {
+	grid-row: 1 / span 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	padding-right: 5px;
+}
+.objazd-info, .zmiana-info {
+	display: grid;
+	grid-template-columns: 40px 1fr;
+	grid-template-rows: auto auto;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+.objazd-info-ikona::before {
+	content: '!';
+	color: #ff9900;
+}
+.objazd-info {
+	border: 4px solid var(--objazd-info-border);
+	background-color: var(--objazd-info-background-color);
+}
+
+.zmiana-info {
+	border: 4px solid var(--zmiana-info-border);
+	background-color: var(--zmiana-info-background-color);
+}
+.zmiana-info-ikona::before {
+	content: '';
+	color: blue;
+}
+
+
+
+
+
 /* tabelki rozkładowe */
 
 .rozklad_miejskie, .rozklad_podmiejskie, .rozklad_pospieszne, .rozklad_nocne, .rozklad_specjalne {
-    float:left;
-    width:auto;
-    margin:auto;
+    float: left;
+    width: auto;
+    margin: auto;
 	margin-left: 1%;
 	text-align: center;
 }
@@ -543,7 +605,7 @@ table th {
 /* dymek */
 
 #dymek {
-	border: 2px solid var(--dymek-border-color);
+	border: 2px solid;
 	border-radius: 5px;
 	background-color: var(--dymek-background-color);
 	color: var(--dymek-color);

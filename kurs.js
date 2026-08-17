@@ -160,7 +160,7 @@ function wyswietldymek(h,m,typ,event) {
 	 });*/
 	
 	
-	dymek.innerHTML = "<b>"+h+":"+(m < 10 ? "0" + m : m)+" </b>"+tablica_przystanki[0+offset] + "<br>";
+	dymek.innerHTML = "<b>" + h + ":" + (m < 10 ? "0" + m : m) + " </b>" + pobierzNazwePrzystanku(0 + offset, false) + "<br>";
 	for (let i = 1+offset; i < i_p+offset; i++) {
 		let czas_przejazdu = parseInt(tablica_minuty[i-1]); // Pobierz czas przejazdu między przystankami
 		m += czas_przejazdu; // Dodaj czas przejazdu do bieżącej minuty
@@ -172,11 +172,53 @@ function wyswietldymek(h,m,typ,event) {
 		}
 		if (h > 23) h = 0; // Zmiana godziny 24 -> 0
 		// Dodaj dane do "dymka"
-		dymek.innerHTML += "<b>" + h + ":" + (m < 10 ? "0" + m : m) + " </b>" + tablica_przystanki[i] + "<br>";
+		// Czy to ostatni przystanek wybranego wariantu?
+		let koncowy = (i == i_p + offset - 1);
+		dymek.innerHTML += "<b>" + h + ":" + (m < 10 ? "0" + m : m) + " </b>" + pobierzNazwePrzystanku(i, koncowy) + "<br>";
 		//console.log(dymek);
 	}
+	//kolorowanie nż i - i border dymku
+    dymek.innerHTML = dymek.innerHTML.replace(/(<[^>]+>)|(\bnż\b)|(-)/g, function(match, tag, nz, minus) {
+        if (tag) return tag;
+        return '<span class="red-text">' + match + '</span>';
+    });
+	//kolorowanie ramki prze table th
+	/*const tabela = event.target.closest("table");
+	if (tabela) {
+    	const klasy = ["miejskie","podmiejskie","pospieszne","nocne","specjalne"];
+		for (const klasa of klasy) {
+			if (tabela.classList.contains("rozklad_" + klasa)) {
+            	dymek.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue("--rozklad_" + klasa + "_th-background-color");
+            	break;
+        	}
+		}
+	}*/
+	//kolorowanie ramki przez border numeru linii
+	const ramka = event.target.closest("table")?.querySelector(".ramka_miejskie, .ramka_podmiejskie, .ramka_pospieszne, .ramka_nocne, .ramka_specjalne");
+	if (ramka) dymek.style.borderColor = getComputedStyle(ramka).borderColor;
+
+
+//funkcja pomocnicza do kolorowania i kolorowanie objazdu
+function pobierzNazwePrzystanku(i, koncowy = false) {
+    let przystanek;
+
+    if (koncowy) {
+        przystanek = document.getElementById("pr" + i + "_end");
+        if (!przystanek) {przystanek = document.getElementById("pr" + i);}
+    } else {
+        przystanek = document.getElementById("pr" + i);
+    }
 	
-	//kolorowanie nż i -
-    const updatedContent = dymek.innerHTML.replace(/(nż|-)/g, '<span class="red-text">$1</span>');
-    dymek.innerHTML = updatedContent;
+    if (!przystanek) return "";
+    
+    let nazwa = przystanek.innerHTML; // Kopia zawartości przystanku
+
+    // Usunięcie technicznych spanów z margin-left
+    nazwa = nazwa.replace(/<span\s+style=["'][^"']*margin-left\s*:[^"']*["']>\s*<\/span>/gi,"");
+
+    // Jeżeli <tr> ma objazd, obejmij nazwę dodatkowym spanem
+    if (przystanek.parentElement.classList.contains("objazd-text")) nazwa = '<span class="objazd-text">' + nazwa + '</span>';
+
+    return nazwa;
+}
 }

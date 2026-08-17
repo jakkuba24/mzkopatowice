@@ -496,7 +496,7 @@
 			// Sprawdzamy, czy dany fragment jest datą DD.MM.YYYY
    			const czyData = /^\d{2}\.\d{2}\.\d{4}$/.test(item);
 			if (czyData) {
-				Data += `<img src="css/kalendarz.png" class="img_invert"> ${item}`;
+				Data += `<img src="css/kalendarz.png" class="img_invert" style="vertical-align: text-top;"> ${item}`;
 				return;
 			}
 
@@ -519,7 +519,7 @@
 			Linie += `<span class="${klasa}">${liczba}</span>`;
 		});
 		// Warunek sprawdzający, czy znaleziono jakiekolwiek linie autobusowe
-		if (Linie !== "") element.innerHTML = `${Data} <span style="padding-right:30px"></span>Informacja dotyczy linii: ${Linie}`;
+		if (Linie !== "") element.innerHTML = `${Data} <span style="padding:0 15px; font-size: xx-large; vertical-align: bottom;">|</span>Informacja dotyczy linii: ${Linie}`;
 		else element.innerHTML = Data;
 	});
 	</script>
