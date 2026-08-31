@@ -13,7 +13,8 @@
 	<script src="motyw.js"></script>
 </head>
 <body>
-    <header><script src="headerek.js"></script></div>
+    <header><script src="headerek.js"></script></header>
+	<script src="komunikaty.js"></script>
     <div class="tables-container">
 		<table class="rozklad_pospieszne">
 			<tr style="border: 2px solid var(--table-border-widoczny)">
@@ -88,7 +89,7 @@
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 11.05.2026</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 31.08.2026</td>
 			</tr>
 			<tr>
 				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
@@ -103,261 +104,210 @@
 		<div class="ignore-on-mobile">
 		<table class="przystanki_pospieszne">
 			<tr>
-				<th>Przystanek</th>
-				<th>M</th>
-				<th>N</th>
+				<th>Trasa</th>
+				<th></th>
 			</tr>
 			<tr>
 				<td id="pr0">Poprzeczna</td>
 				<td id="mi0">1</td>
-				<td></td>
 			</tr>
 			<tr>
 				<td id="pr1">Rondo Lechitów</td>
 				<td id="mi1">1</td>
-				<td>1</td>
 			</tr>
 			<tr>
 				<td id="pr2">Podgórna</td>
 				<td id="mi2">2</td>
-				<td>2</td>
 			</tr>
 			<tr>
 				<td id="pr3">Wańkowicza</td>
 				<td id="mi3">1</td>
-				<td>4</td>
 			</tr>
 			<tr>
 				<td id="pr4">Jana Pawła II</td>
 				<td id="mi4">1</td>
-				<td>5</td>
 			</tr>
 			<tr>
 				<td id="pr5">Staszica</td>
 				<td id="mi5">1</td>
-				<td>6</td>
 			</tr>
 			<tr>
 				<td id="pr6">Śniadeckich Politechnika</td>
 				<td id="mi6">2</td>
-				<td>7</td>
 			</tr>
 			<tr>
 				<td id="pr7">Śniadeckich</td>
 				<td id="mi7">1</td>
-				<td>9</td>
 			</tr>
 			<tr>
 				<td id="pr8">Lelewela</td>
 				<td id="mi8">1</td>
-				<td>10</td>
 			</tr>
 			<tr>
 				<td id="pr9">Osiedle Bukowe</td>
 				<td id="mi9">4</td>
-				<td>11</td>
 			</tr>
 			<tr>
 				<td id="pr10">Działkowa <span class="red-text">nż</span></td>
 				<td id="mi10">1</td>
-				<td>15</td>
 			</tr>
 			<tr>
 				<td id="pr11">Lubelska <span class="red-text">nż</span></td>
 				<td id="mi11">1</td>
-				<td>16</td>
 			</tr>
 			<tr>
 				<td id="pr12">Elektryczna <span class="red-text">nż</span></td>
 				<td id="mi12">1</td>
-				<td>17</td>
 			</tr>
 			<tr>
 				<td id="pr13">Olejowa <span class="red-text">nż</span></td>
 				<td id="mi13">1</td>
-				<td>18</td>
 			</tr>
 			<tr>
 				<td id="pr14">Szczerbińska <span class="red-text">nż</span></td>
 				<td id="mi14" style="display:none">6</td><td>5/6</td>
-				<td>19</td>
 			</tr>
 			<tr>
 				<td id="pr15"><span style="margin-left:10px"></span>Osiedle Unii Lubelskiej</td>
 				<td id="mi15">1</td>
-				<td>25</td>
 			</tr>
 			<tr>
 				<td id="pr16"><span style="margin-left:10px"></span>Niemena <span class="red-text">nż</span></td>
 				<td id="mi16">1</td>
-				<td>26</td>
 			</tr>
 			<tr>
 				<td id="pr17"><span style="margin-left:10px"></span>Promykowa</td>
 				<td id="mi17">1</td>
-				<td>27</td>
 			</tr>
 			<tr>
 				<td id="pr18"><span style="margin-left:10px"></span>Fiołków</td>
 				<td id="mi18">1</td>
-				<td>28</td>
 			</tr>
 			<tr>
 				<td id="pr19"><span style="margin-left:10px"></span>Litewska</td>
 				<td id="mi19">3</td>
-				<td>29</td>
 			</tr>
 			<tr>
 				<td id="pr20">Legionów</td>
 				<td id="mi20">2</td>
-				<td>24/32</td>
 			</tr>
 			<tr>
 				<td id="pr21">Połczyńska</td>
 				<td id="mi21">1</td>
-				<td>26/34</td>
 			</tr>
 			<tr>
 				<td id="pr22">Cmentarz</td>
 				<td id="mi22">1</td>
-				<td>27/35</td>
 			</tr>
 			<tr>
 				<td id="pr23">Rondo Walezego</td>
 				<td id="mi23">1</td>
-				<td>28/36</td>
 			</tr>
 			<tr>
 				<td id="pr24">Rondo Powstańców Śląskich</td>
 				<td id="mi24">1</td>
-				<td>29/37</td>
 			</tr>
 			<tr>
 				<td id="pr25">Macierzy/Srocka</td>
 				<td id="mi25_end">2</td>
-				<td>30/38</td>
 			</tr>
 			<tr>
 				<td id="pr26_end"><span class="red-text"> - </span>Osiedle Północ</td>
 				<td></td>
-				<td>32/40</td>
 			</tr>
 		</table>
 		<table style="display:none">
 			<tr>
-				<th>Przystanek</th>
-				<th>M</th>
-				<th>N</th>
+				<th>Trasa</th>
+				<th></th>
 			</tr>
 			<tr>
 				<td id="pr50">Poprzeczna</td>
 				<td id="mi50">1</td>
-				<td></td>
 			</tr>
 			<tr>
 				<td id="pr51">Rondo Lechitów</td>
 				<td id="mi51">1</td>
-				<td>1</td>
 			</tr>
 			<tr>
 				<td id="pr52">Podgórna</td>
 				<td id="mi52">2</td>
-				<td>2</td>
 			</tr>
 			<tr>
 				<td id="pr53">Wańkowicza</td>
 				<td id="mi53">1</td>
-				<td>4</td>
 			</tr>
 			<tr>
 				<td id="pr54">Jana Pawła II</td>
 				<td id="mi54">1</td>
-				<td>5</td>
 			</tr>
 			<tr>
 				<td id="pr55">Staszica</td>
 				<td id="mi55">1</td>
-				<td>6</td>
 			</tr>
 			<tr>
 				<td id="pr56">Śniadeckich Politechnika</td>
 				<td id="mi56">2</td>
-				<td>7</td>
 			</tr>
 			<tr>
 				<td id="pr57">Śniadeckich</td>
 				<td id="mi57">1</td>
-				<td>9</td>
 			</tr>
 			<tr>
 				<td id="pr58">Lelewela</td>
 				<td id="mi58">1</td>
-				<td>10</td>
 			</tr>
 			<tr>
 				<td id="pr59">Osiedle Bukowe</td>
 				<td id="mi59">4</td>
-				<td>11</td>
 			</tr>
 			<tr>
 				<td id="pr60">Działkowa <span class="red-text">nż</span></td>
 				<td id="mi60">1</td>
-				<td>15</td>
 			</tr>
 			<tr>
 				<td id="pr61">Lubelska <span class="red-text">nż</span></td>
 				<td id="mi61">1</td>
-				<td>16</td>
 			</tr>
 			<tr>
 				<td id="pr62">Elektryczna <span class="red-text">nż</span></td>
 				<td id="mi62">1</td>
-				<td>17</td>
 			</tr>
 			<tr>
 				<td id="pr63">Olejowa <span class="red-text">nż</span></td>
 				<td id="mi63">1</td>
-				<td>18</td>
 			</tr>
 			<tr>
 				<td id="pr64">Szczerbińska <span class="red-text">nż</span></td>
 				<td id="mi64">5</td>
-				<td>19</td>
 			</tr>
 			<tr>
 				<td id="pr65">Legionów</td>
 				<td id="mi65">2</td>
-				<td>24/32</td>
 			</tr>
 			<tr>
 				<td id="pr66">Połczyńska</td>
 				<td id="mi66">1</td>
-				<td>26/34</td>
 			</tr>
 			<tr>
 				<td id="pr67">Cmentarz</td>
 				<td id="mi67">1</td>
-				<td>27/35</td>
 			</tr>
 			<tr>
 				<td id="pr68">Rondo Walezego</td>
 				<td id="mi68">1</td>
-				<td>28/36</td>
 			</tr>
 			<tr>
 				<td id="pr69">Rondo Powstańców Śląskich</td>
 				<td id="mi69">1</td>
-				<td>29/37</td>
 			</tr>
 			<tr>
 				<td id="pr70">Macierzy/Srocka</td>
 				<td id="mi70_end">2</td>
-				<td>30/38</td>
 			</tr>
 			<tr>
 				<td id="pr71_end"><span class="red-text"> - </span>Osiedle Północ</td>
 				<td></td>
-				<td>32/40</td>
 			</tr>
 		</table>
 		</div>
@@ -411,7 +361,7 @@
 				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
 				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 20 -->
 				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '37b_1', event)" onmouseleave="dymek.style.display='none'">18U</td>
-				<td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
+				<td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">00</td>
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
@@ -437,7 +387,7 @@
 				<td></td> <!-- 23 -->
 			</tr>
 			<tr>
-				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 11.05.2026</td>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 31.08.2026</td>
 			</tr>
 			<tr>
 				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
@@ -452,281 +402,226 @@
 		<div class="ignore-on-mobile">
 		<table class="przystanki_pospieszne">
 			<tr>
-				<th>Przystanek</th>
-				<th>M</th>
-				<th>N</th>
+				<th>Trasa</th>
+				<th></th>
 			</tr>
 			<tr>
 				<td id="pr100">Osiedle Północ</td>
 				<td id="mi100">2</td>
-				<td></td>
 			</tr>
 			<tr>
 				<td id="pr101">Macierzy/Srocka</td>
 				<td id="mi101">1</td>
-				<td>2</td>
 			</tr>
 			<tr>
 				<td id="pr102">Rondo Powstańców Śląskich</td>
 				<td id="mi102">1</td>
-				<td>3</td>
 			</tr>
 			<tr>
 				<td id="pr103">Rondo Walezego</td>
 				<td id="mi103">1</td>
-				<td>4</td>
 			</tr>
 			<tr>
 				<td id="pr104">Cmentarz</td>
 				<td id="mi104">2</td>
-				<td>5</td>
 			</tr>
 			<tr>
 				<td id="pr105">Połczyńska</td>
 				<td id="mi105">1</td>
-				<td>7</td>
 			</tr>
 			<tr>
 				<td id="pr106">Połczyńska Działki <span class="red-text">nż</span></td>
 				<td id="mi106" style="display:none">2</td><td>5/2</td>
-				<td>8</td>
 			</tr>
 			<tr>
 				<td id="pr107"><span style="margin-left:10px"></span>Litewska</td>
 				<td id="mi107">1</td>
-				<td>10</td>
 			</tr>
 			<tr>
 				<td id="pr108"><span style="margin-left:10px"></span>Fiołków</td>
 				<td id="mi108">1</td>
-				<td>11</td>
 			</tr>
 			<tr>
 				<td id="pr109"><span style="margin-left:10px"></span>Promykowa</td>
 				<td id="mi109">1</td>
-				<td>12</td>
 			</tr>
 			<tr>
 				<td id="pr110"><span style="margin-left:10px"></span>Niemena <span class="red-text">nż</span></td>
 				<td id="mi110">1</td>
-				<td>13</td>
 			</tr>
 			<tr>
 				<td id="pr111"><span style="margin-left:10px"></span>Osiedle Unii Lubelskiej</td>
 				<td id="mi111">5</td>
-				<td>14</td>
 			</tr>
 			<tr>
 				<td id="pr112">Szczerbińska <span class="red-text">nż</span></td>
 				<td id="mi112">1</td>
-				<td>13/19</td>
 			</tr>
 			<tr>
 				<td id="pr113">Olejowa <span class="red-text">nż</span></td>
 				<td id="mi113">1</td>
-				<td>14/20</td>
 			</tr>
 			<tr>
 				<td id="pr114">Elektryczna <span class="red-text">nż</span></td>
 				<td id="mi114">2</td>
-				<td>15/21</td>
 			</tr>
 			<tr>
 				<td id="pr115">Lubelska <span class="red-text">nż</span></td>
 				<td id="mi115">1</td>
-				<td>17/23</td>
 			</tr>
 			<tr>
 				<td id="pr116">Działkowa <span class="red-text">nż</span></td>
 				<td id="mi116">3</td>
-				<td>18/24</td>
 			</tr>
 			<tr>
 				<td id="pr117">Lelewela</td>
 				<td id="mi117">1</td>
-				<td>21/27</td>
 			</tr>
 			<tr>
 				<td id="pr118">Osiedle Bukowe</td>
 				<td id="mi118">2</td>
-				<td>22/28</td>
 			</tr>
 			<tr>
 				<td id="pr119">Śniadeckich</td>
 				<td id="mi119">1</td>
-				<td>24/30</td>
 			</tr>
 			<tr>
 				<td id="pr120">Śniadeckich Politechnika</td>
 				<td id="mi120">1</td>
-				<td>25/31</td>
 			</tr>
 			<tr>
 				<td id="pr121">Staszica</td>
 				<td id="mi121">2</td>
-				<td>26/32</td>
 			</tr>
 			<tr>
 				<td id="pr122">Sikorskiego</td>
 				<td id="mi122">1</td>
-				<td>28/34</td>
 			</tr>
 			<tr>
 				<td id="pr123">Wańkowicza</td>
 				<td id="mi123">1</td>
-				<td>29/35</td>
 			</tr>
 			<tr>
 				<td id="pr124">Podgórna</td>
 				<td id="mi124">2</td>
-				<td>30/36</td>
 			</tr>
 			<tr>
 				<td id="pr125">Rondo Lechitów</td>
 				<td id="mi125">1</td>
-				<td>32/38</td>
 			</tr>
 			<tr>
 				<td id="pr126">Armii Krajowej/Franciszkańska</td>
 				<td id="mi126">1</td>
-				<td>33/39</td>
 			</tr>
 			<tr>
 				<td id="pr127">Łużycka Orlik</td>
 				<td id="mi127_end">1</td>
-				<td>34/40</td>
 			</tr>
 			<tr>
 				<td id="pr128_end"><span class="red-text"> - </span>Poprzeczna</td>
 				<td></td>
-				<td>35/41</td>
 			</tr>
 		</table>
 		<table style="display:none">
 			<tr>
-				<th>Przystanek</th>
-				<th>M</th>
-				<th>N</th>
+				<th>Trasa</th>
+				<th></th>
 			</tr>
 			<tr>
 				<td id="pr150">Osiedle Północ</td>
 				<td id="mi150">2</td>
-				<td></td>
 			</tr>
 			<tr>
 				<td id="pr151">Macierzy/Srocka</td>
 				<td id="mi151">1</td>
-				<td>2</td>
 			</tr>
 			<tr>
 				<td id="pr152">Rondo Powstańców Śląskich</td>
 				<td id="mi152">1</td>
-				<td>3</td>
 			</tr>
 			<tr>
 				<td id="pr153">Rondo Walezego</td>
 				<td id="mi153">1</td>
-				<td>4</td>
 			</tr>
 			<tr>
 				<td id="pr154">Cmentarz</td>
 				<td id="mi154">2</td>
-				<td>5</td>
 			</tr>
 			<tr>
 				<td id="pr155">Połczyńska</td>
 				<td id="mi155">1</td>
-				<td>7</td>
 			</tr>
 			<tr>
 				<td id="pr156">Połczyńska Działki <span class="red-text">nż</span></td>
 				<td id="mi156">5</td>
-				<td>8</td>
 			</tr>
 			<tr>
 				<td id="pr157">Szczerbińska <span class="red-text">nż</span></td>
 				<td id="mi157">1</td>
-				<td>13/19</td>
 			</tr>
 			<tr>
 				<td id="pr158">Olejowa <span class="red-text">nż</span></td>
 				<td id="mi158">1</td>
-				<td>14/20</td>
 			</tr>
 			<tr>
 				<td id="pr159">Elektryczna <span class="red-text">nż</span></td>
 				<td id="mi159">2</td>
-				<td>15/21</td>
 			</tr>
 			<tr>
 				<td id="pr160">Lubelska <span class="red-text">nż</span></td>
 				<td id="mi160">1</td>
-				<td>17/23</td>
 			</tr>
 			<tr>
 				<td id="pr161">Działkowa <span class="red-text">nż</span></td>
 				<td id="mi161">3</td>
-				<td>18/24</td>
 			</tr>
 			<tr>
 				<td id="pr162">Lelewela</td>
 				<td id="mi162">1</td>
-				<td>21/27</td>
 			</tr>
 			<tr>
 				<td id="pr163">Osiedle Bukowe</td>
 				<td id="mi163">2</td>
-				<td>22/28</td>
 			</tr>
 			<tr>
 				<td id="pr164">Śniadeckich</td>
 				<td id="mi164">1</td>
-				<td>24/30</td>
 			</tr>
 			<tr>
 				<td id="pr165">Śniadeckich Politechnika</td>
 				<td id="mi165">1</td>
-				<td>25/31</td>
 			</tr>
 			<tr>
 				<td id="pr166">Staszica</td>
 				<td id="mi166">2</td>
-				<td>26/32</td>
 			</tr>
 			<tr>
 				<td id="pr167">Sikorskiego</td>
 				<td id="mi167">1</td>
-				<td>28/34</td>
 			</tr>
 			<tr>
 				<td id="pr168">Wańkowicza</td>
 				<td id="mi168">1</td>
-				<td>29/35</td>
 			</tr>
 			<tr>
 				<td id="pr169">Podgórna</td>
 				<td id="mi169">2</td>
-				<td>30/36</td>
 			</tr>
 			<tr>
 				<td id="pr170">Rondo Lechitów</td>
 				<td id="mi170">1</td>
-				<td>32/38</td>
 			</tr>
 			<tr>
 				<td id="pr171">Armii Krajowej/Franciszkańska</td>
 				<td id="mi171">1</td>
-				<td>33/39</td>
 			</tr>
 			<tr>
 				<td id="pr172">Łużycka Orlik</td>
 				<td id="mi172_end">1</td>
-				<td>34/40</td>
 			</tr>
 			<tr>
 				<td id="pr173_end"><span class="red-text"> - </span>Poprzeczna</td>
 				<td></td>
-				<td>35/41</td>
 			</tr>
 		</table>
 		</div>

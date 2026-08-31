@@ -6,10 +6,10 @@ function wyswietldymek(h,m,typ,event) {
 	var i_p = 0;
 	var offset = 0;
 	// ---Linia 1---
-	if (typ == '1a') i_p = 19;
-	if (typ == '1a_1') {i_p = 18; offset = 20;}
-	if (typ == '1b') {i_p = 21; offset = 41;}
-	if (typ == '1b_1') {i_p = 20; offset = 66;}
+	if (typ == '1a') i_p = 21;
+	if (typ == '1a_1') {i_p = 12; offset = 20;}
+	if (typ == '1b') {i_p = 24; offset = 50;}
+	if (typ == '1b_1') {i_p = 15; offset = 75;}
 	// ---Linia 2---
 	if (typ == '2a') {i_p = 17; offset = 8;} //chelmoniewo - strefa
 	if (typ == '2a_1') {i_p = 20; offset = 5;} //dzierzecino - strefa
@@ -20,6 +20,10 @@ function wyswietldymek(h,m,typ,event) {
 	if (typ == '2a_5') {i_p = 12; offset = 8;}   //chelmoniewo - laksa
 	if (typ == '2a_6') {i_p = 15; offset = 5;} //dzierzecino - laksa
 	if (typ == '2a_7') i_p = 20; //lubiatowo - laksa
+	if (typ == '2a_8') {i_p = 10; offset = 8;}   //chelmoniewo - pkp
+	if (typ == '2a_9') {i_p = 13; offset = 5;} //dzierzecino - pkp
+	if (typ == '2a_10') i_p = 18; //lubiatowo - pkp
+	if (typ == '2a_11') {i_p = 15; offset = 55;} //hospicjum - laksa
 	if (typ == '2b') {i_p = 18; offset = 100}; //strefa - chelmoniewo
 	if (typ == '2b_1') {i_p = 21; offset = 100}; //strefa - dzierzecino
 	if (typ == '2b_2') {i_p = 26; offset = 100}; //strefa - lubiatowo
@@ -33,6 +37,10 @@ function wyswietldymek(h,m,typ,event) {
 	if (typ == '2b_10') {i_p = 25; offset = 200};   //strefa - sianowska p Dzierzecino
 	if (typ == '2b_11') {i_p = 20; offset = 205}; //laksa - sianowska p Dzierzecino
 	if (typ == '2b_12') {i_p = 5; offset = 220}; //dzierżęcino - sianowska p Dzierzecino
+	if (typ == '2b_14') {i_p = 11; offset = 250}; //pkp - chelmoniewo
+	if (typ == '2b_15') {i_p = 14; offset = 250}; //pkp - dzierzecino
+	if (typ == '2b_16') {i_p = 19; offset = 250}; //pkp - lubiatowo
+	if (typ == '2b_17') {i_p = 14; offset = 280}; //pkp - hospicjum
 	// ---Linia 4---
 	if (typ == '4a') i_p = 23;
 	if (typ == '4a_1') {i_p = 24; offset = 23};
@@ -43,22 +51,40 @@ function wyswietldymek(h,m,typ,event) {
 	if (typ == '5b') {i_p = 19; offset = 20};
 	// ---Linia 6---
 	if (typ == '6a') i_p = 17; //ue - pkp
-	if (typ == '6a_1') {i_p = 18; offset = 30;} // big - pkp
-	if (typ == '6a_2') i_p = 24; // ue - strefa
-	if (typ == '6a_3') {i_p = 25; offset = 30;} // big - strefa
-	if (typ == '6a_4') {i_p = 9; offset = 8;} // wawozowa - pkp
-	if (typ == '6a_5') {i_p = 16; offset = 8;} // wawozowa - strefa
-	if (typ == '6b') {i_p = 15; offset = 60;} //pkp - ue
-	if (typ == '6b_1') {i_p = 17; offset = 60;} // pkp - big
-	if (typ == '6b_2') {i_p = 22; offset = 80;} // strefa - ue
-	if (typ == '6b_3') {i_p = 24; offset = 80;} // strefa - big
-	if (typ == '6b_4') {i_p = 8; offset = 60;} // pkp - wawozowa
+	if (typ == '6a_1') i_p = 24; // ue - strefa
+	if (typ == '6a_2') {i_p = 25; offset = 30;} // jamno - pkp
+	if (typ == '6a_3') {i_p = 32; offset = 30;} // jamno - strefa
+	if (typ == '6a_4') {i_p = 24; offset = 150;} // N jamno - pkp
+	if (typ == '6a_5') {i_p = 31; offset = 150;} // N jamno - strefa
+	if (typ == '6a_6') {i_p = 18; offset = 37;} // big - pkp
+	if (typ == '6a_7') {i_p = 25; offset = 37;} // big - strefa
+	if (typ == '6a_8') {i_p = 9; offset = 8;} // wawozowa - pkp
+	if (typ == '6a_9') {i_p = 16; offset = 8;} // wawozowa - strefa
+	if (typ == '6a_10') {i_p = 20; offset = 30;} // jamno - wankowicza
+	if (typ == '6a_11') {i_p = 19; offset = 150;} // N jamno - wankowicza
+	if (typ == '6a_12') {i_p = 13; offset = 37;} // big - wankowicza
+	if (typ == '6a_13') {i_p = 4; offset = 46;} // wawozowa - wankowicza
+	if (typ == '6b') {i_p = 15; offset = 70;} //pkp - ue
+	if (typ == '6b_1') {i_p = 17; offset = 70;} // pkp - big
+	if (typ == '6b_2') {i_p = 23; offset = 70;} // pkp - jamno
+	if (typ == '6b_3') {i_p = 22; offset = 200;} // N pkp - jamno
+	if (typ == '6b_4') {i_p = 8; offset = 70;} // pkp - wawozowa
+	if (typ == '6b_5') {i_p = 22; offset = 100;} // strefa - ue
+	if (typ == '6b_6') {i_p = 24; offset = 100;} // strefa - big
+	if (typ == '6b_7') {i_p = 30; offset = 100;} // strefa - jamno
+	if (typ == '6b_8') {i_p = 29; offset = 230;} // N strefa - jamno
 	// ---Linia 8---
 	if (typ == '8a') i_p = 20;
 	if (typ == '8b') {i_p = 20; offset = 20};
 	// ---Linia 9---
-	if (typ == '9a') i_p = 15;
-	if (typ == '9b') {i_p = 16; offset = 40};
+	if (typ == '9a') i_p = 19; //lasem - dzialki
+	if (typ == '9a_1') {i_p = 18; offset = 30}; //lasem - bukowe
+	if (typ == '9a_2') {i_p = 15; offset = 60}; //sloneczna - dzialki
+	if (typ == '9a_3') {i_p = 14; offset = 80}; //sloneczna - bukowe
+	if (typ == '9b') {i_p = 21; offset = 100}; //dzialki - lasem
+	if (typ == '9b_1') {i_p = 16; offset = 100}; //dzialki - szpital
+	if (typ == '9b_2') {i_p = 20; offset = 130}; //bukowe - lasem
+	if (typ == '9b_3') {i_p = 15; offset = 130}; //bukowe - szpital
 	// ---Linia 12---
 	if (typ == '12a') i_p = 29;
 	if (typ == '12a_1') i_p = 32;
@@ -182,17 +208,6 @@ function wyswietldymek(h,m,typ,event) {
         if (tag) return tag;
         return '<span class="red-text">' + match + '</span>';
     });
-	//kolorowanie ramki prze table th
-	/*const tabela = event.target.closest("table");
-	if (tabela) {
-    	const klasy = ["miejskie","podmiejskie","pospieszne","nocne","specjalne"];
-		for (const klasa of klasy) {
-			if (tabela.classList.contains("rozklad_" + klasa)) {
-            	dymek.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue("--rozklad_" + klasa + "_th-background-color");
-            	break;
-        	}
-		}
-	}*/
 	//kolorowanie ramki przez border numeru linii
 	const ramka = event.target.closest("table")?.querySelector(".ramka_miejskie, .ramka_podmiejskie, .ramka_pospieszne, .ramka_nocne, .ramka_specjalne");
 	if (ramka) dymek.style.borderColor = getComputedStyle(ramka).borderColor;
