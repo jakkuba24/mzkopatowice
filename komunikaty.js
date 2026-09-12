@@ -33,7 +33,7 @@ const KOMUNIKATY = {
         {
         linie: [1],
         tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 1: W dni powszednie nabiera szkolnego charakteru - godziny odjazdów zostaną dostosowane do godzin dzwonków w szkołach podstawowych, a dodatkowo zostanie skierowana przez Os. Unii Eurpejskiej; W soboty będzie kursowała wyłącznie na trasie Os. Bukowe - BIG Opatowice; W niedziele linia nie będzie kursować."
+        tresc: "Linia nr 1: W dni powszednie nabiera szkolnego charakteru - godziny odjazdów zostaną dostosowane do godzin dzwonków w szkołach podstawowych, a dodatkowo zostanie skierowana przez Os. Unii Europejskiej; W soboty będzie kursowała wyłącznie na trasie Os. Bukowe - BIG Opatowice; W niedziele linia nie będzie kursować."
         },
         {
         linie: [2],
