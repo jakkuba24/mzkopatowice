@@ -30,56 +30,6 @@ const KOMUNIKATY = {
     //...
     ],
     zmiana: [
-        {
-        linie: [1],
-        tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 1: W dni powszednie nabiera szkolnego charakteru - godziny odjazdów zostaną dostosowane do godzin dzwonków w szkołach podstawowych, a dodatkowo zostanie skierowana przez Os. Unii Europejskiej; W soboty będzie kursowała wyłącznie na trasie Os. Bukowe - BIG Opatowice; W niedziele linia nie będzie kursować."
-        },
-        {
-        linie: [2],
-        tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 2: Zwiększenie częstotliwości kursów w niedziele do 30 minut, skrócenie części kursów do Dworca PKP oraz drobna korekta rozkładu jazdy."
-        },
-        {
-        linie: [4],
-        tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 4: Usunięcie kursów przez CH Laksa w niedziele."
-        },
-        {
-        linie: [6],
-        tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 6: Zmiana trasy: Strefa Ekonomiczna/Dworzec PKP <-> ... <-> Os. Unii Europejskiej <-> BIG Opatowice <-> Zagroda Jamneńska; zmiana rozkładu jazdy: Kursy nawet co 10 minut w dni powszednie, co 20 minut w soboty. Dojazd do Jamna co 30 minut w godzinach szczytu, co 60 minut poza szczytem, w soboty i w niedziele."
-        },
-        {
-        linie: [9],
-        tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 9: Zmiana trasy: Osiedle Bukowe/Działkowa Działki <-> ... <-> Szpital <-> Lechicka <-> Leśna <-> Osiedle Pod Lasem; zmiana rozkładu jazdy: kursy co 30 minut w dni powszednie, kursy do Działkowej Działki co 60 minut."
-        },
-        {
-        linie: [12],
-        tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 12: Zwiększenie częstotliwości kursów w soboty do 60 minut."
-        },
-        {
-        linie: [13,14],
-        tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 13 i 14: Cofnięcie wszystkich kursów w dni powszednie o 3 minuty w celu lepszej synchronizacji na Osiedlu Morskim oraz z linią nr 2."
-        },
-        {
-        linie: [15],
-        tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 15: Dodanie kursów w międzyszczycie przewozowym co 60 minut."
-        },
-        {
-        linie: [23],
-        tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 23: Korekta kursu z 5:27 na 5:24 realizowanego w dni powszednie z Niekłonic Wsi."
-        },
-        {
-        linie: [37,38],
-        tytul: "Zmiany w kursowaniu autobusów na liniach nr 1, 2, 4, 6, 9, 12, 13, 14, 15, 23, 37 i 38 od 31 sierpnia 2026r.",
-        tresc: "Linia nr 37 i 38: Korekta rozkładu jazdy."
-        }
     //...
     ]
 };
@@ -89,9 +39,6 @@ const KOMUNIKATY = {
 
 
 /* MECHANIZM GENEROWANIA KOMUNIKATÓW */
-
-// Kolejność kategorii komunikatów.
-//const KOLEJNOSC_KATEGORII = ["awaria", "objazd", "zmiana"];
 
 /* Znajdujemy numer linii na podstawie nazwy pliku. */
 function pobierzNumerLinii() {
@@ -132,12 +79,9 @@ function utworzKomunikat(komunikat) {
 function generujKomunikaty() {
     const numerLinii = pobierzNumerLinii();
 
-    // Jeżeli skrypt został użyty na stronie, gdzie nazwa nie pasuje do linia_x.html  to niczego nie generujemy.
-    if (numerLinii === null) {
-        console.warn("komunikaty.js: nie udało się odczytać numeru linii z nazwy pliku.");
-        return;
-    }
-    // Tablica wszystkich komunikatów dotyczącychaktualnej linii.
+    // Jeżeli skrypt został użyty na stronie, gdzie nazwa nie pasuje do linia_x.html, to niczego nie generujemy.
+    if (numerLinii === null) return;
+    // Tablica wszystkich komunikatów dotyczących aktualnej linii.
     const komunikatyLinii = [];
 
     // Przechodzimy przez wszystkie działy:
@@ -149,7 +93,7 @@ function generujKomunikaty() {
         });
     });
 
-    // Brak komunikatów = nie tworzymy .info.
+    // Brak komunikatów to nie tworzymy .info.
     if (komunikatyLinii.length === 0) return;
 
     // Główny kontener.
@@ -164,7 +108,6 @@ function generujKomunikaty() {
     // Wstawiamy .info bezpośrednio pod <script>.
     const skrypt = document.currentScript;
     if (skrypt && skrypt.parentNode) skrypt.parentNode.insertBefore(kontener, skrypt.nextSibling);
-    else console.warn("komunikaty.js: nie udało się znaleźć elementu <script>.");
 }
 
 /* Uruchomienie generatora. */
