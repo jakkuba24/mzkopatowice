@@ -39,6 +39,8 @@
 	<label for="linia16">Linia 16</label><hr style="background-color:#80BAFF"><br>
 	<input type="checkbox" id="linia23" onclick="aktualizacja_mapki()">
 	<label for="linia23">Linia 23</label><hr style="background-color:#009B00"><br>
+	<input type="checkbox" id="linia25" onclick="aktualizacja_mapki()">
+	<label for="linia23">Linia 25</label><hr style="background-color:#4a7764"><br>
 	<input type="checkbox" id="linia29" onclick="aktualizacja_mapki()">
 	<label for="linia29">Linia 29</label><hr style="background-color:#BC96FF"><br>
 	<input type="checkbox" id="linia37" onclick="aktualizacja_mapki()">
@@ -59,7 +61,7 @@
 	
 
 	<p><b>Na mapie nie są uwzględnione objazdy</b></p>
-	<p>Aktualizacja: 31.08.2026<p>
+	<p>Aktualizacja: 01.10.2026<p>
 	<p>© MZK Opatowice</p>
 	</div>
 	
@@ -76,6 +78,7 @@
 	<img src="zdjecia/linia15.png" id="mapka_linia15">
 	<img src="zdjecia/linia16.png" id="mapka_linia16">
 	<img src="zdjecia/linia23.png" id="mapka_linia23">
+	<img src="zdjecia/linia25.png" id="mapka_linia25">
 	<img src="zdjecia/linia29.png" id="mapka_linia29">
 	<img src="zdjecia/linia37.png" id="mapka_linia37">
 	<img src="zdjecia/linia38.png" id="mapka_linia38">
@@ -112,7 +115,7 @@
         img.style.height = "100%";
     }
 
-    function przyciskZoom() {
+    function przyciskZoom() { //nieużywane
         if (duzyDiv) {
             const originalWidth = parseFloat(calaMapka.style.width) / 2;
 			const originalHeight = parseFloat(calaMapka.style.height) / 2;
@@ -160,6 +163,8 @@ if (document.getElementById("linia16").checked) document.getElementById("mapka_l
 else document.getElementById("mapka_linia16").style.display = "none";
 if (document.getElementById("linia23").checked) document.getElementById("mapka_linia23").style.display = "block";
 else document.getElementById("mapka_linia23").style.display = "none";
+if (document.getElementById("linia25").checked) document.getElementById("mapka_linia25").style.display = "block";
+else document.getElementById("mapka_linia25").style.display = "none";
 if (document.getElementById("linia29").checked) document.getElementById("mapka_linia29").style.display = "block";
 else document.getElementById("mapka_linia29").style.display = "none";
 if (document.getElementById("linia37").checked) document.getElementById("mapka_linia37").style.display = "block";
@@ -188,6 +193,7 @@ if (!pokazWszystkie) {
 	document.getElementById("linia15").checked = true;
 	document.getElementById("linia16").checked = true;
 	document.getElementById("linia23").checked = true;
+	document.getElementById("linia25").checked = true;
 	document.getElementById("linia29").checked = true;
 	document.getElementById("linia37").checked = true;
 	document.getElementById("linia38").checked = true;
@@ -210,6 +216,7 @@ if (!pokazWszystkie) {
 	document.getElementById("linia15").checked = false;
 	document.getElementById("linia16").checked = false;
 	document.getElementById("linia23").checked = false;
+	document.getElementById("linia25").checked = false;
 	document.getElementById("linia29").checked = false;
 	document.getElementById("linia37").checked = false;
 	document.getElementById("linia38").checked = false;

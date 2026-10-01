@@ -15,6 +15,83 @@
 <body>
     <header><script src="headerek.js"></script></header>
 	<script src="komunikaty.js"></script>
+<!--
+	<button type="button" class="przelacznik-listy" onclick="const pokazListe = getComputedStyle(document.querySelector('.div_kierunki')).display === 'none'; document.querySelector('.div_kierunki').style.display = pokazListe ? 'flex' : 'none'; document.querySelectorAll('.tables-container').forEach((tabliczka) => {tabliczka.style.display = pokazListe ? 'none' : 'block';});">Pokaż tabelki</button>
+	<div class="div_kierunki">
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Poprzeczna</h2>
+	<ul class="lista-przystankow">
+		<li data-glowna-start><a>Osiedle Północ</a></li>
+		<li><a>Macierzy/Srocka</a></li>
+		<li><a>Rondo Powstańców Śląskich</a></li>
+		<li><a>Rondo Walezego</a></li>
+		<li><a>Cmentarz</a></li>
+		<li><a>Połczyńska</a></li>
+		<li><a>Połczyńska Działki <span class="red-text">nż</span></a></li>
+		<ul>
+			<li data-wariant-start><span class="wariant-start"></span><a>Litewska</a></li>
+			<li><a>Fiołków</a></li>
+			<li><a>Promykowa</a></li>
+			<li><a>Niemena <span class="red-text">nż</span></a></li>
+			<li data-wariant-koniec><a>Osiedle Unii Lubelskiej</a><span class="wariant-koniec"></span></li>
+		</ul>
+		<li><a>Szczerbińska <span class="red-text">nż</span></a></li>
+		<li><a>Olejowa <span class="red-text">nż</span></a></li>
+		<li><a>Elektryczna <span class="red-text">nż</span></a></li>
+		<li><a>Lubelska <span class="red-text">nż</span></a></li>
+		<li><a>Działkowa <span class="red-text">nż</span></a></li>
+		<li><a>Lelewela</a></li>
+		<li><a>Osiedle Bukowe</a></li>
+		<li><a>Śniadeckich</a></li>
+		<li><a>Śniadeckich Politechnika</a></li>
+		<li><a>Staszica</a></li>
+		<li><a>Sikorskiego</a></li>
+		<li><a>Wańkowicza</a></li>
+		<li><a>Podgórna</a></li>
+		<li><a>Rondo Lechitów</a></li>
+		<li><a>Armii Krajowej/Franciszkańska</a></li>
+		<li><a>Łużycka Orlik</a></li>
+		<li data-glowna-koniec><span class="red-text"> - </span>Poprzeczna</li>
+	</ul>
+	</div>
+
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Osiedle Północ</h2>
+	<ul class="lista-przystankow">
+		<li data-glowna-start><a>Poprzeczna</a></li>
+		<li><a>Rondo Lechitów</a></li>
+		<li><a>Podgórna</a></li>
+		<li><a>Wańkowicza</a></li>
+		<li><a>Jana Pawła II</a></li>
+		<li><a>Staszica</a></li>
+		<li><a>Śniadeckich Politechnika</a></li>
+		<li><a>Śniadeckich</a></li>
+		<li><a>Lelewela</a></li>
+		<li><a>Osiedle Bukowe</a></li>
+		<li><a>Działkowa <span class="red-text">nż</span></a></li>
+		<li><a>Lubelska <span class="red-text">nż</span></a></li>
+		<li><a>Elektryczna <span class="red-text">nż</span></a></li>
+		<li><a>Olejowa <span class="red-text">nż</span></a></li>
+		<li><a>Szczerbińska <span class="red-text">nż</span></a></li>
+		<ul>
+			<li data-wariant-start><span class="wariant-start"></span><a>Osiedle Unii Lubelskiej</a></li>
+			<li><a>Niemena <span class="red-text">nż</span></a></li>
+			<li><a>Promykowa</a></li>
+			<li><a>Fiołków</a></li>
+			<li data-wariant-koniec><a>Litewska</a><span class="wariant-koniec"></span></li>
+		</ul>
+		<li><a>Legionów</a></li>
+		<li><a>Połczyńska</a></li>
+		<li><a>Cmentarz</a></li>
+		<li><a>Rondo Walezego</a></li>
+		<li><a>Rondo Powstańców Śląskich</a></li>
+		<li><a>Macierzy/Srocka</a></li>
+		<li data-glowna-koniec><span class="red-text"> - </span>Osiedle Północ</li>
+	</ul>
+	</div>
+	
+	</div>
+-->
     <div class="tables-container">
 		<table class="rozklad_pospieszne">
 			<tr style="border: 2px solid var(--table-border-widoczny)">
@@ -132,15 +209,15 @@
 				<td id="mi5">1</td>
 			</tr>
 			<tr>
-				<td id="pr6">Śniadeckich Politechnika</td>
+				<td id="pr6">Śniadeckich Politechnika <span class="red-text">nż</span></td>
 				<td id="mi6">2</td>
 			</tr>
 			<tr>
-				<td id="pr7">Śniadeckich</td>
+				<td id="pr7">Śniadeckich <span class="red-text">nż</span></td>
 				<td id="mi7">1</td>
 			</tr>
 			<tr>
-				<td id="pr8">Lelewela</td>
+				<td id="pr8">Lelewela <span class="red-text">nż</span></td>
 				<td id="mi8">1</td>
 			</tr>
 			<tr>
@@ -246,15 +323,15 @@
 				<td id="mi55">1</td>
 			</tr>
 			<tr>
-				<td id="pr56">Śniadeckich Politechnika</td>
+				<td id="pr56">Śniadeckich Politechnika <span class="red-text">nż</span></td>
 				<td id="mi56">2</td>
 			</tr>
 			<tr>
-				<td id="pr57">Śniadeckich</td>
+				<td id="pr57">Śniadeckich <span class="red-text">nż</span></td>
 				<td id="mi57">1</td>
 			</tr>
 			<tr>
-				<td id="pr58">Lelewela</td>
+				<td id="pr58">Lelewela <span class="red-text">nż</span></td>
 				<td id="mi58">1</td>
 			</tr>
 			<tr>
@@ -474,7 +551,7 @@
 				<td id="mi116">3</td>
 			</tr>
 			<tr>
-				<td id="pr117">Lelewela</td>
+				<td id="pr117">Lelewela <span class="red-text">nż</span></td>
 				<td id="mi117">1</td>
 			</tr>
 			<tr>
@@ -576,7 +653,7 @@
 				<td id="mi161">3</td>
 			</tr>
 			<tr>
-				<td id="pr162">Lelewela</td>
+				<td id="pr162">Lelewela <span class="red-text">nż</span></td>
 				<td id="mi162">1</td>
 			</tr>
 			<tr>
@@ -628,6 +705,11 @@
     </div>
 	
 	<div id="dymek"></div>
+	<script>
+		ustawKolorLinii();
+		ustawDlugoscLinii();
+		ustawObslugePrzystankow();
+	</script>
 	<footer>&copy MZK Opatowice</footer>
 </body>
 </html>

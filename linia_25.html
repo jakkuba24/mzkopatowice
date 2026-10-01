@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rozkład Jazdy - Linia 25</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="zdjecia/mzk.png">
+	<script src="kurs.js"></script>
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
+</head>
+<body>
+    <header><script src="headerek.js"></script></header>
+
+	<p>Strona w wersji testowej!</p>
+	<div class="div_kierunki">
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Sypniewo Centrum Przesiadkowe</h2>
+	<ul class="lista-przystankow">
+		<li data-glowna-start><a>Dworzec PKP</a></li>
+		<li><a>Rynek</a></li>
+		<li><a>Zwycięstwa/Wyszyńskiego</a></li>
+		<li><a>Węzeł Opatowice Centrum <span class="red-text">nż</span></a></li>
+		<li><a>Centrum Handlowe Laksa</a></li>
+		<ul>
+			<li data-wariant-start><span class="wariant-start"></span><a>Szczerbińska <span class="red-text">nż</span></a></li>
+			<li><a>Olejowa <span class="red-text">nż</span></a></li>
+			<li><a>Elektryczna <span class="red-text">nż</span></a></li>
+			<li><a>Lubelska <span class="red-text">nż</span></a></li>
+			<li><a>Działkowa <span class="red-text">nż</span></a></li>
+			<ul>
+				<li><a>Zwycięstwa/Wyszyńskiego</a></li>
+				<li><a>Kamienna</a><span class="wariant-koniec"></span></li>
+			</ul>
+			<li data-wariant-koniec><a>Zajezdnia MZK <span class="red-text">nż</span></a><span class="wariant-koniec"></span></li>
+		</ul>
+		<li><a>Manowo Szkoła 01</a></li>
+		<li><a>Manowo 02</a></li>
+		<li><a>Manowo Kaplica 01</a></li>
+		<li><a>Sypniewo Leśna 02 <span class="red-text">nż</span></a></li>
+		<li><a><span class="red-text"> - </span>Sypniewo Centrum Przesiadkowe</a></li>
+		<li><a>Sypniewo Grunwaldzka 01</a></li>
+		<li><a>Sypniewo Cmentarz 01</a></li>
+		<ul>
+			<li><span class="wariant-start"></span><a>Sypniewo Demokracji 02 <span class="red-text">nż</span></a></li>
+			<li><a>Moczyły Skrzyżowanie 03 <span class="red-text">nż</span></a></li>
+			<li><span class="red-text"> - </span>Moczyły</li>
+		</ul>
+		<li><a>Sypniewo Demokracji 01 <span class="red-text">nż</span></a></li>
+		<li data-glowna-koniec><span class="red-text"> - </span>Sypniewo Centrum Przesiadkowe</li>
+	</ul>
+	</div>
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Dworzec PKP</h2>
+    <ul class="lista-przystankow">
+		<li><a>Sypniewo Centrum Przesiadkowe</a></li>
+		<li><a>Sypniewo Wojska Polskiego 02 <span class="red-text">nż</span></a></li>
+		<ul>
+			<li><a>Moczyły</a></li>
+			<li><a>Moczyły Skrzyżowanie 01 <span class="red-text">nż</span></a></li>
+			<li><a>Sypniewo Demokracji 05 <span class="red-text">nż</span></a><span class="wariant-koniec"></span></li>
+		</ul>
+		<li><a>Sypniewo Cmentarz 02</a></li>
+		<li><a>Sypniewo Grunwaldzka 02</a></li>
+		<li><a>Sypniewo Centrum Przesiadkowe</a></li>
+		<li><a>Sypniewo Leśna 01 <span class="red-text">nż</span></a></li>
+		<li><a>Manowo Kaplica 01</a></li>
+		<li><a>Manowo 01</a></li>
+		<li><a>Manowo Szkoła 01</a></li>
+		<ul>
+			<li><span class="wariant-start"></span><a>Zajezdnia MZK <span class="red-text">nż</span></a></li>
+			<ul>
+				<li><span class="wariant-start"></span><a>Kamienna</a></li>
+			</ul>
+			<li><a>Działkowa <span class="red-text">nż</span></a></li>
+			<li><a>Lubelska <span class="red-text">nż</span></a></li>
+			<li><a>Elektryczna <span class="red-text">nż</span></a></li>
+			<li><a>Olejowa <span class="red-text">nż</span></a></li>
+			<li><a>Szczerbińska <span class="red-text">nż</span></a><span class="wariant-koniec"></span></li>
+		</ul>
+		<li><a>Centrum Handlowe Laksa</a></li>
+		<li><a>Węzeł Opatowice Centrum <span class="red-text">nż</span></a></li>
+		<li><a>Zwycięstwa/Wyszyńskiego</a></li>
+		<li><a>Rynek</a></li>
+		<li><span class="red-text"> - </span>Dworzec PKP</li>
+	</ul>
+	</div>
+	</div>
+
+    <div class="tables-container" style="display: none;">
+		<table class="rozklad_podmiejskie">
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_podmiejskie">25</div></b>dzienna/podmiejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Dworzec PKP<br><br><b>Kierunek:</b> Sypniewo Centrum Przesiadkowe</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr class="linie">
+				<th rowspan="3" style="text-align:left">Dzień powszedni</th>
+				<td>09M</td> <!-- 5 -->
+				<td>05Se</td>
+				<td>05Se</td>
+				<td>09</td> <!-- 8 -->
+				<td>09</td>
+				<td>09</td>
+				<td>09M</td> <!-- 11 -->
+				<td>09</td>
+				<td>09M</td>
+				<td>05Me</td> <!-- 14 -->
+				<td>05Me</td>
+				<td>05Se</td>
+				<td>09</td> <!-- 17 -->
+				<td>09M</td>
+				<td>09</td>
+				<td>09M</td> <!-- 20 -->
+				<td>09</td>
+				<td>05Se</td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td>29Sb</td> <!-- 5 -->
+				<td>29M</td>
+				<td>29M</td>
+				<td>29</td> <!-- 8 -->
+				<td>39</td>
+				<td>39</td>
+				<td>39</td> <!-- 11 -->
+				<td>39</td>
+				<td>29</td>
+				<td>29</td> <!-- 14 -->
+				<td>29</td>
+				<td>29M</td>
+				<td>29</td> <!-- 17 -->
+				<td>39</td>
+				<td>39</td>
+				<td>39</td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td>49M</td> <!-- 5 -->
+				<td>49</td>
+				<td>49</td>
+				<td>49M</td> <!-- 8 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 11 -->
+				<td></td>
+				<td>49</td>
+				<td>49</td> <!-- 14 -->
+				<td>49</td>
+				<td>49</td>
+				<td>49</td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<th rowspan="2" style="text-align:left">Sobota</th>
+				<td></td> <!-- 5 -->
+				<td>05Se</td>
+				<td>29</td>
+				<td>09</td> <!-- 8 -->
+				<td>09</td>
+				<td>09</td>
+				<td>09M</td> <!-- 11 -->
+				<td>09</td>
+				<td>09</td>
+				<td>05Se</td> <!-- 14 -->
+				<td>09</td>
+				<td>09M</td>
+				<td>09</td> <!-- 17 -->
+				<td>09</td>
+				<td>19Sb</td>
+				<td>09</td> <!-- 20 -->
+				<td>19Sbw</td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td></td> <!-- 5 -->
+				<td>49</td>
+				<td></td>
+				<td>39M</td> <!-- 8 -->
+				<td>39</td>
+				<td>39</td>
+				<td>39</td> <!-- 11 -->
+				<td>39</td>
+				<td>39M</td>
+				<td>39</td> <!-- 14 -->
+				<td>39</td>
+				<td>39</td>
+				<td>39</td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Niedziela / Święta</th>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td></td>
+				<td>07Sb</td> <!-- 8 -->
+				<td>07Sb</td>
+				<td>07</td>
+				<td>07Sb</td> <!-- 11 -->
+				<td>07</td>
+				<td>07</td>
+				<td>07</td> <!-- 14 -->
+				<td>07</td>
+				<td>07</td>
+				<td>07</td> <!-- 17 -->
+				<td>07</td>
+				<td>07Sb</td>
+				<td>07</td> <!-- 20 -->
+				<td>07Sb</td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 01.10.2026</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">M - kurs do Moczył</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Me - kurs do Moczył przez Strefę Ekonomiczną</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Sb - kurs bezpośredni do Sypniewa bez przejazdu przez Manowo Kaplica i Sypniewo ul. Grunwaldzka i Demokracji</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Sbw - kurs bezpośredni do Sypniewa przez ul. Wyszyńskiego bez przejazdu przez CH Laksa, Manowo Kaplica i Sypniewo ul. Grunwaldzka i Demokracji (tylko Sobota)</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Se - kurs do Sypniewa przez Strefę Ekonomiczną</td>
+			</tr>
+			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"><br></td></tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>W niedziele i święta wszystkie kursy realizowane są przez ul. Wyszyńskiego bez przejazdu przez Centrum Handlowe Laksa.</b></td>
+			</tr>
+		</table>
+		
+    </div>
+
+	<div class="tables-container" style="display: none;">
+		<table class="rozklad_podmiejskie">
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_podmiejskie">25</div></b>dzienna/podmiejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Sypniewo Centrum Przesiadkowe<br><br><b>Kierunek:</b> Dworzec PKP</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr class="linie">
+				<th rowspan="6" style="text-align:left">Dzień powszedni</th>
+				<td>20Se</td> <!-- 5 -->
+				<td>06S</td>
+				<td>12</td>
+				<td>12</td> <!-- 8 -->
+				<td>02</td>
+				<td>02</td>
+				<td>02</td> <!-- 11 -->
+				<td>02</td>
+				<td>02</td>
+				<td>06S</td> <!-- 14 -->
+				<td>06S</td>
+				<td>06S</td>
+				<td>12</td> <!-- 17 -->
+				<td>02</td>
+				<td>02</td>
+				<td>02</td> <!-- 20 -->
+				<td>02</td>
+				<td>02</td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td>26De</td> <!-- 5 -->
+				<td>12</td>
+				<td>20Se</td>
+				<td>26S</td> <!-- 8 -->
+				<td>32</td>
+				<td>26S</td>
+				<td>26S</td> <!-- 11 -->
+				<td>26S</td>
+				<td>20Se</td>
+				<td>12</td> <!-- 14 -->
+				<td>12</td>
+				<td>12</td>
+				<td>26S</td> <!-- 17 -->
+				<td>26S</td>
+				<td>26S</td>
+				<td>26S</td> <!-- 20 -->
+				<td>20Se</td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td>52</td> <!-- 5 -->
+				<td>26De</td>
+				<td>26De</td>
+				<td>32</td> <!-- 8 -->
+				<td>56S</td>
+				<td>32</td>
+				<td>32</td> <!-- 11 -->
+				<td>32</td>
+				<td>26De</td>
+				<td>20Se</td> <!-- 14 -->
+				<td>26S</td>
+				<td>26S</td>
+				<td>32</td> <!-- 17 -->
+				<td>32</td>
+				<td>32</td>
+				<td>32</td> <!-- 20 -->
+				<td>26De</td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td></td> <!-- 5 -->
+				<td>46S</td>
+				<td>46S</td>
+				<td>56S</td> <!-- 8 -->
+				<td></td>
+				<td>56S</td>
+				<td></td> <!-- 11 -->
+				<td>56S</td>
+				<td>52</td>
+				<td>26De</td> <!-- 14 -->
+				<td>32</td>
+				<td>32</td>
+				<td>56S</td> <!-- 17 -->
+				<td></td>
+				<td>56S</td>
+				<td></td> <!-- 20 -->
+				<td>56S</td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td></td> <!-- 5 -->
+				<td>52</td>
+				<td>52</td>
+				<td></td> <!-- 8 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 11 -->
+				<td></td>
+				<td></td>
+				<td>52</td> <!-- 14 -->
+				<td>52</td>
+				<td>46S</td>
+				<td></td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 8 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 11 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 14 -->
+				<td></td>
+				<td>52</td>
+				<td></td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<th rowspan="4" style="text-align:left">Sobota</th>
+				<td>20Se</td> <!-- 5 -->
+				<td>46S</td>
+				<td>26S</td>
+				<td>06S</td> <!-- 8 -->
+				<td>32</td>
+				<td>02</td>
+				<td>02</td> <!-- 11 -->
+				<td>02</td>
+				<td>02</td>
+				<td>02</td> <!-- 14 -->
+				<td>02</td>
+				<td>02</td>
+				<td>02</td> <!-- 17 -->
+				<td>41S</td>
+				<td>44D</td>
+				<td>46S</td> <!-- 20 -->
+				<td>47Dw</td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td>26De</td> <!-- 5 -->
+				<td>52</td>
+				<td>32</td>
+				<td>12</td> <!-- 8 -->
+				<td>56S</td>
+				<td>26S</td>
+				<td>26S</td> <!-- 11 -->
+				<td>26S</td>
+				<td>20Se</td>
+				<td>32</td> <!-- 14 -->
+				<td>26S</td>
+				<td>26S</td>
+				<td>26S</td> <!-- 17 -->
+				<td>47</td>
+				<td></td>
+				<td>52</td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td></td>
+				<td>46S</td> <!-- 8 -->
+				<td></td>
+				<td>32</td>
+				<td>32</td> <!-- 11 -->
+				<td>32</td>
+				<td>26De</td>
+				<td>56S</td> <!-- 14 -->
+				<td>32</td>
+				<td>32</td>
+				<td>32</td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td></td>
+				<td>52</td> <!-- 8 -->
+				<td></td>
+				<td>56S</td>
+				<td></td> <!-- 11 -->
+				<td>56S</td>
+				<td>56S</td>
+				<td></td> <!-- 14 -->
+				<td>56S</td>
+				<td></td>
+				<td>54D</td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr class="linie">
+				<th rowspan="2" style="text-align:left">Niedziela / Święta</th>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td>29S</td>
+				<td>29D</td> <!-- 8 -->
+				<td>29S</td>
+				<td>39S</td>
+				<td>29S</td> <!-- 11 -->
+				<td>39S</td>
+				<td>39S</td>
+				<td>39S</td> <!-- 14 -->
+				<td>39S</td>
+				<td>39S</td>
+				<td>39D</td> <!-- 17 -->
+				<td>39S</td>
+				<td>39D</td>
+				<td>39S</td> <!-- 20 -->
+				<td>29D</td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td>35</td>
+				<td></td> <!-- 8 -->
+				<td>35</td>
+				<td>45</td>
+				<td>35</td> <!-- 11 -->
+				<td>45</td>
+				<td>45</td>
+				<td>45</td> <!-- 14 -->
+				<td>45</td>
+				<td>45</td>
+				<td></td> <!-- 17 -->
+				<td>45</td>
+				<td></td>
+				<td>45</td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 01.10.2026</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">D - kurs bezpośredni do Dworca PKP bez przejazdu przez Sypniewo ul. Demokracji i Grunwaldzka oraz Manowo Kaplica</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">De - kurs przez Strefę Ekonomiczną</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">S - kurs przez Sypniewo ul. Demokracji i Grunwaldzka</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Se - kurs przez Sypniewo ul. Demokracji i Grunwaldzka oraz Strefę Ekonomiczną</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Dw - kurs bezpośredni przez ul. Wyszyńskiego bez przejazdu przez Sypniewo ul. Demokracji oraz Manowo Kaplica i Centrum Handlowe Laksa (tylko Sobota)</td>
+			</tr>
+			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"><br></td></tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>W niedziele i święta wszystkie kursy realizowane są przez ul. Wyszyńskiego bez przejazdu przez Centrum Handlowe Laksa.</b></td>
+			</tr>
+		</table>
+		
+    </div>
+
+	<div class="tables-container" style="display: none;">
+		<table class="rozklad_podmiejskie">
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_podmiejskie">25</div></b>dzienna/podmiejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Moczyły<br><br><b>Kierunek:</b> Dworzec PKP</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Dzień powszedni</th>
+				<td>45</td> <!-- 5 -->
+				<td>19Se</td>
+				<td>05</td>
+				<td>05</td> <!-- 8 -->
+				<td>25</td>
+				<td></td>
+				<td>55</td> <!-- 11 -->
+				<td></td>
+				<td>45</td>
+				<td>45</td> <!-- 14 -->
+				<td>45</td>
+				<td></td>
+				<td>05</td> <!-- 17 -->
+				<td>55</td>
+				<td></td>
+				<td>55</td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<th rowspan="1" style="text-align:left">Sobota</th>
+				<td></td> <!-- 5 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 8 -->
+				<td>25</td>
+				<td></td>
+				<td>55</td> <!-- 11 -->
+				<td></td>
+				<td></td>
+				<td>25</td> <!-- 14 -->
+				<td></td>
+				<td>55</td>
+				<td></td> <!-- 17 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 20 -->
+				<td></td>
+				<td></td>
+				<td></td> <!-- 23 -->
+			</tr>
+			<tr>
+				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 01.10.2026</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
+			</tr>
+			<tr>
+				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Se - kurs przez Strefę Ekonomiczną</td>
+			</tr>
+		</table>
+		
+    </div>
+	
+	<div id="dymek"></div>
+	<script>
+		ustawKolorLinii();
+		ustawDlugoscLinii();
+		ustawObslugePrzystankow();
+	</script>
+	<footer>&copy MZK Opatowice</footer>
+</body>
+</html>

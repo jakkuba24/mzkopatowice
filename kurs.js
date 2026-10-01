@@ -1,3 +1,172 @@
+function ustawDlugoscLinii() {
+	document.querySelectorAll('.objazd-start').forEach((start) => {
+		const end = start.parentElement?.querySelector('.objazd-koniec');
+		if (!end) return;
+
+		let trasa = start.parentElement;
+		while (trasa && !trasa.contains(end)) trasa = trasa.parentElement;
+		if (!trasa) return;
+		trasa.classList.add('objazd-aktywny');
+
+		const trasaRect = trasa.getBoundingClientRect();
+		const center = (element) => {
+			const rect = element.getBoundingClientRect();
+			return rect.top + rect.height / 2 - trasaRect.top;
+		};
+
+		trasa.style.setProperty('--objazd-linia-top', `${center(start) - 2}px`);
+		trasa.style.setProperty('--objazd-linia-bottom', `${trasaRect.height - center(end) - 2}px`);
+	});
+
+	document.querySelectorAll('.lista-przystankow').forEach((lista) => {
+		const start = lista.querySelector('[data-glowna-start]');
+		const end = lista.querySelector('[data-glowna-koniec]');
+		if (!start || !end) return;
+
+		const listaTop = lista.getBoundingClientRect().top;
+		const center = (element) => {
+			const rect = element.getBoundingClientRect();
+			return rect.top + rect.height / 2 - listaTop;
+		};
+
+		lista.style.setProperty('--glowna-linia-top', `${center(start) - 2}px`);
+		lista.style.setProperty('--glowna-linia-bottom', `${lista.getBoundingClientRect().height - center(end) - 2}px`);
+	});
+	document.querySelectorAll('.lista-przystankow ul').forEach((wariant) => {
+		const start = wariant.querySelector(':scope > li[data-wariant-start]');
+		const end = wariant.querySelector(':scope > li[data-wariant-koniec]');
+		if (!start || !end) return;
+
+		const wariantTop = wariant.getBoundingClientRect().top;
+		const center = (element) => {
+			const rect = element.getBoundingClientRect();
+			return rect.top + rect.height / 2 - wariantTop;
+		};
+
+		wariant.style.setProperty('--wariant-linia-top', `${center(start)}px`);
+		wariant.style.setProperty('--wariant-linia-bottom', `${wariant.getBoundingClientRect().height - center(end)}px`);
+	});
+}
+
+function ustawKolorLinii() {
+	const plik = window.location.pathname.split('/').pop();
+	const linkLinii = document.querySelector(`.div_wybor_linii a[href="${plik}"]`);
+	if (!linkLinii) return;
+
+	const kategorie = [
+		['linia_miejska', '--linia_miejska-border-color', '--rozklad_miejskie_th-background-color'],
+		['linia_podmiejska', '--linia_podmiejska-border-color', '--rozklad_podmiejskie_th-background-color'],
+		['linia_pospieszna', '--linia_pospieszna-border-color', '--rozklad_pospieszne_th-background-color'],
+		['linia_nocna', '--linia_nocna-border-color', '--rozklad_nocne_th-background-color'],
+		['linia_specjalna', '--linia_specjalna-border-color', '--rozklad_specjalne_th-background-color']
+	];
+	const kategoria = kategorie.find(([klasa]) => linkLinii.classList.contains(klasa));
+	if (!kategoria) return;
+
+	document.documentElement.style.setProperty('--kolor-linii-glowna', `var(${kategoria[1]})`);
+	document.documentElement.style.setProperty('--kolor-linii-wariant', `var(${kategoria[2]})`);
+}
+/*w pół działający skrypt do generowania listy przystanków z tabeli rozkładu jazdy
+function generujListePrzystankow() {
+	const kolumny = [...document.querySelectorAll('.div_kierunki .kierunek-kolumna')];
+	const trasy = ['pr0', 'pr100'];
+
+	trasy.forEach((idStart, indeks) => {
+		const kolumna = kolumny[indeks];
+		const lista = kolumna?.querySelector('.lista-przystankow');
+		const start = document.getElementById(idStart);
+		const tabela = start?.closest('table');
+		if (!lista || !tabela) return;
+
+		let wariant = null;
+		const komorki = [...tabela.querySelectorAll('td[id^="pr"]')];
+		komorki.forEach((komorka) => {
+			const jestWariantem = !!komorka.querySelector('span[style*="margin-left"]');
+			if (jestWariantem && !wariant) {
+				wariant = document.createElement('ul');
+				wariant.innerHTML = '<span class="wariant-start"></span>';
+				lista.appendChild(wariant);
+			}
+			if (!jestWariantem) wariant = null;
+
+			const li = document.createElement('li');
+			const a = document.createElement('a');
+			const zawartosc = komorka.cloneNode(true);
+			zawartosc.removeAttribute('id');
+			zawartosc.querySelectorAll('span[style*="margin-left"]').forEach((span) => span.remove());
+			const czerwony = zawartosc.querySelector('.red-text');
+			if (czerwony && /^\s*-/.test(czerwony.textContent)) czerwony.remove();
+			a.innerHTML = zawartosc.innerHTML.trim();
+			li.appendChild(a);
+
+			if (wariant) wariant.appendChild(li);
+			else lista.appendChild(li);
+		});
+
+		const glowne = [...lista.children].filter((element) => element.matches('li'));
+		glowne[0]?.setAttribute('data-glowna-start', '');
+		glowne.at(-1)?.setAttribute('data-glowna-koniec', '');
+		lista.querySelectorAll(':scope > ul').forEach((odgalezienie) => {
+			const przystanki = [...odgalezienie.children].filter((element) => element.matches('li'));
+			przystanki[0]?.setAttribute('data-wariant-start', '');
+			przystanki.at(-1)?.setAttribute('data-wariant-koniec', '');
+		});
+	});
+}*/
+
+function ustawObslugePrzystankow() {
+	const normalizuj = (tekst) => tekst
+		.replace(/\s+/g, ' ')
+		.replace(/\bnż\b/gi, '')
+		.replace(/^\s*-\s*/, '')
+		.trim();
+
+	const tabliczki = [...document.querySelectorAll('.tables-container')].map((tabliczka) => {
+		const opis = tabliczka.querySelector('table tr:first-child td[colspan]');
+		if (!opis) return null;
+
+		const tekst = normalizuj(opis.textContent);
+		const dane = tekst.match(/Przystanek:\s*(.*?)\s*Kierunek:\s*(.*)$/i);
+		if (!dane) return null;
+
+		return {
+			element: tabliczka,
+			przystanek: normalizuj(dane[1]),
+			kierunek: normalizuj(dane[2])
+		};
+	}).filter(Boolean);
+
+	document.querySelectorAll('.div_kierunki .kierunek-kolumna').forEach((kolumna) => {
+		const naglowek = kolumna.querySelector('h2');
+		const kierunek = normalizuj(naglowek?.textContent.replace(/^Kierunek:\s*/i, '') || '');
+
+		kolumna.querySelectorAll('li').forEach((przystanek) => {
+			const oznaczenieKoniec = przystanek.querySelector(':scope > .red-text, :scope > a > .red-text');
+			if (oznaczenieKoniec && /^\s*-\s*$/.test(oznaczenieKoniec.textContent)) {
+				przystanek.classList.add('przystanek-koncowy');
+			}
+			if ([...przystanek.querySelectorAll(':scope > a .red-text, :scope > .red-text')]
+				.some((oznaczenie) => /nż/i.test(oznaczenie.textContent))) {
+				przystanek.classList.add('przystanek-na-zadanie');
+			}
+			if (!przystanek.querySelector(':scope > a')) return;
+			const nazwa = normalizuj(przystanek.textContent);
+			const tabliczka = tabliczki.find((pozycja) =>
+				pozycja.przystanek === nazwa && pozycja.kierunek === kierunek
+			);
+			if (!tabliczka) return;
+
+			przystanek.classList.add('przystanek-klikalny');
+			przystanek.onclick = () => {
+				document.querySelector('.div_kierunki').style.display = 'none';
+				tabliczki.forEach((pozycja) => pozycja.element.style.display = 'none');
+				tabliczka.element.style.display = 'block';
+			};
+		});
+	});
+}
+
+
 function wyswietldymek(h,m,typ,event) {
 	// h = godzina; m = minuta; typ = typ kursu; i_p = ilosc przystanków
 	// xa_1 = trasa wariantowa
@@ -204,7 +373,7 @@ function wyswietldymek(h,m,typ,event) {
 		//console.log(dymek);
 	}
 	//kolorowanie nż i - i border dymku
-    dymek.innerHTML = dymek.innerHTML.replace(/(<[^>]+>)|(\bnż\b)|(-)/g, function(match, tag, nz, minus) {
+    dymek.innerHTML = dymek.innerHTML.replace(/(<[^>]+>)|(\bnż\b)|(-)/g, function(match, tag) {
         if (tag) return tag;
         return '<span class="red-text">' + match + '</span>';
     });

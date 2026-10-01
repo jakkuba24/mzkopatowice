@@ -36,7 +36,11 @@ input[type="checkbox"][role="switch"]:checked::before {
 	--logo: drop-shadow(2px 4px 6px rgba(255,255,255,0.2));
 	--header-background-color: #0e1a47;
 	/* wybor linii */
+	--linia_miejska-border-color: #00b1eb;
+	--linia_podmiejska-border-color: #24378d;
+	--linia_pospieszna-border-color: #ff0000;
 	--linia_nocna-border-color: #fff;
+	--linia_specjalna-border-color: #7F4A7F;
 	/* aktualnosci */
 	--aktualnosci-border-color: #00aaff;
 	--aktualnosci-li2-span-color: #fff;
@@ -68,7 +72,11 @@ input[type="checkbox"][role="switch"]:checked::before {
 	--logo: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
 	--header-background-color: #1f2f6d;
 	/* wybor linii */
+	--linia_miejska-border-color: #00b1eb;
+	--linia_podmiejska-border-color: #24378d;
+	--linia_pospieszna-border-color: #ff0000;
 	--linia_nocna-border-color: #777;
+	--linia_specjalna-border-color: #7F4A7F;
 	/* aktualnosci */
 	--aktualnosci-border-color: #0088ee;
 	--aktualnosci-li2-span-color: #333;
@@ -199,7 +207,7 @@ header a:hover {
 	background-color: #333;
 	color: #fff;
 }
-.linia_specjalna2 {
+.linia_specjalna2 { /*julek*/
 	padding-right: 15px;
 	padding-left: 5px;
 	line-height: 35px;
@@ -215,7 +223,7 @@ header a:hover {
 .objazd::before {
     content: "Objazd";
     position: absolute;
-    bottom: calc(100% + 3px);
+    bottom: 109.5%;
     left: -3.5px;
     background-color: #ff9900;
     color: #000;
@@ -228,19 +236,19 @@ header a:hover {
 }
 
 .linia_miejska {
-	border: 4px solid #0094ff;
+	border: 4px solid var(--linia_miejska-border-color);
 }
 .linia_podmiejska {
-	border: 4px solid #24378d;
+	border: 4px solid var(--linia_podmiejska-border-color);
 }
 .linia_pospieszna {
-	border: 4px solid #ff0000;
+	border: 4px solid var(--linia_pospieszna-border-color);
 }
 .linia_nocna {
 	border: 4px solid var(--linia_nocna-border-color);
 }
 .linia_specjalna, .linia_specjalna2 {
-	border: 4px solid #7F4A7F;
+	border: 4px solid var(--linia_specjalna-border-color);
 }
 
 .linia_miejska:hover, .linia_podmiejska:hover, .linia_pospieszna:hover, .linia_specjalna:hover, .linia_specjalna2:hover {
@@ -425,19 +433,19 @@ header a:hover {
 }
 
 .linia_miejska_text {
-	border: 3px solid #0094ff;
+	border: 3px solid var(--linia_miejska-border-color);
 }
 .linia_podmiejska_text {
-	border: 3px solid #24378d;
+	border: 3px solid var(--linia_podmiejska-border-color);
 }
 .linia_pospieszna_text {
-	border: 3px solid #ff0000;
+	border: 3px solid var(--linia_pospieszna-border-color);
 }
 .linia_nocna_text {
 	border: 3px solid var(--linia_nocna-border-color);
 }
 .linia_specjalna_text, .linia_specjalna2_text {
-	border: 3px solid #7F4A7F;
+	border: 3px solid var(--linia_specjalna-border-color);
 }
 
 
@@ -445,6 +453,232 @@ header a:hover {
 
 
 /* ROZKLADY JAZDY */
+.przelacznik-listy {
+    background-color: transparent;
+	color: var(--body-color);
+	border: none;
+    cursor: pointer;
+}
+/* --- LISTA PRZYSTANKÓW --- */
+.div_kierunki {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+	margin-top: 10px;
+}
+
+.kierunek-kolumna {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    border: 1px solid var(--table-border-widoczny);
+    border-radius: 8px;
+    padding: 15px 20px;
+}
+.div_kierunki h2 {
+    font-size: 24px;
+    margin: 0;
+    color: var(--body-color);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--table-border-widoczny);
+}
+
+.div_kierunki ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+	padding-left: 20px;
+	font-size: 18px;
+}
+/* Główna linia łącząca przystanki */
+.lista-przystankow::before {
+    content: '';
+    position: absolute;
+    top: var(--glowna-linia-top, 10px);
+    bottom: var(--glowna-linia-bottom, 10px);
+    left: 7px;
+    width: 4px;
+    background-color: var(--kolor-linii-glowna, blue);
+}
+
+/* Pojedynczy przystanek */
+.lista-przystankow li {
+    position: relative;
+    margin: 8px 0;
+}
+.przystanek-klikalny {
+    cursor: pointer;
+}
+
+/* Kropka przy przystanku głównym */
+.lista-przystankow > li::before {
+    content: '';
+    position: absolute;
+    left: -18px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--kolor-linii-glowna, blue);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Link przystanku */
+.lista-przystankow a {
+    color: var(--body-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: font-weight 0.2s;
+    display: inline-block;
+}
+.lista-przystankow a:hover {
+    font-weight: bold;
+}
+
+/* WARIANTY */
+/* łącznik wariantu*/
+.wariant-start::before {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: -33px;
+    width: 20px;
+    height: 20px;
+    border-right: 4px solid var(--kolor-linii-wariant, cyan);
+    border-top: 4px solid var(--kolor-linii-wariant, cyan);
+    border-top-right-radius: 20px;
+	corner-top-right-shape: bevel;
+}
+.wariant-koniec::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: -33px;
+    width: 20px;
+    height: 21px;
+    border-right: 4px solid var(--kolor-linii-wariant, cyan);
+    border-bottom: 4px solid var(--kolor-linii-wariant, cyan);
+    border-bottom-right-radius: 20px;
+	corner-bottom-right-shape: bevel;
+}
+.wariant-objazd::before {
+	border-color: var(--objazd-info-border) !important;
+}
+
+/* Wariantowa linia łącząca przystanki */
+.lista-przystankow ul::before {
+    content: '';
+    position: absolute;
+    top: var(--wariant-linia-top, 10px);
+    bottom: var(--wariant-linia-bottom, 10px);
+    left: 7px;
+    width: 4px;
+    background-color: var(--kolor-linii-wariant, cyan);
+}
+
+/* Dokładny zakres objazdu, od .objazd-start do .objazd-koniec. automat*/
+.objazd-aktywny::after {
+    content: '';
+    position: absolute;
+    top: var(--objazd-linia-top);
+    bottom: var(--objazd-linia-bottom);
+    left: 7px;
+    width: 4px;
+    background-color: var(--objazd-info-border);
+    z-index: 1;
+}
+
+/* Przystanki na żądanie: puste kółko zamiast pełnej kropki. */
+.lista-przystankow > li.przystanek-na-zadanie::before {
+    background-color: var(--body-background-color);
+    border: 4px solid var(--kolor-linii-glowna, blue);
+    box-sizing: border-box;
+}
+
+.lista-przystankow ul > li.przystanek-na-zadanie::before {
+    background-color: var(--body-background-color);
+    border: 4px solid var(--kolor-linii-wariant, cyan);
+    box-sizing: border-box;
+}
+
+.lista-przystankow > li.przystanek-na-zadanie:has(> a.objazd-text)::before,
+.lista-przystankow ul > li.przystanek-na-zadanie:has(> a.objazd-text)::before {
+    border-color: var(--objazd-info-border);
+}
+/* Kropka dla przystanku wariantu */
+.lista-przystankow ul > li::before {
+    content: '';
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: var(--kolor-linii-wariant, cyan);
+    border-radius: 50%;
+	z-index: 1;
+}
+
+/* Przystanki i odcinki oznaczone jako objazd */
+.lista-przystankow > li:has(> a.objazd-text)::before,
+.lista-przystankow ul > li:has(> a.objazd-text)::before,
+.lista-przystankow > li.objazd-text::before,
+.lista-przystankow ul > li.objazd-text::before {
+    background-color: var(--objazd-info-border);
+}
+
+/* Przystanki końcowe: kwadrat zamiast kropki. */
+.lista-przystankow li.przystanek-koncowy::before {
+    border-radius: 0;
+    background-color: var(--kolor-linii-glowna, blue);
+    border: 0;
+}
+
+.lista-przystankow li.przystanek-koncowy.przystanek-na-zadanie::before {
+    background-color: var(--body-background-color);
+    border: 4px solid var(--kolor-linii-glowna, blue);
+}
+
+.lista-przystankow ul > li.przystanek-koncowy::before {
+    background-color: var(--kolor-linii-wariant, cyan);
+}
+
+.lista-przystankow ul > li.przystanek-koncowy.przystanek-na-zadanie::before {
+    background-color: var(--body-background-color);
+    border-color: var(--kolor-linii-wariant, cyan);
+}
+
+.lista-przystankow li.przystanek-koncowy:has(> a.objazd-text)::before {
+    background-color: var(--objazd-info-border);
+}
+
+.lista-przystankow li.przystanek-koncowy.przystanek-na-zadanie:has(> a.objazd-text)::before {
+    background-color: var(--body-background-color);
+    border-color: var(--objazd-info-border);
+}
+
+.lista-przystankow > li:has(> a.objazd-text):has(+ li > a.objazd-text)::after,
+.lista-przystankow ul > li:has(> a.objazd-text):has(+ li > a.objazd-text)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    bottom: calc(-50% - 14px);
+    left: -13px;
+    width: 4px;
+    background-color: var(--objazd-info-border);
+    z-index: 1;
+}
+
+/* Nie przedłużaj objazdu za jego ostatni oznaczony przystanek. */
+.lista-przystankow > li:not(:has(+ li > a.objazd-text))::after,
+.lista-przystankow ul > li:not(:has(+ li > a.objazd-text))::after {
+    display: none;
+}
+
+
+
 /* ustawienia tabel */
 
 table {
@@ -458,6 +692,7 @@ table th {
 }
 .tables-container {
 	margin-top: 60px;
+	/*display:none;*/
 }
 .tables-container::after {
 	content: "";
@@ -571,19 +806,19 @@ table th {
 	border: 4px solid;
 }
 .ramka_miejskie {
-	border-color: #00B1EB;
+	border-color: var(--linia_miejska-border-color);
 }
 .ramka_podmiejskie {
-	border-color: #24378d;
+	border-color: var(--linia_podmiejska-border-color);
 }
 .ramka_pospieszne {
-	border-color: #ff0000;
+	border-color: var(--linia_pospieszna-border-color);
 }
 .ramka_nocne {
 	border-color: var(--ramka_nocne-border-color);
 }
 .ramka_specjalne {
-	border-color: #7F4A7F;
+	border-color: var(--linia_specjalna-border-color);
 }
 
 .linie td {
@@ -627,7 +862,7 @@ table th {
     color: #009900;
 }
 .objazd-text {
-	color: #ff9900;
+	color: #ff9900 !important;
 }
 
 .img_invert {
