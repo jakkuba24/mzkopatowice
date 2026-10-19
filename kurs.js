@@ -4930,10 +4930,35 @@ function pobierzWierszeTrasyDoWidoku(segmenty, przystanek, opcjeTrasy = {}, kier
 	const wstawienia = new Map();
 	const nadpisaniaCzasu = new Map();
 	const dodanePunktyRozgalezienia = new Set();
+	const pierwszePrzystankiOdcinkowPodstawowych = new Set();
+	const dodajCzasNaRozgalezieniu = (nazwa, czasy) => {
+		const poprawneCzasy = czasy.filter((czas) => czas != null);
+		if (!poprawneCzasy.length) return;
+		const klucz = normalizujNazwePrzystanku(nazwa);
+		const poprzednie = nadpisaniaCzasu.get(klucz) || [];
+		nadpisaniaCzasu.set(klucz, [...new Set([...poprzednie, ...poprawneCzasy])]);
+	};
+	/* Początek odcinkaPodstawowego należy do poprzedniego wspólnego
+	 * przystanku, a nie do pierwszego przystanku tego odcinka. */
+	segmentyPodstawowe.forEach((segment, indeks) => {
+		if (!/^odcinekPodstawowy\d*$/.test(segment.nazwa)) return;
+		const poprzedni = segmentyPodstawowe[indeks - 1]?.przystanki.at(-1);
+		const pierwszy = segment.przystanki[0];
+		if (!poprzedni || !pierwszy) return;
+		pierwszePrzystankiOdcinkowPodstawowych.add(normalizujNazwePrzystanku(pierwszy.nazwa));
+		dodajCzasNaRozgalezieniu(poprzedni.nazwa, [
+			poprzedni.czasDoNastepnego,
+			pierwszy.czasOdPoprzedniego
+		]);
+		/* Podział nie może być wyświetlany ponownie na pierwszym
+		 * przystanku równoległego odcinka. */
+		nadpisaniaCzasu.delete(normalizujNazwePrzystanku(pierwszy.nazwa));
+	});
 	const zajeteNazwyDo = new Set(podstawoweDo.map((element) =>
 		normalizujNazwePrzystanku(element.nazwa)
 	));
 	const dodajCzasWariantu = (nazwa, czasy) => {
+		if (pierwszePrzystankiOdcinkowPodstawowych.has(normalizujNazwePrzystanku(nazwa))) return;
 		const poprawneCzasy = czasy.filter((czas) => czas != null);
 		if (!poprawneCzasy.length) return;
 		const klucz = normalizujNazwePrzystanku(nazwa);
@@ -5239,7 +5264,8 @@ function czyPrzystanekJestZaRozdzieleniem(segmenty, wariant, przystanek) {
 	});
 	const trasaWariantu = zbudujTraseKierunku(segmenty, {
 		przystanekPoczatkowy: poczatek,
-		segmentKoncowy: wariant
+		segmentKoncowy: podstawowy,
+		warianty: [wariant]
 	});
 
 	let wspolnyPoczatek = 0;
@@ -5254,19 +5280,45 @@ function czyPrzystanekJestZaRozdzieleniem(segmenty, wariant, przystanek) {
 	if (wspolnyPoczatek === 0 || wspolnyPoczatek >= trasaPodstawowa.length) return false;
 
 	const indeksPrzystanku = trasaPodstawowa.findIndex((element) =>
-		normalizujNazwePrzystanku(element.nazwa) === normalizujNazwePrzystanku(przystanek)
+		czyWybranyPrzystanekPasuje(element.nazwa, przystanek)
+	);
+	const indeksPrzystankuWariantu = trasaWariantu.findIndex((element) =>
+		czyWybranyPrzystanekPasuje(element.nazwa, przystanek)
 	);
 	/* Ostatni wspólny przystanek nadal obsługuje wszystkie warianty.
 	   Wariant znika dopiero od pierwszego przystanku po rozdzieleniu tras. */
 	// Przystanek na granicy rozdzielenia jest jeszcze wspólny dla wszystkich
 	// tras. Wariant ukrywamy dopiero od następnego przystanku.
-	return indeksPrzystanku > wspolnyPoczatek;
+	if (indeksPrzystanku <= wspolnyPoczatek) return false;
+	if (indeksPrzystankuWariantu >= 0) {
+		const dalszaTrasaPodstawowa = trasaPodstawowa.slice(indeksPrzystanku);
+		const dalszaTrasaWariantu = trasaWariantu.slice(indeksPrzystankuWariantu);
+		const dalszyPrzebiegJestWspolny = dalszaTrasaPodstawowa.length === dalszaTrasaWariantu.length &&
+			dalszaTrasaPodstawowa.every((element, indeks) =>
+				czyWybranyPrzystanekPasuje(element.nazwa, dalszaTrasaWariantu[indeks]?.nazwa)
+			);
+		if (dalszyPrzebiegJestWspolny) return false;
+	}
+	return true;
 }
 
 function filtrujOdjazdyWedlugWybranejTrasy(odjazdy, segmenty, przystanek, opcjeTrasy = {}, kierunek = null) {
 	const { segmentKoncowy, segmentyKoncowe } = opcjeTrasy;
 	if (segmentyKoncowe) {
-		return odjazdy.filter((odjazd) => segmentyKoncowe.includes(odjazd.segmentWariantu));
+		return odjazdy.filter((odjazd) => {
+			if (segmentyKoncowe.includes(odjazd.segmentWariantu)) return true;
+			if (!odjazd.segmentWariantu?.startsWith('wariant')) return false;
+			/*
+			 * segmentyKoncowe zawiera końcowe segmenty do..., ale kursy
+			 * przez wariant środkowy (np. U) nadal należą do tych tras.
+			 * Wariant odrzucamy dopiero po faktycznym rozdzieleniu tras.
+			 */
+			return !czyPrzystanekJestZaRozdzieleniem(
+				segmenty,
+				odjazd.segmentWariantu,
+				przystanek
+			);
+		});
 	}
 	if (!segmentKoncowy?.startsWith('do')) return odjazdy;
 
@@ -5362,13 +5414,13 @@ function przygotujTabliczke(przystanek, kierunek, kontener, naZadanie = false, o
 	);
 	generujTabeleTrasy(kontener, daneTrasy, normalizujNazwePrzystanku(przystanek), opcjeAktywnejTrasy, kierunek);
 	/* DEBUG: odkomentuj poniższą linię, aby włączyć informacje diagnostyczne w konsoli. */
-	/* console.info('Przygotowana trasa i odjazdy:', {
+	 console.info('Przygotowana trasa i odjazdy:', {
 		numerLinii,
 		przystanek,
 		kierunek,
 		trasa: trasaOdWybranegoPrzystanku,
 		odjazdy
-	});*/ 
+	}); 
 }
 
 function zamienOznaczenieNaCzerwone(root, wyrazenie) {
