@@ -15,89 +15,87 @@
 <body>
     <header><script src="headerek.js"></script></header>
 	<script src="komunikaty.js"></script>
-<!--
-	<button type="button" class="przelacznik-listy" onclick="const pokazListe = getComputedStyle(document.querySelector('.div_kierunki')).display === 'none'; document.querySelector('.div_kierunki').style.display = pokazListe ? 'flex' : 'none'; document.querySelectorAll('.tables-container').forEach((tabliczka) => {tabliczka.style.display = pokazListe ? 'none' : 'block';});">Pokaż tabelki</button>
+
 	<div class="div_kierunki">
     <div class="kierunek-kolumna">
     <h2>Kierunek: Poprzeczna</h2>
 	<ul class="lista-przystankow">
-		<li data-glowna-start><a>Osiedle Północ</a></li>
-		<li><a>Macierzy/Srocka</a></li>
-		<li><a>Rondo Powstańców Śląskich</a></li>
-		<li><a>Rondo Walezego</a></li>
-		<li><a>Cmentarz</a></li>
-		<li><a>Połczyńska</a></li>
-		<li><a>Połczyńska Działki <span class="red-text">nż</span></a></li>
+		<li data-glowna-start>Osiedle Północ</li>
+		<li>Macierzy/Srocka</li>
+		<li>Rondo Powstańców Śląskich</li>
+		<li>Rondo Walezego</li>
+		<li>Cmentarz</li>
+		<li>Połczyńska</li>
+		<li>Połczyńska Działki nż</li>
 		<ul>
-			<li data-wariant-start><span class="wariant-start"></span><a>Litewska</a></li>
-			<li><a>Fiołków</a></li>
-			<li><a>Promykowa</a></li>
-			<li><a>Niemena <span class="red-text">nż</span></a></li>
-			<li data-wariant-koniec><a>Osiedle Unii Lubelskiej</a><span class="wariant-koniec"></span></li>
+			<li data-wariant-start><span class="wariant-start"></span>Litewska</li>
+			<li>Fiołków</li>
+			<li>Promykowa</li>
+			<li>Niemena nż</li>
+			<li data-wariant-koniec>Osiedle Unii Lubelskiej<span class="wariant-koniec"></span></li>
 		</ul>
-		<li><a>Szczerbińska <span class="red-text">nż</span></a></li>
-		<li><a>Olejowa <span class="red-text">nż</span></a></li>
-		<li><a>Elektryczna <span class="red-text">nż</span></a></li>
-		<li><a>Lubelska <span class="red-text">nż</span></a></li>
-		<li><a>Działkowa <span class="red-text">nż</span></a></li>
-		<li><a>Lelewela</a></li>
-		<li><a>Osiedle Bukowe</a></li>
-		<li><a>Śniadeckich</a></li>
-		<li><a>Śniadeckich Politechnika</a></li>
-		<li><a>Staszica</a></li>
-		<li><a>Sikorskiego</a></li>
-		<li><a>Wańkowicza</a></li>
-		<li><a>Podgórna</a></li>
-		<li><a>Rondo Lechitów</a></li>
-		<li><a>Armii Krajowej/Franciszkańska</a></li>
-		<li><a>Łużycka Orlik</a></li>
-		<li data-glowna-koniec><span class="red-text"> - </span>Poprzeczna</li>
+		<li>Szczerbińska nż</li>
+		<li>Olejowa nż</li>
+		<li>Elektryczna nż</li>
+		<li>Lubelska nż</li>
+		<li>Działkowa nż</li>
+		<li>Lelewela nż</li>
+		<li>Osiedle Bukowe</li>
+		<li>Śniadeckich</li>
+		<li>Śniadeckich Politechnika</li>
+		<li>Staszica</li>
+		<li>Sikorskiego</li>
+		<li>Wańkowicza</li>
+		<li>Podgórna</li>
+		<li>Rondo Lechitów</li>
+		<li>Armii Krajowej/Franciszkańska</li>
+		<li>Łużycka Orlik</li>
+		<li data-glowna-koniec>- Poprzeczna</li>
 	</ul>
 	</div>
 
     <div class="kierunek-kolumna">
     <h2>Kierunek: Osiedle Północ</h2>
 	<ul class="lista-przystankow">
-		<li data-glowna-start><a>Poprzeczna</a></li>
-		<li><a>Rondo Lechitów</a></li>
-		<li><a>Podgórna</a></li>
-		<li><a>Wańkowicza</a></li>
-		<li><a>Jana Pawła II</a></li>
-		<li><a>Staszica</a></li>
-		<li><a>Śniadeckich Politechnika</a></li>
-		<li><a>Śniadeckich</a></li>
-		<li><a>Lelewela</a></li>
-		<li><a>Osiedle Bukowe</a></li>
-		<li><a>Działkowa <span class="red-text">nż</span></a></li>
-		<li><a>Lubelska <span class="red-text">nż</span></a></li>
-		<li><a>Elektryczna <span class="red-text">nż</span></a></li>
-		<li><a>Olejowa <span class="red-text">nż</span></a></li>
-		<li><a>Szczerbińska <span class="red-text">nż</span></a></li>
+		<li data-glowna-start>Poprzeczna</li>
+		<li>Rondo Lechitów</li>
+		<li>Podgórna</li>
+		<li>Wańkowicza</li>
+		<li>Jana Pawła II</li>
+		<li>Staszica</li>
+		<li>Śniadeckich Politechnika nż</li>
+		<li>Śniadeckich nż</li>
+		<li>Lelewela nż</li>
+		<li>Osiedle Bukowe</li>
+		<li>Działkowa nż</li>
+		<li>Lubelska nż</li>
+		<li>Elektryczna nż</li>
+		<li>Olejowa nż</li>
+		<li>Szczerbińska nż</li>
 		<ul>
-			<li data-wariant-start><span class="wariant-start"></span><a>Osiedle Unii Lubelskiej</a></li>
-			<li><a>Niemena <span class="red-text">nż</span></a></li>
-			<li><a>Promykowa</a></li>
-			<li><a>Fiołków</a></li>
-			<li data-wariant-koniec><a>Litewska</a><span class="wariant-koniec"></span></li>
+			<li data-wariant-start><span class="wariant-start"></span>Osiedle Unii Lubelskiej</li>
+			<li>Niemena nż</li>
+			<li>Promykowa</li>
+			<li>Fiołków</li>
+			<li data-wariant-koniec>Litewska<span class="wariant-koniec"></span></li>
 		</ul>
-		<li><a>Legionów</a></li>
-		<li><a>Połczyńska</a></li>
-		<li><a>Cmentarz</a></li>
-		<li><a>Rondo Walezego</a></li>
-		<li><a>Rondo Powstańców Śląskich</a></li>
-		<li><a>Macierzy/Srocka</a></li>
-		<li data-glowna-koniec><span class="red-text"> - </span>Osiedle Północ</li>
+		<li>Legionów</li>
+		<li>Połczyńska</li>
+		<li>Cmentarz</li>
+		<li>Rondo Walezego</li>
+		<li>Rondo Powstańców Śląskich</li>
+		<li>Macierzy/Srocka</li>
+		<li data-glowna-koniec>- Osiedle Północ</li>
 	</ul>
 	</div>
-	
 	</div>
--->
+
     <div class="tables-container">
 		<table class="rozklad_pospieszne">
 			<tr style="border: 2px solid var(--table-border-widoczny)">
 				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_pospieszne">37</b></div>dzienna/pospieszna</td>
 				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Poprzeczna<br><br><b>Kierunek:</b> Osiedle Północ</td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> <br><br><b>Kierunek:</b> </td>
 			</tr>
 			<tr>
 				<th></th>
@@ -121,60 +119,12 @@
 				<th>22</th>
 				<th>23</th>
 			</tr>
-			<tr>
-				<th rowspan="1" style="text-align:left">Dzień powszedni</th>
-				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td> <!-- 5 -->
-				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td>
-				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td>
-				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td> <!-- 8 -->
-				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td>
-				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td>
-				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td> <!-- 11 -->
-				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td>
-				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '37a_1', event)" onmouseleave="dymek.style.display='none'">00U</td>
-				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '37a_1', event)" onmouseleave="dymek.style.display='none'">00U</td> <!-- 14 -->
-				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '37a_1', event)" onmouseleave="dymek.style.display='none'">00U</td>
-				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '37a_1', event)" onmouseleave="dymek.style.display='none'">00U</td>
-				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 17 -->
-				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">00</td>
-				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">00</td>
-				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">10</td> <!-- 20 -->
-				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">20</td>
-				<td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '37a_1', event)" onmouseleave="dymek.style.display='none'">00U</td>
-				<td></td> <!-- 23 -->
+			<tr class="obowiazuje">
+				<td colspan="20">Obowiązuje od: 01.10.2026</td>
 			</tr>
-			<tr>
-				<th rowspan="1" style="text-align:left">Sobota</th>
-				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td> <!-- 5 -->
-				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td>
-				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td>
-				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td> <!-- 8 -->
+			<tr class="objasnienia">
 				<td></td>
-				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td>
-				<td></td> <!-- 11 -->
-				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td>
-				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '37a_1', event)" onmouseleave="dymek.style.display='none'">00U</td>
-				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '37a_1', event)" onmouseleave="dymek.style.display='none'">00U</td> <!-- 14 -->
-				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '37a_1', event)" onmouseleave="dymek.style.display='none'">00U</td>
-				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '37a_1', event)" onmouseleave="dymek.style.display='none'">00U</td>
-				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 17 -->
-				<td></td>
-				<td></td>
-				<td></td> <!-- 20 -->
-				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '37a', event)" onmouseleave="dymek.style.display='none'">26</td>
-				<td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '37a_1', event)" onmouseleave="dymek.style.display='none'">00U</td>
-				<td></td> <!-- 23 -->
-			</tr>
-			<tr>
-				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 01.10.2026</td>
-			</tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
-			</tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">U - kurs z przejazdem przez Osiedle Unii Lubelskiej</td>
+				<th colspan="15">Objaśnienia:</th>
 			</tr>
 		</table>
 			
@@ -184,530 +134,16 @@
 				<th>Trasa</th>
 				<th></th>
 			</tr>
-			<tr>
-				<td id="pr0">Poprzeczna</td>
-				<td id="mi0">1</td>
-			</tr>
-			<tr>
-				<td id="pr1">Rondo Lechitów</td>
-				<td id="mi1">1</td>
-			</tr>
-			<tr>
-				<td id="pr2">Podgórna</td>
-				<td id="mi2">2</td>
-			</tr>
-			<tr>
-				<td id="pr3">Wańkowicza</td>
-				<td id="mi3">1</td>
-			</tr>
-			<tr>
-				<td id="pr4">Jana Pawła II</td>
-				<td id="mi4">1</td>
-			</tr>
-			<tr>
-				<td id="pr5">Staszica</td>
-				<td id="mi5">1</td>
-			</tr>
-			<tr>
-				<td id="pr6">Śniadeckich Politechnika <span class="red-text">nż</span></td>
-				<td id="mi6">2</td>
-			</tr>
-			<tr>
-				<td id="pr7">Śniadeckich <span class="red-text">nż</span></td>
-				<td id="mi7">1</td>
-			</tr>
-			<tr>
-				<td id="pr8">Lelewela <span class="red-text">nż</span></td>
-				<td id="mi8">1</td>
-			</tr>
-			<tr>
-				<td id="pr9">Osiedle Bukowe</td>
-				<td id="mi9">4</td>
-			</tr>
-			<tr>
-				<td id="pr10">Działkowa <span class="red-text">nż</span></td>
-				<td id="mi10">1</td>
-			</tr>
-			<tr>
-				<td id="pr11">Lubelska <span class="red-text">nż</span></td>
-				<td id="mi11">1</td>
-			</tr>
-			<tr>
-				<td id="pr12">Elektryczna <span class="red-text">nż</span></td>
-				<td id="mi12">1</td>
-			</tr>
-			<tr>
-				<td id="pr13">Olejowa <span class="red-text">nż</span></td>
-				<td id="mi13">1</td>
-			</tr>
-			<tr>
-				<td id="pr14">Szczerbińska <span class="red-text">nż</span></td>
-				<td id="mi14" style="display:none">6</td><td>5/6</td>
-			</tr>
-			<tr>
-				<td id="pr15"><span style="margin-left:10px"></span>Osiedle Unii Lubelskiej</td>
-				<td id="mi15">1</td>
-			</tr>
-			<tr>
-				<td id="pr16"><span style="margin-left:10px"></span>Niemena <span class="red-text">nż</span></td>
-				<td id="mi16">1</td>
-			</tr>
-			<tr>
-				<td id="pr17"><span style="margin-left:10px"></span>Promykowa</td>
-				<td id="mi17">1</td>
-			</tr>
-			<tr>
-				<td id="pr18"><span style="margin-left:10px"></span>Fiołków</td>
-				<td id="mi18">1</td>
-			</tr>
-			<tr>
-				<td id="pr19"><span style="margin-left:10px"></span>Litewska</td>
-				<td id="mi19">3</td>
-			</tr>
-			<tr>
-				<td id="pr20">Legionów</td>
-				<td id="mi20">2</td>
-			</tr>
-			<tr>
-				<td id="pr21">Połczyńska</td>
-				<td id="mi21">1</td>
-			</tr>
-			<tr>
-				<td id="pr22">Cmentarz</td>
-				<td id="mi22">1</td>
-			</tr>
-			<tr>
-				<td id="pr23">Rondo Walezego</td>
-				<td id="mi23">1</td>
-			</tr>
-			<tr>
-				<td id="pr24">Rondo Powstańców Śląskich</td>
-				<td id="mi24">1</td>
-			</tr>
-			<tr>
-				<td id="pr25">Macierzy/Srocka</td>
-				<td id="mi25_end">2</td>
-			</tr>
-			<tr>
-				<td id="pr26_end"><span class="red-text"> - </span>Osiedle Północ</td>
-				<td></td>
-			</tr>
-		</table>
-		<table style="display:none">
-			<tr>
-				<th>Trasa</th>
-				<th></th>
-			</tr>
-			<tr>
-				<td id="pr50">Poprzeczna</td>
-				<td id="mi50">1</td>
-			</tr>
-			<tr>
-				<td id="pr51">Rondo Lechitów</td>
-				<td id="mi51">1</td>
-			</tr>
-			<tr>
-				<td id="pr52">Podgórna</td>
-				<td id="mi52">2</td>
-			</tr>
-			<tr>
-				<td id="pr53">Wańkowicza</td>
-				<td id="mi53">1</td>
-			</tr>
-			<tr>
-				<td id="pr54">Jana Pawła II</td>
-				<td id="mi54">1</td>
-			</tr>
-			<tr>
-				<td id="pr55">Staszica</td>
-				<td id="mi55">1</td>
-			</tr>
-			<tr>
-				<td id="pr56">Śniadeckich Politechnika <span class="red-text">nż</span></td>
-				<td id="mi56">2</td>
-			</tr>
-			<tr>
-				<td id="pr57">Śniadeckich <span class="red-text">nż</span></td>
-				<td id="mi57">1</td>
-			</tr>
-			<tr>
-				<td id="pr58">Lelewela <span class="red-text">nż</span></td>
-				<td id="mi58">1</td>
-			</tr>
-			<tr>
-				<td id="pr59">Osiedle Bukowe</td>
-				<td id="mi59">4</td>
-			</tr>
-			<tr>
-				<td id="pr60">Działkowa <span class="red-text">nż</span></td>
-				<td id="mi60">1</td>
-			</tr>
-			<tr>
-				<td id="pr61">Lubelska <span class="red-text">nż</span></td>
-				<td id="mi61">1</td>
-			</tr>
-			<tr>
-				<td id="pr62">Elektryczna <span class="red-text">nż</span></td>
-				<td id="mi62">1</td>
-			</tr>
-			<tr>
-				<td id="pr63">Olejowa <span class="red-text">nż</span></td>
-				<td id="mi63">1</td>
-			</tr>
-			<tr>
-				<td id="pr64">Szczerbińska <span class="red-text">nż</span></td>
-				<td id="mi64">5</td>
-			</tr>
-			<tr>
-				<td id="pr65">Legionów</td>
-				<td id="mi65">2</td>
-			</tr>
-			<tr>
-				<td id="pr66">Połczyńska</td>
-				<td id="mi66">1</td>
-			</tr>
-			<tr>
-				<td id="pr67">Cmentarz</td>
-				<td id="mi67">1</td>
-			</tr>
-			<tr>
-				<td id="pr68">Rondo Walezego</td>
-				<td id="mi68">1</td>
-			</tr>
-			<tr>
-				<td id="pr69">Rondo Powstańców Śląskich</td>
-				<td id="mi69">1</td>
-			</tr>
-			<tr>
-				<td id="pr70">Macierzy/Srocka</td>
-				<td id="mi70_end">2</td>
-			</tr>
-			<tr>
-				<td id="pr71_end"><span class="red-text"> - </span>Osiedle Północ</td>
-				<td></td>
-			</tr>
-		</table>
-		</div>
-	</div>
-	
-	<div class="tables-container">
-		<table class="rozklad_pospieszne">
-			<tr style="border: 2px solid var(--table-border-widoczny)">
-				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_pospieszne">37</b></div>dzienna/pospieszna</td>
-				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Osiedle Północ<br><br><b>Kierunek:</b> Poprzeczna</td>
-			</tr>
-			<tr>
-				<th></th>
-				<th>5</th>
-				<th>6</th>
-				<th>7</th>
-				<th>8</th>
-				<th>9</th>
-				<th>10</th>
-				<th>11</th>
-				<th>12</th>
-				<th>13</th>
-				<th>14</th>
-				<th>15</th>
-				<th>16</th>
-				<th>17</th>
-				<th>18</th>
-				<th>19</th>
-				<th>20</th>
-				<th>21</th>
-				<th>22</th>
-				<th>23</th>
-			</tr>
-			<tr>
-				<th rowspan="1" style="text-align:left">Dzień powszedni</th>
-				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '37b_1', event)" onmouseleave="dymek.style.display='none'">23U</td> <!-- 5 -->
-				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '37b_1', event)" onmouseleave="dymek.style.display='none'">23U</td>
-				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '37b_1', event)" onmouseleave="dymek.style.display='none'">23U</td>
-				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">29</td> <!-- 8 -->
-				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">29</td>
-				<td onmouseenter="wyswietldymek(10, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">29</td>
-				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">29</td> <!-- 11 -->
-				<td onmouseenter="wyswietldymek(12, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
-				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
-				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 14 -->
-				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
-				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
-				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 17 -->
-				<td onmouseenter="wyswietldymek(18, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
-				<td onmouseenter="wyswietldymek(19, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
-				<td onmouseenter="wyswietldymek(20, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 20 -->
-				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '37b_1', event)" onmouseleave="dymek.style.display='none'">18U</td>
-				<td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">00</td>
-				<td></td> <!-- 23 -->
-			</tr>
-			<tr>
-				<th rowspan="1" style="text-align:left">Sobota</th>
-				<td onmouseenter="wyswietldymek(5, parseInt(this.innerText), '37b_1', event)" onmouseleave="dymek.style.display='none'">23U</td> <!-- 5 -->
-				<td onmouseenter="wyswietldymek(6, parseInt(this.innerText), '37b_1', event)" onmouseleave="dymek.style.display='none'">23U</td>
-				<td onmouseenter="wyswietldymek(7, parseInt(this.innerText), '37b_1', event)" onmouseleave="dymek.style.display='none'">23U</td>
-				<td onmouseenter="wyswietldymek(8, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">29</td> <!-- 8 -->
-				<td onmouseenter="wyswietldymek(9, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">29</td>
-				<td></td>
-				<td onmouseenter="wyswietldymek(11, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">29</td> <!-- 11 -->
-				<td></td>
-				<td onmouseenter="wyswietldymek(13, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
-				<td onmouseenter="wyswietldymek(14, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 14 -->
-				<td onmouseenter="wyswietldymek(15, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
-				<td onmouseenter="wyswietldymek(16, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
-				<td onmouseenter="wyswietldymek(17, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td> <!-- 17 -->
-				<td></td>
-				<td></td>
-				<td></td> <!-- 20 -->
-				<td onmouseenter="wyswietldymek(21, parseInt(this.innerText), '37b_1', event)" onmouseleave="dymek.style.display='none'">18U</td>
-				<td onmouseenter="wyswietldymek(22, parseInt(this.innerText), '37b', event)" onmouseleave="dymek.style.display='none'">02</td>
-				<td></td> <!-- 23 -->
-			</tr>
-			<tr>
-				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 01.10.2026</td>
-			</tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
-			</tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">U - kurs z przejazdem przez Osiedle Unii Lubelskiej</td>
-			</tr>
-		</table>
-		
-		<div class="ignore-on-mobile">
-		<table class="przystanki_pospieszne">
-			<tr>
-				<th>Trasa</th>
-				<th></th>
-			</tr>
-			<tr>
-				<td id="pr100">Osiedle Północ</td>
-				<td id="mi100">2</td>
-			</tr>
-			<tr>
-				<td id="pr101">Macierzy/Srocka</td>
-				<td id="mi101">1</td>
-			</tr>
-			<tr>
-				<td id="pr102">Rondo Powstańców Śląskich</td>
-				<td id="mi102">1</td>
-			</tr>
-			<tr>
-				<td id="pr103">Rondo Walezego</td>
-				<td id="mi103">1</td>
-			</tr>
-			<tr>
-				<td id="pr104">Cmentarz</td>
-				<td id="mi104">2</td>
-			</tr>
-			<tr>
-				<td id="pr105">Połczyńska</td>
-				<td id="mi105">1</td>
-			</tr>
-			<tr>
-				<td id="pr106">Połczyńska Działki <span class="red-text">nż</span></td>
-				<td id="mi106" style="display:none">2</td><td>5/2</td>
-			</tr>
-			<tr>
-				<td id="pr107"><span style="margin-left:10px"></span>Litewska</td>
-				<td id="mi107">1</td>
-			</tr>
-			<tr>
-				<td id="pr108"><span style="margin-left:10px"></span>Fiołków</td>
-				<td id="mi108">1</td>
-			</tr>
-			<tr>
-				<td id="pr109"><span style="margin-left:10px"></span>Promykowa</td>
-				<td id="mi109">1</td>
-			</tr>
-			<tr>
-				<td id="pr110"><span style="margin-left:10px"></span>Niemena <span class="red-text">nż</span></td>
-				<td id="mi110">1</td>
-			</tr>
-			<tr>
-				<td id="pr111"><span style="margin-left:10px"></span>Osiedle Unii Lubelskiej</td>
-				<td id="mi111">5</td>
-			</tr>
-			<tr>
-				<td id="pr112">Szczerbińska <span class="red-text">nż</span></td>
-				<td id="mi112">1</td>
-			</tr>
-			<tr>
-				<td id="pr113">Olejowa <span class="red-text">nż</span></td>
-				<td id="mi113">1</td>
-			</tr>
-			<tr>
-				<td id="pr114">Elektryczna <span class="red-text">nż</span></td>
-				<td id="mi114">2</td>
-			</tr>
-			<tr>
-				<td id="pr115">Lubelska <span class="red-text">nż</span></td>
-				<td id="mi115">1</td>
-			</tr>
-			<tr>
-				<td id="pr116">Działkowa <span class="red-text">nż</span></td>
-				<td id="mi116">3</td>
-			</tr>
-			<tr>
-				<td id="pr117">Lelewela <span class="red-text">nż</span></td>
-				<td id="mi117">1</td>
-			</tr>
-			<tr>
-				<td id="pr118">Osiedle Bukowe</td>
-				<td id="mi118">2</td>
-			</tr>
-			<tr>
-				<td id="pr119">Śniadeckich</td>
-				<td id="mi119">1</td>
-			</tr>
-			<tr>
-				<td id="pr120">Śniadeckich Politechnika</td>
-				<td id="mi120">1</td>
-			</tr>
-			<tr>
-				<td id="pr121">Staszica</td>
-				<td id="mi121">2</td>
-			</tr>
-			<tr>
-				<td id="pr122">Sikorskiego</td>
-				<td id="mi122">1</td>
-			</tr>
-			<tr>
-				<td id="pr123">Wańkowicza</td>
-				<td id="mi123">1</td>
-			</tr>
-			<tr>
-				<td id="pr124">Podgórna</td>
-				<td id="mi124">2</td>
-			</tr>
-			<tr>
-				<td id="pr125">Rondo Lechitów</td>
-				<td id="mi125">1</td>
-			</tr>
-			<tr>
-				<td id="pr126">Armii Krajowej/Franciszkańska</td>
-				<td id="mi126">1</td>
-			</tr>
-			<tr>
-				<td id="pr127">Łużycka Orlik</td>
-				<td id="mi127_end">1</td>
-			</tr>
-			<tr>
-				<td id="pr128_end"><span class="red-text"> - </span>Poprzeczna</td>
-				<td></td>
-			</tr>
-		</table>
-		<table style="display:none">
-			<tr>
-				<th>Trasa</th>
-				<th></th>
-			</tr>
-			<tr>
-				<td id="pr150">Osiedle Północ</td>
-				<td id="mi150">2</td>
-			</tr>
-			<tr>
-				<td id="pr151">Macierzy/Srocka</td>
-				<td id="mi151">1</td>
-			</tr>
-			<tr>
-				<td id="pr152">Rondo Powstańców Śląskich</td>
-				<td id="mi152">1</td>
-			</tr>
-			<tr>
-				<td id="pr153">Rondo Walezego</td>
-				<td id="mi153">1</td>
-			</tr>
-			<tr>
-				<td id="pr154">Cmentarz</td>
-				<td id="mi154">2</td>
-			</tr>
-			<tr>
-				<td id="pr155">Połczyńska</td>
-				<td id="mi155">1</td>
-			</tr>
-			<tr>
-				<td id="pr156">Połczyńska Działki <span class="red-text">nż</span></td>
-				<td id="mi156">5</td>
-			</tr>
-			<tr>
-				<td id="pr157">Szczerbińska <span class="red-text">nż</span></td>
-				<td id="mi157">1</td>
-			</tr>
-			<tr>
-				<td id="pr158">Olejowa <span class="red-text">nż</span></td>
-				<td id="mi158">1</td>
-			</tr>
-			<tr>
-				<td id="pr159">Elektryczna <span class="red-text">nż</span></td>
-				<td id="mi159">2</td>
-			</tr>
-			<tr>
-				<td id="pr160">Lubelska <span class="red-text">nż</span></td>
-				<td id="mi160">1</td>
-			</tr>
-			<tr>
-				<td id="pr161">Działkowa <span class="red-text">nż</span></td>
-				<td id="mi161">3</td>
-			</tr>
-			<tr>
-				<td id="pr162">Lelewela <span class="red-text">nż</span></td>
-				<td id="mi162">1</td>
-			</tr>
-			<tr>
-				<td id="pr163">Osiedle Bukowe</td>
-				<td id="mi163">2</td>
-			</tr>
-			<tr>
-				<td id="pr164">Śniadeckich</td>
-				<td id="mi164">1</td>
-			</tr>
-			<tr>
-				<td id="pr165">Śniadeckich Politechnika</td>
-				<td id="mi165">1</td>
-			</tr>
-			<tr>
-				<td id="pr166">Staszica</td>
-				<td id="mi166">2</td>
-			</tr>
-			<tr>
-				<td id="pr167">Sikorskiego</td>
-				<td id="mi167">1</td>
-			</tr>
-			<tr>
-				<td id="pr168">Wańkowicza</td>
-				<td id="mi168">1</td>
-			</tr>
-			<tr>
-				<td id="pr169">Podgórna</td>
-				<td id="mi169">2</td>
-			</tr>
-			<tr>
-				<td id="pr170">Rondo Lechitów</td>
-				<td id="mi170">1</td>
-			</tr>
-			<tr>
-				<td id="pr171">Armii Krajowej/Franciszkańska</td>
-				<td id="mi171">1</td>
-			</tr>
-			<tr>
-				<td id="pr172">Łużycka Orlik</td>
-				<td id="mi172_end">1</td>
-			</tr>
-			<tr>
-				<td id="pr173_end"><span class="red-text"> - </span>Poprzeczna</td>
-				<td></td>
-			</tr>
 		</table>
 		</div>
     </div>
-	
-	<div id="dymek"></div>
 	<script>
 		ustawKolorLinii();
-		ustawDlugoscLinii();
+		if (document.fonts) {
+			document.fonts.load('18px CustomFont').then(ustawDlugoscLinii);
+		} else {
+			ustawDlugoscLinii();
+		}
 		ustawObslugePrzystankow();
 	</script>
 	<footer>&copy MZK Opatowice</footer>

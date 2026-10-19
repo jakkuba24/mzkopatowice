@@ -14,191 +14,118 @@
 </head>
 <body>
     <header><script src="headerek.js"></script></header>
-	<div class="tables-container">
-		<table class="rozklad_nocne">
-			<tr style="border: 2px solid var(--table-border-widoczny)">
-				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_nocne">44</b></div>nocna</td>
-				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Wąwozowa (Południowy PKP)<br><br><b>Kierunek:</b> Osiedle Północ</td>
-			</tr>
-			<tr>
-				<th></th>
-				<th>23</th>
-				<th>0</th>
-				<th>1</th>
-				<th>2</th>
-				<th>3</th>
-				<th>4</th>
-				<th>5</th>
-			</tr>
-			<tr>
-				<th rowspan="1" style="text-align:left">Codziennie</td>
-				<td></td> <!-- 23 -->
-				<td></td>
-				<td onmouseenter="wyswietldymek(1, parseInt(this.innerText), '44a', event)" onmouseleave="dymek.style.display='none'">00</td>
-				<td onmouseenter="wyswietldymek(2, parseInt(this.innerText), '44a', event)" onmouseleave="dymek.style.display='none'">00</td> <!-- 2 -->
-				<td onmouseenter="wyswietldymek(3, parseInt(this.innerText), '44a', event)" onmouseleave="dymek.style.display='none'">00</td>
-				<td onmouseenter="wyswietldymek(4, parseInt(this.innerText), '44a', event)" onmouseleave="dymek.style.display='none'">10</td>
-				<td></td> <!-- 5 -->
-			</tr>
-			<tr>
-				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 06.10.2025</td>
-			</tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
-			</tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
-			</tr>
-			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"><br><br></td></tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>W komunikacji nocnej wszystkie przystanki są na żądanie</b></td>
-			</tr>
-		</table>
-		
-		<div class="ignore-on-mobile">
-		<table class="przystanki_nocne">
-			<tr>
-				<th>Trasa</th>
-				<th></th>
-			</tr>
-			<tr>
-				<td>Wąwozowa (Południowy PKP)</td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>Kwiatkowskiego</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Jana Pawła II</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Staszica</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Politechnika</td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>Dworzec PKP</td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>Rynek</td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>Wyszyńskiego/Połtawska</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Wyszyńskiego</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Asnyka</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td>Orłowska</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Orla</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Struga</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Struga Działki</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td>Łączna</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Legionów Szkoła</td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>Połczyńska</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Traugutta</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Rondo Walezego</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Rondo Powstańców Śląskich</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>Macierzy/Srocka</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td><span class="red-text"> - </span>Osiedle Północ</td>
-				<td></td>
-			</tr>
-		</table>
-		</div>
-    </div>
-	
+	<script src="komunikaty.js"></script>
+
+	<div class="div_kierunki">
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Osiedle Północ</h2>
+    <ul class="lista-przystankow">
+		<ul>
+			<li data-wariant-start>Osiedle Unii Europejskiej</li>
+			<li>Grecka</li>
+			<li>Francuska</li>
+			<li>Fińska</li>
+			<li>Holenderska Orlik</li>
+			<li>Holenderska KTBS</li>
+			<li>Holenderska</li>
+			<li data-wariant-koniec>Rondo Generała Maczka<span class="wariant-koniec"></span></li>
+		</ul>
+		<li data-glowna-start>Wąwozowa (Południowy PKP)</li>
+		<li>Kwiatkowskiego</li>
+		<li>Staszica</li>
+		<li>Politechnika</li>
+		<li>Dworzec PKP</li>
+		<li>Rynek</li>
+		<li>Wyszyńskiego/Połtawska</li>
+		<li>Wyszyńskiego</li>
+		<li>Asnyka</li>
+		<li>Orłowska</li>
+		<li>Orla</li>
+		<li>Struga</li>
+		<li>Struga Działki</li>
+		<li>Łączna</li>
+		<li>Legionów Szkoła</li>
+		<li>Połczyńska</li>
+		<li>Traugutta</li>
+		<li>Rondo Walezego</li>
+		<li>Rondo Powstańców Śląskich</li>
+		<li>Macierzy/Srocka</li>
+		<li data-glowna-koniec>- Osiedle Północ</li>
+	</ul>
+	</div>
+
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Wąwozowa (Południowy PKP)</h2>
+    <ul class="lista-przystankow">
+		<li data-glowna-start>Osiedle Północ</li>
+		<li>Macierzy/Srocka</li>
+		<li>Rondo Powstańców Śląskich</li>
+		<li>Rondo Walezego</li>
+		<li>Traugutta</li>
+		<li>Połczyńska</li>
+		<li>Legionów Szkoła</li>
+		<li>Łączna</li>
+		<li>Struga Działki</li>
+		<li>Struga</li>
+		<li>Orla</li>
+		<li>Orłowska</li>
+		<li>Asnyka</li>
+		<li>Wyszyńskiego</li>
+		<li>Zwycięstwa/Wyszyńskiego</li>
+		<li>Rynek</li>
+		<li>Dworzec PKP</li>
+		<li>Politechnika</li>
+		<li>Staszica</li>
+		<li>Kwiatkowskiego</li>
+		<li data-glowna-koniec class="przystanek-klikalny">- Wąwozowa (Południowy PKP)</li>
+		<ul>
+			<li data-wariant-start><span class="wariant-start"></span>Rondo Generała Maczka</li>
+			<li>Holenderska KTBS</li>
+			<li>Holenderska Orlik</li>
+			<li>Fińska</li>
+			<li>Francuska</li>
+			<li>Grecka</li>
+			<li data-wariant-koniec>- Osiedle Unii Europejskiej</li>
+		</ul>
+	</ul>
+	</div>
+	</div>
+
     <div class="tables-container">
 		<table class="rozklad_nocne">
 			<tr style="border: 2px solid var(--table-border-widoczny)">
-				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_nocne">44</b></div>nocna</td>
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_nocne">44</div></b>nocna</td>
 				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Osiedle Unii Europejskiej<br><br><b>Kierunek:</b> Osiedle Północ</td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> <br><br><b>Kierunek:</b> </td>
 			</tr>
 			<tr>
 				<th></th>
-				<th>23</th>
-				<th>0</th>
-				<th>1</th>
-				<th>2</th>
-				<th>3</th>
-				<th>4</th>
 				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
 			</tr>
-			<tr>
-				<th rowspan="1" style="text-align:left">Codziennie</td>
-				<td></td> <!-- 23 -->
-				<td onmouseenter="wyswietldymek(0, parseInt(this.innerText), '44a_1', event)" onmouseleave="dymek.style.display='none'">54</td>
+			<tr class="obowiazuje">
+				<td colspan="20">Obowiązuje od: 06.10.2025</td>
+			</tr>
+			<tr class="objasnienia">
 				<td></td>
-				<td></td> <!-- 2 -->
-				<td></td>
-				<td onmouseenter="wyswietldymek(4, parseInt(this.innerText), '44a_1', event)" onmouseleave="dymek.style.display='none'">04</td>
-				<td></td> <!-- 5 -->
-			</tr>
-			<tr>
-				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 06.10.2025</td>
-			</tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
-			</tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"></td>
-			</tr>
-			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"><br><br></td></tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>W komunikacji nocnej wszystkie przystanki są na żądanie</b></td>
+				<th>Objaśnienia:</th>
 			</tr>
 		</table>
 			
@@ -208,302 +135,18 @@
 				<th>Trasa</th>
 				<th></th>
 			</tr>
-			<tr>
-				<td id="pr-8">Osiedle Unii Europejskiej</td>
-				<td id="mi-8">1</td>
-			</tr>
-			<tr>
-				<td id="pr-7">Grecka</td>
-				<td id="mi-7">0</td>
-			</tr>
-			<tr>
-				<td id="pr-6">Francuska</td>
-				<td id="mi-6">1</td>
-			</tr>
-			<tr>
-				<td id="pr-5">Fińska</td>
-				<td id="mi-5">1</td>
-			</tr>
-			<tr>
-				<td id="pr-4">Holenderska Orlik</td>
-				<td id="mi-4">1</td>
-			</tr>
-			<tr>
-				<td id="pr-3">Holenderska KTBS</td>
-				<td id="mi-3">1</td>
-			</tr>
-			<tr>
-				<td id="pr-2">Holenderska</td>
-				<td id="mi-2">0</td>
-			</tr>
-			<tr>
-				<td id="pr-1">Rondo Generała Maczka</td>
-				<td id="mi-1">1</td>
-			</tr>
-			<tr>
-				<td id="pr0">Wąwozowa (Południowy PKP)</td>
-				<td id="mi0">2</td>
-			</tr>
-			<tr>
-				<td id="pr1">Kwiatkowskiego</td>
-				<td id="mi1">1</td>
-			</tr>
-			<tr>
-				<td id="pr2">Jana Pawła II</td>
-				<td id="mi2">1</td>
-			</tr>
-			<tr>
-				<td id="pr3">Staszica</td>
-				<td id="mi3">1</td>
-			</tr>
-			<tr>
-				<td id="pr4">Politechnika</td>
-				<td id="mi4">2</td>
-			</tr>
-			<tr>
-				<td id="pr5">Dworzec PKP</td>
-				<td id="mi5">2</td>
-			</tr>
-			<tr>
-				<td id="pr6">Rynek</td>
-				<td id="mi6">2</td>
-			</tr>
-			<tr>
-				<td id="pr7">Wyszyńskiego/Połtawska</td>
-				<td id="mi7">1</td>
-			</tr>
-			<tr>
-				<td id="pr8">Wyszyńskiego</td>
-				<td id="mi8">1</td>
-			</tr>
-			<tr>
-				<td id="pr9">Asnyka</td>
-				<td id="mi9">0</td>
-			</tr>
-			<tr>
-				<td id="pr10">Orłowska</td>
-				<td id="mi10">1</td>
-			</tr>
-			<tr>
-				<td id="pr11">Orla</td>
-				<td id="mi11">1</td>
-			</tr>
-			<tr>
-				<td id="pr12">Struga</td>
-				<td id="mi12">1</td>
-			</tr>
-			<tr>
-				<td id="pr13">Struga Działki</td>
-				<td id="mi13">0</td>
-			</tr>
-			<tr>
-				<td id="pr14">Łączna</td>
-				<td id="mi14">1</td>
-			</tr>
-			<tr>
-				<td id="pr15">Legionów Szkoła</td>
-				<td id="mi15">2</td>
-			</tr>
-			<tr>
-				<td id="pr16">Połczyńska</td>
-				<td id="mi16">1</td>
-			</tr>
-			<tr>
-				<td id="pr17">Traugutta</td>
-				<td id="mi17">1</td>
-			</tr>
-			<tr>
-				<td id="pr18">Rondo Walezego</td>
-				<td id="mi18">1</td>
-			</tr>
-			<tr>
-				<td id="pr19">Rondo Powstańców Śląskich</td>
-				<td id="mi19">1</td>
-			</tr>
-			<tr>
-				<td id="pr20">Macierzy/Srocka</td>
-				<td id="mi20_end">1</td>
-			</tr>
-			<tr>
-				<td id="pr21_end"><span class="red-text"> - </span>Osiedle Północ</td>
-				<td></td>
-			</tr>
 		</table>
 		</div>
     </div>
-	
-	<div class="tables-container">
-		<table class="rozklad_nocne">
-			<tr style="border: 2px solid var(--table-border-widoczny)">
-				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_nocne">44</b></div>nocna</td>
-				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> Osiedle Północ<br><br><b>Kierunek:</b> Wąwozowa (Południowy PKP)</td>
-			</tr>
-			<tr>
-				<th></th>
-				<th>23</th>
-				<th>0</th>
-				<th>1</th>
-				<th>2</th>
-				<th>3</th>
-				<th>4</th>
-				<th>5</th>
-			</tr>
-			<tr>
-				<th rowspan="1" style="text-align:left">Codziennie</td>
-				<td></td> <!-- 23 -->
-				<td onmouseenter="wyswietldymek(0, parseInt(this.innerText), '44b_1', event)" onmouseleave="dymek.style.display='none'">15U</td>
-				<td onmouseenter="wyswietldymek(1, parseInt(this.innerText), '44b', event)" onmouseleave="dymek.style.display='none'">25</td>
-				<td onmouseenter="wyswietldymek(2, parseInt(this.innerText), '44b', event)" onmouseleave="dymek.style.display='none'">25</td> <!-- 2 -->
-				<td onmouseenter="wyswietldymek(3, parseInt(this.innerText), '44b_1', event)" onmouseleave="dymek.style.display='none'">25U</td>
-				<td onmouseenter="wyswietldymek(4, parseInt(this.innerText), '44b', event)" onmouseleave="dymek.style.display='none'">35</td>
-				<td></td> <!-- 5 -->
-			</tr>
-			<tr>
-				<td colspan="20" style="border: 1px solid var(--table-border-niewidoczny);text-align:right">Obowiązuje od: 06.10.2025</td>
-			</tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<th colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">Objaśnienia:</th>
-			</tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left">U - kurs do przystanku Osiedle Unii Europejskiej</td>
-			</tr>
-			<tr><td style="border: 1px solid var(--table-border-niewidoczny)"><br><br></td></tr>
-			<tr>
-				<td style="border: 1px solid var(--table-border-niewidoczny)"></td>
-				<td colspan="15" style="border: 1px solid var(--table-border-niewidoczny);text-align:left"><b>W komunikacji nocnej wszystkie przystanki są na żądanie</b></td>
-			</tr>
-		</table>
-			
-		<div class="ignore-on-mobile">
-		<table class="przystanki_nocne">
-			<tr>
-				<th>Trasa</th>
-				<th></th>
-			</tr>
-			<tr>
-				<td id="pr25">Osiedle Północ</td>
-				<td id="mi25">2</td>
-			</tr>
-			<tr>
-				<td id="pr26">Macierzy/Srocka</td>
-				<td id="mi26">1</td>
-			</tr>
-			<tr>
-				<td id="pr27">Rondo Powstańców Śląskich</td>
-				<td id="mi27">1</td>
-			</tr>
-			<tr>
-				<td id="pr28">Rondo Walezego</td>
-				<td id="mi28">1</td>
-			</tr>
-			<tr>
-				<td id="pr29">Traugutta</td>
-				<td id="mi29">1</td>
-			</tr>
-			<tr>
-				<td id="pr30">Połczyńska</td>
-				<td id="mi30">1</td>
-			</tr>
-			<tr>
-				<td id="pr31">Legionów Szkoła</td>
-				<td id="mi31">1</td>
-			</tr>
-			<tr>
-				<td id="pr32">Łączna</td>
-				<td id="mi32">1</td>
-			</tr>
-			<tr>
-				<td id="pr33">Struga Działki</td>
-				<td id="mi33">0</td>
-			</tr>
-			<tr>
-				<td id="pr34">Struga</td>
-				<td id="mi34">1</td>
-			</tr>
-			<tr>
-				<td id="pr35">Orla</td>
-				<td id="mi35">1</td>
-			</tr>
-			<tr>
-				<td id="pr36">Orłowska</td>
-				<td id="mi36">1</td>
-			</tr>
-			<tr>
-				<td id="pr37">Asnyka</td>
-				<td id="mi37">1</td>
-			</tr>
-			<tr>
-				<td id="pr38">Wyszyńskiego</td>
-				<td id="mi38">2</td>
-			</tr>
-			<tr>
-				<td id="pr39">Zwycięstwa/Wyszyńskiego</td>
-				<td id="mi39">2</td>
-			</tr>
-			<tr>
-				<td id="pr40">Rynek</td>
-				<td id="mi40">2</td>
-			</tr>
-			<tr>
-				<td id="pr41">Dworzec PKP</td>
-				<td id="mi41">1</td>
-			</tr>
-			<tr>
-				<td id="pr42">Politechnika</td>
-				<td id="mi42">1</td>
-			</tr>
-			<tr>
-				<td id="pr43">Staszica</td>
-				<td id="mi43">1</td>
-			</tr>
-			<tr>
-				<td id="pr44">Kwiatkowskiego</td>
-				<td id="mi44_end">2</td><td id="mi44" style="display:none">2</td>
-			</tr>
-			<tr>
-				<td id="pr45_end"><span class="red-text"> - </span>Wąwozowa (Południowy PKP)</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td id="pr45"><span style="margin-left: 10px;"></span>Wąwozowa (Południowy PKP)</td>
-				<td id="mi45">1</td>
-			</tr>
-			<tr>
-				<td id="pr46"><span style="margin-left: 10px;"></span>Rondo Generała Maczka</td>
-				<td id="mi46">1</td>
-			</tr>
-			<tr>
-				<td id="pr47"><span style="margin-left: 10px;"></span>Holenderska KTBS</td>
-				<td id="mi47">1</td>
-			</tr>
-			<tr>
-				<td id="pr48"><span style="margin-left: 10px;"></span>Holenderska Orlik</td>
-				<td id="mi48">1</td>
-			</tr>
-			<tr>
-				<td id="pr49"><span style="margin-left: 10px;"></span>Fińska</td>
-				<td id="mi49">1</td>
-			</tr>
-			<tr>
-				<td id="pr50"><span style="margin-left: 10px;"></span>Francuska</td>
-				<td id="mi50">0</td>
-			</tr>
-			<tr>
-				<td id="pr51"><span style="margin-left: 10px;"></span>Grecka</td>
-				<td id="mi51_end">1</td>
-			</tr>
-			<tr>
-				<td id="pr52_end"><span style="margin-left: 10px;"></span><span class="red-text"> - </span>Osiedle Unii Europejskiej</td>
-				<td></td>
-			</tr>
-		</table>
-		</div>
-    </div>
-	
-	<div id="dymek"></div>
+	<script>
+		ustawKolorLinii();
+		if (document.fonts) {
+			document.fonts.load('18px CustomFont').then(ustawDlugoscLinii);
+		} else {
+			ustawDlugoscLinii();
+		}
+		ustawObslugePrzystankow();
+	</script>
 	<footer>&copy MZK Opatowice</footer>
 </body>
 </html>
