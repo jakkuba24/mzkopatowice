@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rozkład Jazdy - Linia 4</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="zdjecia/mzk.png">
+	<script src="kurs_rozklady_special.js"></script>
+	<script src="kurs.js"></script>
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
+</head>
+<body>
+	<header><script src="headerek_special.js"></script></header>
+	<script src="komunikaty.js"></script>
+
+	<div class="div_kierunki">
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Osiedle Północ</h2>
+    <ul class="lista-przystankow">
+		<li>Wąwozowa (Południowy PKP)</li>
+		<li>Kwiatkowskiego</li>
+		<li>Staszica</li>
+		<li>Politechnika</li>
+		<li>Dworzec PKP</li>
+		<li>Rynek</li>
+		<li>Wyszyńskiego/Połtawska</li>
+		<li>Wyszyńskiego</li>
+		<li>Asnyka</li>
+		<li>Orłowska</li>
+		<li>Orla</li>
+		<li>Struga</li>
+		<li>Struga Działki</li>
+		<li>Łączna</li>
+		<li>Legionów Szkoła</li>
+		<li>Połczyńska</li>
+		<li>Cmentarz</li>
+		<li>Rondo Walezego</li>
+		<li>Rondo Powstańców Śląskich</li>
+		<li>Rodła</li>
+		<li>Gerberowa</li>
+		<li>- Osiedle Północ</li>
+	</ul>
+	</div>
+
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Wąwozowa (Południowy PKP)</h2>
+    <ul class="lista-przystankow">
+		<li>Osiedle Północ</li>
+		<li>Gerberowa</li>
+		<li>Rodła</li>
+		<li>Rondo Powstańców Śląskich</li>
+		<li>Rondo Walezego</li>
+		<li>Cmentarz</li>
+		<li>Połczyńska</li>
+		<li>Legionów Szkoła</li>
+		<li>Łączna</li>
+		<li>Struga Działki</li>
+		<li>Struga</li>
+		<li>Orla</li>
+		<li>Orłowska</li>
+		<li>Asnyka</li>
+		<li>Wyszyńskiego</li>
+		<li>Zwycięstwa/Wyszyńskiego</li>
+		<li>Rynek</li>
+		<li>Dworzec PKP</li>
+		<li>Politechnika</li>
+		<li>Staszica</li>
+		<li>Kwiatkowskiego</li>
+		<li>- Wąwozowa (Południowy PKP)</li>
+	</ul>
+	</div>
+	</div>
+
+	<div class="tables-container">
+		<table class="rozklad_miejskie">
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_miejskie">4</div></b>dzienna/miejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> <br><br><b>Kierunek:</b> </td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr class="obowiazuje">
+				<td colspan="20">Obowiązuje 25.10.2026</td>
+			</tr>
+			<tr class="objasnienia">
+				<td></td>
+				<th>Objaśnienia:</th>
+			</tr>
+		</table>
+			
+		<div class="ignore-on-mobile">
+		<table class="przystanki_miejskie">
+			<tr>
+				<th>Trasa</th>
+				<th></th>
+			</tr>
+		</table>
+		</div>
+    </div>
+	<script>
+		ustawKolorLinii();
+		if (document.fonts) {
+			document.fonts.load('18px CustomFont').then(ustawDlugoscLinii);
+		} else {
+			ustawDlugoscLinii();
+		}
+		ustawObslugePrzystankow();
+	</script>
+	<footer>&copy MZK Opatowice</footer>
+</body>
+</html>
