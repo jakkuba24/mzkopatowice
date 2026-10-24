@@ -500,7 +500,7 @@ const TRASY = {
 			"zCelinki bezpośredni": [
 				"Celinki","1",
 				"Celinki Kościół","1",
-				["Celinki Opatowicka","2",{nz:true}],
+				["Celinki Opatowicka 01","2",{nz:true}],
 				"Połczyńska 03","1"
 			],
         	"odcinekWspolny": [
