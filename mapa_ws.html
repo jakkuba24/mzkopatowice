@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>MZK OPATOWICE - Mapa linii dnia 1.11.2026</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="zdjecia/mzk.png">
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
+</head>
+<body style="background-color: var(--mapa-background-color);">
+    <header><script src="headerek.js"></script></header>
+	<div style="margin-top: 4%">
+	<div class="menu-mapka">
+	<input type="checkbox" id="linia2" onclick="aktualizacja_mapki()">
+	<label for="linia2">Linia 2</label><hr style="background-color:#FF0000"><br>
+	<input type="checkbox" id="linia4" onclick="aktualizacja_mapki()">
+	<label for="linia4">Linia 4</label><hr style="background-color:#0000ff"><br>
+	<input type="checkbox" id="linia6" onclick="aktualizacja_mapki()">
+	<label for="linia6">Linia 6</label><hr style="background-color:#00AAAA"><br>
+	<input type="checkbox" id="linia13" onclick="aktualizacja_mapki()">
+	<label for="linia13">Linia 13</label><hr style="background-color:#7F92FF"><br>
+	<input type="checkbox" id="linia16" onclick="aktualizacja_mapki()">
+	<label for="linia16">Linia 16</label><hr style="background-color:#80BAFF"><br>
+	<input type="checkbox" id="linia23" onclick="aktualizacja_mapki()">
+	<label for="linia23">Linia 23</label><hr style="background-color:#009B00"><br>
+	<input type="checkbox" id="linia25" onclick="aktualizacja_mapki()">
+	<label for="linia25">Linia 25</label><hr style="background-color:#4a7764"><br>
+	<input type="checkbox" id="linia29" onclick="aktualizacja_mapki()">
+	<label for="linia29">Linia 29</label><hr style="background-color:#BC96FF"><br>
+	<input type="checkbox" id="linia53" onclick="aktualizacja_mapki()">
+	<label for="linia53">Linia 53</label><hr style="background-color:#7F4A7F"><br>
+	<br><br>
+
+	<button id="pokaz-all" onclick="pokaz_ukryjLinie()">Pokaż wszystkie linie</button>
+	<button id="jasnosc" onclick='const mapa = document.getElementById("cala_mapka");const przycisk = document.getElementById("jasnosc"); mapa.classList.toggle("jasna_mapka"); if (mapa.classList.contains("jasna_mapka")) przycisk.textContent = "Przyciemnij mapę"; else przycisk.textContent = "Rozjaśnij mapę";'>Rozjaśnij mapę</button><br><br>
+	<!--<button id="zoom" onclick="przyciskZoom()">Powiększ mapę</button>-->
+	
+
+	<p><b>Mapa przedstawia przebieg linii w dniu 1 listopada 2026 roku</b></p>
+	<p>© MZK Opatowice</p>
+	</div>
+	
+	<div id="cala_mapka">
+	<img src="zdjecia/linia2ws.png" id="mapka_linia2">
+	<img src="zdjecia/linia4ws.png" id="mapka_linia4">
+	<img src="zdjecia/linia6ws.png" id="mapka_linia6">
+	<img src="zdjecia/linia13ws.png" id="mapka_linia13">
+	<img src="zdjecia/linia16.png" id="mapka_linia16">
+	<img src="zdjecia/linia23ws.png" id="mapka_linia23">
+	<img src="zdjecia/linia25ws.png" id="mapka_linia25">
+	<img src="zdjecia/linia29ws.png" id="mapka_linia29">
+	<img src="zdjecia/linia53ws.png" id="mapka_linia53">
+	</div>
+	</div>
+<script>
+    const img = document.getElementById("podklad");
+    const calaMapka = document.getElementById("cala_mapka");
+    const zoom = document.getElementById("zoom");
+
+    let duzyDiv = false; // Flaga wskazująca, czy div jest powiększony
+	let pokazWszystkie = false;
+
+    function zmianaRozmiaruOkna() {
+		duzyDiv = false;
+		if (!duzyDiv) zoom.textContent = "Powiększ mapę";
+		else zoom.textContent = "Pomniejsz mapę";
+
+        // Ustawienie szerokości i wysokości zdjęcia na 90% szerokości strony
+        const imgWidth = window.innerWidth * 0.89;
+		const imgHeight = window.innerHeight * 0.89;
+        img.style.width = `${imgWidth}px`;
+		img.style.height = `${imgHeight}px`;
+
+        // Dopasowanie rozmiaru diva na podstawie zdjęcia
+        const { width, height } = img.getBoundingClientRect();
+        calaMapka.style.width = `${width}px`;
+        calaMapka.style.height = `${height}px`;
+		
+		img.style.width = "100%";
+        img.style.height = "100%";
+    }
+
+    function przyciskZoom() { //nieużywane
+        if (duzyDiv) {
+            const originalWidth = parseFloat(calaMapka.style.width) / 2;
+			const originalHeight = parseFloat(calaMapka.style.height) / 2;
+			calaMapka.style.width = `${originalWidth}px`;
+			calaMapka.style.height = `${originalHeight}px`;
+			zoom.textContent = "Powiększ mapę";
+		} 
+		else {
+			const enlargedWidth = parseFloat(calaMapka.style.width) * 2;
+			const enlargedHeight = parseFloat(calaMapka.style.height) * 2;
+			calaMapka.style.width = `${enlargedWidth}px`;
+			calaMapka.style.height = `${enlargedHeight}px`;
+			zoom.textContent = "Pomniejsz mapę";
+		}
+        duzyDiv = !duzyDiv; // Zmień flagę
+    }
+
+    // Wywołanie przy załadowaniu strony i przy zmianie rozmiaru okna
+    //zmianaRozmiaruOkna();
+    //window.addEventListener("resize", zmianaRozmiaruOkna);
+
+
+function aktualizacja_mapki(){
+if (document.getElementById("linia2").checked) document.getElementById("mapka_linia2").style.display = "block";
+else document.getElementById("mapka_linia2").style.display = "none";
+if (document.getElementById("linia4").checked) document.getElementById("mapka_linia4").style.display = "block";
+else document.getElementById("mapka_linia4").style.display = "none";
+if (document.getElementById("linia6").checked) document.getElementById("mapka_linia6").style.display = "block";
+else document.getElementById("mapka_linia6").style.display = "none";
+if (document.getElementById("linia13").checked) document.getElementById("mapka_linia13").style.display = "block";
+else document.getElementById("mapka_linia13").style.display = "none";
+if (document.getElementById("linia16").checked) document.getElementById("mapka_linia16").style.display = "block";
+else document.getElementById("mapka_linia16").style.display = "none";
+if (document.getElementById("linia23").checked) document.getElementById("mapka_linia23").style.display = "block";
+else document.getElementById("mapka_linia23").style.display = "none";
+if (document.getElementById("linia25").checked) document.getElementById("mapka_linia25").style.display = "block";
+else document.getElementById("mapka_linia25").style.display = "none";
+if (document.getElementById("linia29").checked) document.getElementById("mapka_linia29").style.display = "block";
+else document.getElementById("mapka_linia29").style.display = "none";
+if (document.getElementById("linia53").checked) document.getElementById("mapka_linia53").style.display = "block";
+else document.getElementById("mapka_linia53").style.display = "none";
+}
+
+function pokaz_ukryjLinie(){
+if (!pokazWszystkie) {
+	document.getElementById("linia2").checked = true;
+	document.getElementById("linia4").checked = true;
+	document.getElementById("linia6").checked = true;
+	document.getElementById("linia13").checked = true;
+	document.getElementById("linia16").checked = true;
+	document.getElementById("linia23").checked = true;
+	document.getElementById("linia25").checked = true;
+	document.getElementById("linia29").checked = true;
+	document.getElementById("linia53").checked = true;
+	aktualizacja_mapki();
+	document.getElementById("pokaz-all").textContent = "Ukryj wszystkie linie";
+	pokazWszystkie = true;
+} else {
+	document.getElementById("linia2").checked = false;
+	document.getElementById("linia4").checked = false;
+	document.getElementById("linia6").checked = false;
+	document.getElementById("linia13").checked = false;
+	document.getElementById("linia16").checked = false;
+	document.getElementById("linia23").checked = false;
+	document.getElementById("linia25").checked = false;
+	document.getElementById("linia29").checked = false;
+	document.getElementById("linia53").checked = false;
+	aktualizacja_mapki();
+	document.getElementById("pokaz-all").textContent = "Pokaż wszystkie linie";
+	pokazWszystkie = false;
+}
+}
+aktualizujPrzyciskJasnosciMapy()
+</script>
+</body>
+</html>
