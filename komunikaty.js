@@ -30,31 +30,6 @@ const KOMUNIKATY = {
     //...
     ],
     zmiana: [
-        {
-        linie: [1],
-        tytul: "Zmiany rozkładów jazdy od dnia 19.10.2026 r.",
-        tresc: "Linia nr 1: Wszystkie kursy będą obsługiwały przystanek BIG Opatowice. W porannym szczycie kursy do Jamna i w popołudniowym szczycie kursy do Os. Bukowego bez przejazdu przez Os. Unii Europejskiej."
-        },
-        {
-        linie: [2],
-        tytul: "Zmiany rozkładów jazdy od dnia 19.10.2026 r.",
-        tresc: "Linia nr 2: Przesunięcie kursu z Lubiatowa z godz. 5:16 na 5:06 oraz z Sianowskiej z godz. 5:53 na 5:48. Dodanie kursu z Strefy Ekonomicznej do Chełmoniewa o godz. 5:45."
-        },
-        {
-        linie: [6],
-        tytul: "Zmiany rozkładów jazdy od dnia 19.10.2026 r.",
-        tresc: "Linia nr 6: Przystanek BIG Opatowice będzie obsługiwany przez linię nr 6 co 20 minut, a także przez kursy linii nr 1.",
-        },
-        {
-        linie: [8],
-        tytul: "Zmiany rozkładów jazdy od dnia 19.10.2026 r.",
-        tresc: "Linia nr 8: Dodanie nowych kursów z Osiedla Unii Lubelskiej: w dniu powszednim o godzinie 5:10, w soboty o 5:30 oraz w niedziele i święta o 6:30.",
-        },
-        {
-        linie: [14],
-        tytul: "Zmiany rozkładów jazdy od dnia 19.10.2026 r.",
-        tresc: "Linia nr 14: Kursy o godz. 23:02 w dniu powszednim i w sobotę oraz o 22:02 w niedziele będą przejeżdżać przez ul. Krańcową."
-        }
     //...
     ]
 };

@@ -2874,14 +2874,14 @@ const TRASY = {
 				"Rondo Walezego","1",
 				"Rondo Powstańców Śląskich","1",
 				"Rodła","1",
-				"Gerberowa","1",
+				"Moniuszki","1",
 				"Osiedle Północ"
         	]
     	},
     	"Wąwozowa (Południowy PKP)": {
         	"odcinekWspolny": [
             	"Osiedle Północ","1",
-				"Gerberowa","1",
+				"Moniuszki","1",
 				"Rodła","1",
 				"Rondo Powstańców Śląskich","1",
 				"Rondo Walezego","1",
@@ -3042,7 +3042,7 @@ const TRASY = {
 				"Aleja Europejska Ogrody","3",
 				["BIG Opatowice","2",{ignoruj:"Niedziela i Święta",czas:2},{nieKoncowy:true}],
 				["Ariadna","1",{nz:true}],
-				["Widokowa","1",{nz:true}],
+				["Widokowa","0",{nz:true}],
 				["Żyzna","1",{nz:true}],
 				["Kwiatowa","1",{nz:true}],
 				"Jamno","1",
@@ -3063,7 +3063,7 @@ const TRASY = {
 				"Piłsudskiego","1",
 				"Krucza","2",
 				"Dębowa","1",
-				"Moniuszki","1",
+				"Osiedle Północ","1",
 				"Macierzy/Srocka","1",
 				"Rondo Powstańców Śląskich","1",
 				"Rodła","1",
@@ -3092,7 +3092,7 @@ const TRASY = {
 				"Rodła","1",
 				"Rondo Powstańców Śląskich","1",
 				"Macierzy/Srocka","1",
-				"Moniuszki","2",
+				"Osiedle Północ","2",
 				"Dębowa","1",
 				"Krucza","1",
 				"Piłsudskiego","2",
@@ -3989,7 +3989,7 @@ const TRASY = {
 				"Cmentarz","1",
 				"Rondo Walezego","0",
 				"Andersa","1",
-				"Gerberowa","1"
+				"Moniuszki","1"
 			],
         	"odcinekWspolny": [
             	"Osiedle Północ","2",
@@ -4055,7 +4055,7 @@ const TRASY = {
 			],
 			"doOsiedle Unii Lubelskiej": [
 				["1","Osiedle Północ","1",{nieKoncowy:true}],
-				"Gerberowa","1",
+				"Moniuszki","1",
 				"Andersa","0",
 				"Rondo Walezego","1",
 				"Traugutta","1",
