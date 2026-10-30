@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rozkład Jazdy - Linia 12</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="zdjecia/mzk.png">
+	<script src="kurs_rozklady_special.js"></script>
+	<script src="kurs.js"></script>
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
+</head>
+<body>
+    <header><script src="headerek_special.js"></script></header>
+	<script src="komunikaty.js"></script>
+
+	<div class="div_kierunki">
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Dzierżęcino</h2>
+    <ul class="lista-przystankow">
+		<li>Dworzec PKP</li>
+		<li>Politechnika</li>
+		<li>ZUS</li>
+		<li>Biblioteka</li>
+		<li>Wańkowicza</li>
+		<li>Kwiatkowskiego</li>
+		<li>Wąwozowa (Południowy PKP)</li>
+		<li>Rondo Generała Maczka nż</li>
+		<li>Osiedle Morskie</li>
+		<li>Franciszkańska nż</li>
+		<li>Papiernicza nż</li>
+		<li>Armii Krajowej/Franciszkańska</li>
+		<li>Rondo WOŚP 02</li>
+		<li>Energetyka</li>
+		<li>Energetyków nż</li>
+		<li>Urząd Skarbowy</li>
+		<li>Urząd Celny nż</li>
+		<li>BoWiD nż</li>
+		<li>Mieszka I</li>
+		<li>Miła</li>
+		<li>Wojska Polskiego</li>
+		<li>Rondo WOŚP 01</li>
+		<li>Rondo Solidarności</li>
+		<li>Świętego Wojciecha</li>
+		<li>Jabłoniowa</li>
+		<li>Gerberowa</li>
+		<li>Czaplówka</li>
+		<li>Żurawia nż</li>
+		<li>- Dzierżęcino</li>
+	</ul>
+	</div>
+
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Dworzec PKP</h2>
+    <ul class="lista-przystankow">
+		<li data-glowna-start>Dzierżęcino</li>
+		<li>Żurawia nż</li>
+		<li>Czaplówka</li>
+		<li>Gerberowa</li>
+		<li>Jabłoniowa</li>
+		<li>Świętego Wojciecha</li>
+		<li>Rondo Solidarności</li>
+		<li>Łużycka</li>
+		<li>Rondo WOŚP 04</li>
+		<li>Miła</li>
+		<li>Mieszka I nż</li>
+		<li>BoWiD nż</li>
+		<li>Urząd Celny nż</li>
+		<li>Przemysłowa</li>
+		<li>Urząd Skarbowy</li>
+		<li>Energetyków</li>
+		<li>Rondo WOŚP 03</li>
+		<li>Armii Krajowej/Franciszkańska</li>
+		<li>Papiernicza nż</li>
+		<li>Franciszkańska</li>
+		<li>Osiedle Morskie</li>
+		<li>DPS</li>
+		<li>Rondo Generała Maczka nż</li>
+		<li>Wąwozowa (Południowy PKP)</li>
+		<li>Kwiatkowskiego</li>
+		<li>Sikorskiego</li>
+		<li>Wańkowicza</li>
+		<li>ZUS</li>
+		<li data-glowna-koniec>- Dworzec PKP</li>
+	</ul>
+	</div>
+	</div>
+
+    <div class="tables-container">
+		<table class="rozklad_miejskie">
+			<tr style="border: 2px solid var(--table-border-widoczny)">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_miejskie">12</div></b>dzienna/miejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> <br><br><b>Kierunek:</b> </td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr class="obowiazuje">
+				<td colspan="20">Obowiązuje 01.11.2026</td>
+			</tr>
+			<tr class="objasnienia">
+				<td></td>
+				<th>Objaśnienia:</th>
+			</tr>
+		</table>
+			
+		<div class="ignore-on-mobile">
+		<table class="przystanki_miejskie">
+			<tr>
+				<th>Trasa</th>
+				<th></th>
+			</tr>
+		</table>
+		</div>
+    </div>
+	<script>
+		ustawKolorLinii();
+		if (document.fonts) {
+			document.fonts.load('18px CustomFont').then(ustawDlugoscLinii);
+		} else {
+			ustawDlugoscLinii();
+		}
+		ustawObslugePrzystankow();
+	</script>
+	<footer>&copy MZK Opatowice</footer>
+</body>
+</html>

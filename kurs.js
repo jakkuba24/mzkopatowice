@@ -266,7 +266,7 @@ function pobierzOznaczenieOdjazdu(wpis) {
 	};
 }
 
-function znajdzSegmentWariantu(segmenty, oznaczenie, objasnienia) {
+function znajdzSegmentWariantu(segmenty, oznaczenie, objasnienia, przystanekBazowy = null) {
 	if (!oznaczenie) {
 		return Object.keys(segmenty).find((nazwa) =>
 			nazwa.startsWith('do') && !czySegmentDoPosredni(segmenty, nazwa)
@@ -275,6 +275,19 @@ function znajdzSegmentWariantu(segmenty, oznaczenie, objasnienia) {
 
 	const bezposredni = `wariant${oznaczenie}`;
 	if (segmenty[bezposredni]) return bezposredni;
+	const zgodneObjasnienia = Object.entries(objasnienia || {}).filter(([, opis]) =>
+		new RegExp(`^${oznaczenie}\\s*-`, 'i').test(String(opis))
+	);
+	const pelneTrasy = [...new Set(zgodneObjasnienia
+		.map(([nazwa]) => segmenty[nazwa] ? nazwa : segmenty[`z${nazwa}`] ? `z${nazwa}` : null)
+		.filter(Boolean))];
+	if (pelneTrasy.length > 1 && przystanekBazowy) {
+		const dopasowanaTrasa = pelneTrasy.find((nazwa) => {
+			const pierwszy = rozbijSegmentTrasy(segmenty[nazwa])[0]?.nazwa;
+			return pierwszy && czyWybranyPrzystanekPasuje(pierwszy, przystanekBazowy);
+		});
+		return dopasowanaTrasa || null;
+	}
 
 		const wpisObjasnienia = Object.entries(objasnienia || {})
 		.find(([, opis]) => new RegExp(`^${oznaczenie}\\s*-`, 'i').test(String(opis)));
@@ -294,6 +307,25 @@ function znajdzSegmentWariantu(segmenty, oznaczenie, objasnienia) {
 		const ostatni = przystanki[przystanki.length - 1];
 		return ostatni && czyTaSamaNazwaPrzystanku(ostatni.nazwa, nazwaKoncowa);
 	}) || null;
+}
+
+function znajdzZlozonaTraseWariantu(segmenty, oznaczenie, objasnienia) {
+	if (!oznaczenie) return null;
+	const wpis = Object.entries(objasnienia || {}).find(([, opis]) =>
+		new RegExp(`^${oznaczenie}\\s*-`, 'i').test(String(opis))
+	);
+	if (!wpis) return null;
+	const nazwa = wpis[0];
+	const poczatki = Object.keys(segmenty)
+		.filter((segment) => segment.startsWith('z') && nazwa.startsWith(`${segment} `))
+		.sort((a, b) => b.length - a.length);
+	for (const segmentPoczatkowy of poczatki) {
+		const segmentKoncowy = nazwa.slice(segmentPoczatkowy.length + 1);
+		if (segmentKoncowy.startsWith('do') && segmenty[segmentKoncowy]) {
+			return { segmentPoczatkowy, segmentKoncowy };
+		}
+	}
+	return null;
 }
 
 function pobierzDomyslnySegmentPoczatkowy(segmenty, przystanekPoczatkowy, objasnienia) {
@@ -408,12 +440,22 @@ function pobierzOdjazdyDlaPrzystanku({ numerLinii, kierunek, przystanek, dzien, 
 				const daneOdjazdu = pobierzOznaczenieOdjazdu(wpis);
 				if (!daneOdjazdu) return;
 
-				const segmentWariantu = znajdzSegmentWariantu(segmenty, daneOdjazdu.oznaczenie, objasnienia);
-				const segmentPoczatkowy = segmentWariantu?.startsWith('z')
+				const zlozonaTrasa = znajdzZlozonaTraseWariantu(
+					segmenty,
+					daneOdjazdu.oznaczenie,
+					objasnienia
+				);
+				const segmentWariantu = zlozonaTrasa?.segmentKoncowy || znajdzSegmentWariantu(
+					segmenty,
+					daneOdjazdu.oznaczenie,
+					objasnienia,
+					przystanekBazowy
+				);
+				const segmentPoczatkowy = zlozonaTrasa?.segmentPoczatkowy || (segmentWariantu?.startsWith('z')
 					? segmentWariantu
 					: !daneOdjazdu.oznaczenie
 						? pobierzDomyslnySegmentPoczatkowy(segmenty, przystanekBazowy, objasnienia)
-						: null;
+						: null);
 				const trasa = zbudujTraseKierunku(segmenty, {
 					przystanekPoczatkowy: przystanekBazowy,
 					segmentPoczatkowy,
@@ -544,14 +586,15 @@ function generujObjasnienia(tabela, odjazdy, objasnienia, dodatkoweInformacje = 
 	if (komorkaNaglowka) komorkaNaglowka.colSpan = nocna ? 7 : 15;
 
 	const uzywaneOznaczenia = new Set(odjazdy.map((odjazd) => odjazd.oznaczenie).filter(Boolean));
-	const oznaczenia = Object.entries(objasnienia || {})
+	const oznaczenia = [...new Map(Object.entries(objasnienia || {})
 		.filter(([, opis]) => {
 			const oznaczenie = String(opis).match(/^([A-Za-z]+)\s*-/)?.[1];
 			return oznaczenie && uzywaneOznaczenia.has(oznaczenie);
-		});
+		})
+		.map(([, opis]) => [String(opis).trim(), String(opis).trim()])).values()];
 	const miejsceWstawienia = naglowek.nextElementSibling;
 
-	oznaczenia.forEach(([, opis]) => {
+	oznaczenia.forEach((opis) => {
 		if (!opis) return;
 
 		const wiersz = document.createElement('tr');
@@ -645,6 +688,78 @@ function pobierzWierszeTrasyDoWidoku(segmenty, przystanek, opcjeTrasy = {}, kier
 			.slice(0, indeksWariantu)
 			.some((nazwa) => /^odcinekPodstawowy\d*$/.test(nazwa));
 	};
+	// In this mode each "z" segment is a full route; matching stop IDs keeps branches distinct.
+	if (Object.keys(segmenty).some((nazwa) => /^z.+\sdo.+/.test(nazwa))) {
+		const pelneTrasy = Object.keys(segmenty)
+			.filter((nazwa) => nazwa.startsWith('z'))
+			.map((nazwa) => ({
+				nazwa,
+				przystanki: rozbijSegmentTrasy(segmenty[nazwa]),
+				podstawowa: !/\sdo/.test(nazwa)
+			}))
+			.sort((a, b) => Number(b.podstawowa) - Number(a.podstawowa))
+			.filter((trasa) => trasa.przystanki.some((element) =>
+				czyWybranyPrzystanekPasuje(element.nazwa, przystanek)
+			));
+		if (pelneTrasy.length) {
+			const korzen = { dzieci: new Map(), trasy: new Set(), koncowe: false, czasyNastepne: new Map(), element: null };
+			pelneTrasy.forEach((trasa) => {
+			const przystanki = trasa.przystanki;
+			let wezel = korzen;
+			przystanki.forEach((element, indeks) => {
+				const klucz = normalizujNazwePrzystanku(element.nazwa);
+				if (!wezel.dzieci.has(klucz)) {
+					wezel.dzieci.set(klucz, {
+						dzieci: new Map(),
+						trasy: new Set(),
+						podstawowe: new Set(),
+						koncowe: false,
+						czasyNastepne: new Map(),
+						element
+					});
+				}
+				const dziecko = wezel.dzieci.get(klucz);
+				dziecko.trasy.add(trasa.nazwa);
+				if (trasa.podstawowa) dziecko.podstawowe.add(trasa.nazwa);
+				if (indeks === przystanki.length - 1) {
+					dziecko.koncowe = !element.opcje?.nieKoncowy;
+				} else {
+					const nastepny = przystanki[indeks + 1];
+					const czas = nastepny.czasOdPoprzedniego ?? element.czasDoNastepnego;
+					if (czas != null) dziecko.czasyNastepne.set(trasa.nazwa, {
+						nazwaNastepnego: normalizujNazwePrzystanku(nastepny.nazwa),
+						czas
+					});
+				}
+				wezel = dziecko;
+			});
+		});
+
+		const wynik = [];
+		const przejdz = (wezel, poziom) => {
+			const dzieci = [...wezel.dzieci.values()];
+			const podstawoweDziecko = dzieci.find((dziecko) => dziecko.podstawowe.size) || dzieci[0];
+			dzieci.forEach((dziecko) => {
+				const poziomWiersza = poziom + (dzieci.length > 1 && dziecko !== podstawoweDziecko ? 1 : 0);
+				const przejscia = [...dziecko.czasyNastepne.values()];
+				const nastepnePrzystanki = new Set(przejscia.map((przejscie) => przejscie.nazwaNastepnego));
+				wynik.push({
+					element: dziecko.element,
+					poziom: poziomWiersza,
+					koncowy: dziecko.koncowe,
+					czasWyswietlany: nastepnePrzystanki.size > 1
+						? przejscia.map((przejscie) => przejscie.czas).join('/')
+						: undefined,
+					segmentyKoncowe: [...dziecko.trasy]
+				});
+				const poziomDzieci = poziomWiersza + (dziecko.koncowe ? 1 : 0);
+				przejdz(dziecko, poziomDzieci);
+			});
+		};
+		przejdz(korzen, pelneTrasy.some((trasa) => trasa.podstawowa) ? 0 : 1);
+		return wynik;
+	}
+	}
 	if (segmentyKoncowe) {
 		const ograniczoneSegmenty = Object.fromEntries(Object.entries(segmenty)
 			.filter(([nazwa]) =>
@@ -820,6 +935,7 @@ function pobierzWierszeTrasyDoWidoku(segmenty, przystanek, opcjeTrasy = {}, kier
 	).sort((a, b) => b.przystanki.length - a.przystanki.length);
 	const wstawienia = new Map();
 	const nadpisaniaCzasu = new Map();
+	const zrodlaCzasuWariantu = new Map();
 	const dodanePunktyRozgalezienia = new Set();
 	const pierwszePrzystankiOdcinkowPodstawowych = new Set();
 	const dodajCzasNaRozgalezieniu = (nazwa, czasy) => {
@@ -848,13 +964,20 @@ function pobierzWierszeTrasyDoWidoku(segmenty, przystanek, opcjeTrasy = {}, kier
 	const zajeteNazwyDo = new Set(podstawoweDo.map((element) =>
 		normalizujNazwePrzystanku(element.nazwa)
 	));
-	const dodajCzasWariantu = (nazwa, czasy) => {
+	const dodajCzasWariantu = (nazwa, wpisy) => {
 		if (pierwszePrzystankiOdcinkowPodstawowych.has(normalizujNazwePrzystanku(nazwa))) return;
-		const poprawneCzasy = czasy.filter((czas) => czas != null);
-		if (!poprawneCzasy.length) return;
+		const poprawneWpisy = wpisy.filter((wpis) => wpis.czas != null);
+		if (!poprawneWpisy.length) return;
 		const klucz = normalizujNazwePrzystanku(nazwa);
 		const poprzednie = nadpisaniaCzasu.get(klucz) || [];
-		nadpisaniaCzasu.set(klucz, [...poprzednie, ...poprawneCzasy]);
+		const zrodla = zrodlaCzasuWariantu.get(klucz) || new Set();
+		poprawneWpisy.forEach(({ id, czas }) => {
+			if (zrodla.has(id)) return;
+			zrodla.add(id);
+			poprzednie.push(czas);
+		});
+		zrodlaCzasuWariantu.set(klucz, zrodla);
+		nadpisaniaCzasu.set(klucz, poprzednie);
 	};
 	wariantyKoncowe.forEach((wariant) => {
 		if (wariant.przystanki.every((element) =>
@@ -897,7 +1020,11 @@ function pobierzWierszeTrasyDoWidoku(segmenty, przystanek, opcjeTrasy = {}, kier
 		const pierwszyPunktWariantu = wariant.przystanki[wspolnyPoczatek]?.nazwa || wariant.przystanki[0]?.nazwa || '';
 		const kluczPunktuRozgalezienia = `${normalizujNazwePrzystanku(nazwaPunktuWstawienia || '')}|${normalizujNazwePrzystanku(pierwszyPunktWariantu)}`;
 		if (!dodanePunktyRozgalezienia.has(kluczPunktuRozgalezienia)) {
-			dodajCzasWariantu(nazwaPunktuWstawienia || '', [czasPodstawowy, czasWariantu]);
+			const nazwaGlownegoDo = segmentyWidoku[indeksPodstawowegoDo].nazwa;
+			dodajCzasWariantu(nazwaPunktuWstawienia || '', [
+				{ id: `podstawowy:${nazwaGlownegoDo}`, czas: czasPodstawowy },
+				{ id: `wariant:${wariant.nazwa}`, czas: czasWariantu }
+			]);
 			dodanePunktyRozgalezienia.add(kluczPunktuRozgalezienia);
 		}
 
@@ -923,8 +1050,8 @@ function pobierzWierszeTrasyDoWidoku(segmenty, przystanek, opcjeTrasy = {}, kier
 		const klucz = normalizujNazwePrzystanku(ostatniPoprzedniego?.nazwa || '');
 		if (pierwszyPrzystanek?.czasOdPoprzedniego != null && ostatniPoprzedniego && !wstawienia.has(klucz)) {
 			dodajCzasWariantu(ostatniPoprzedniego.nazwa, [
-				ostatniPoprzedniego.czasDoNastepnego,
-				pierwszyPrzystanek.czasOdPoprzedniego
+				{ id: `segment:${poprzedniSegment.nazwa}`, czas: ostatniPoprzedniego.czasDoNastepnego },
+				{ id: `segment:${segment.nazwa}`, czas: pierwszyPrzystanek.czasOdPoprzedniego }
 			]);
 		}
 	});
@@ -1021,7 +1148,7 @@ function generujTabeleTrasy(kontener, segmenty, przystanek, opcjeTrasy = {}, kie
 	const fragment = document.createDocumentFragment();
 	const wierszeTrasy = pobierzWierszeTrasyDoWidoku(segmenty, przystanek, opcjeTrasy, kierunek);
 
-	wierszeTrasy.forEach(({ element, poziom, koncowy, czasWyswietlany, segmentKoncowy, warianty }) => {
+	wierszeTrasy.forEach(({ element, poziom, koncowy, czasWyswietlany, segmentKoncowy, warianty, segmentyKoncowe }) => {
 			const wiersz = document.createElement('tr');
 			wiersz.dataset.generowane = 'true';
 			if (czyPrzystanekObjazdowy(element.nazwa, kontener)) wiersz.classList.add('objazd-text');
@@ -1039,7 +1166,9 @@ function generujTabeleTrasy(kontener, segmenty, przystanek, opcjeTrasy = {}, kie
 							element.nazwa,
 							kontener.dataset.kierunek
 						);
-						const opcjeKliknietejTrasy = dostepneSegmentyKoncowe?.length
+						const opcjeKliknietejTrasy = segmentyKoncowe?.length
+							? { segmentyKoncowe }
+							: dostepneSegmentyKoncowe?.length
 							? { segmentyKoncowe: dostepneSegmentyKoncowe }
 							: { segmentKoncowy, warianty };
 						przygotujTabliczke(
@@ -1197,7 +1326,8 @@ function filtrujOdjazdyWedlugWybranejTrasy(odjazdy, segmenty, przystanek, opcjeT
 	const { segmentKoncowy, segmentyKoncowe } = opcjeTrasy;
 	if (segmentyKoncowe) {
 		return odjazdy.filter((odjazd) => {
-			if (segmentyKoncowe.includes(odjazd.segmentWariantu)) return true;
+			if (segmentyKoncowe.includes(odjazd.segmentWariantu) ||
+				segmentyKoncowe.includes(odjazd.segmentPoczatkowy)) return true;
 			if (odjazd.segmentPoczatkowy) {
 				const trasa = zbudujTraseKierunku(segmenty, {
 					przystanekPoczatkowy: odjazd.przystanekBazowy,

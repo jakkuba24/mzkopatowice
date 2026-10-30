@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rozkład Jazdy - Linia 2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="zdjecia/mzk.png">
+	<script src="kurs_rozklady_special.js"></script>
+	<script src="kurs.js"></script>
+	<script>
+		const zapisanyMotyw = localStorage.getItem('motyw') || 'ciemny';
+		document.documentElement.setAttribute('theme', zapisanyMotyw);
+	</script>
+	<script src="motyw.js"></script>
+</head>
+<body>
+    <header><script src="headerek_special.js"></script></header>
+	<script src="komunikaty.js"></script>
+
+	<div class="div_kierunki">
+    <div class="kierunek-kolumna">
+    <h2>Kierunek: Strefa Ekonomiczna</h2>
+    <ul class="lista-przystankow">
+        <ul>
+            <li data-wariant-start>Lubiatowo</li>
+            <li>Jeziorna nż</li>
+            <li>Wioska Indiańska nż</li>
+            <li>Zielone Wzgórze nż</li>
+            <li>Żurawinowa nż</li>
+            <li>Dzierżęcino</li>
+            <li>Krawiecka nż</li>
+            <li data-wariant-koniec>Lubiatowska<span class="wariant-koniec"></span></li>
+        </ul>
+        <ul>
+            <li data-glowna-start>Sianowska</li>
+            <li>Westerplatte nż<span class="wariant-koniec"></span></li>
+        </ul>
+        <li>Chełmoniewo</li>
+        <li>Świętego Wojciecha</li>
+        <li>Rondo Solidarności</li>
+		<li>Zwycięstwa/Franciszkańska nż</li>
+		<li>Liliowa</li>
+		<li>Zwycięstwa/Chrobrego</li>
+        <li>Monte Cassino/Zwycięstwa</li>
+        <li>Zwycięstwa</li>
+		<ul>
+			<li><span class="wariant-start"></span>Rynek 03</li>
+			<li>Niepodległości/Połtawska</li>
+			<li>Szymanowskiego</li>
+			<li>Srocka</li>
+			<li>Traugutta </li>
+			<li>Połczyńska</li>
+			<li>- Cmentarz 04</li>
+		</ul>
+        <ul>
+			<li><span class="wariant-start"></span>Rynek 01</li>
+			<li>- Dworzec PKP</li>
+		</ul>
+        <li>Rynek 02</li>
+        <li>Zwycięstwa/Wyszyńskiego</li>
+        <li>Węzeł Opatowice Centrum nż</li>
+		<ul><li><span class="wariant-start"></span>- Centrum Handlowe Laksa 02</li></ul>
+        <li>Centrum Handlowe Laksa 01</li>
+        <li>Szczerbińska nż</li>
+        <li>Lubelska nż</li>
+        <li>Elektryczna nż</li>
+        <li>Olejowa nż</li>
+        <li data-glowna-koniec>- Strefa Ekonomiczna</li>
+    </ul>
+    </div>
+
+    <div class="kierunek-kolumna">
+        <h2>Kierunek: Chełmoniewo</h2>
+        <ul class="lista-przystankow">
+            <li data-glowna-start>Strefa Ekonomiczna</li>
+            <li>Olejowa nż</li>
+            <li>Elektryczna nż</li>
+            <li>Lubelska nż</li>
+            <li>Szczerbińska nż</li>
+            <li>Centrum Handlowe Laksa</li>
+            <li>Węzeł Opatowice Centrum nż</li>
+            <li>Zwycięstwa/Wyszyńskiego</li>
+            <ul><li>Dworzec PKP<span class="wariant-koniec"></span></li></ul>
+			<ul>
+				<li>Cmentarz 05</li>
+				<li>Połczyńska</li>
+				<li>Traugutta</li>
+				<li>Srocka</li>
+				<li>Szymanowskiego</li>
+				<li>Niepodległości/Połtawska<span class="wariant-koniec"></span></li>
+			</ul>
+            <li>Rynek</li>
+            <li>Zwycięstwa</li>
+            <li>Monte Cassino/Zwycięstwa</li>
+            <li>Zwycięstwa/Chrobrego</li>
+            <li>Liliowa</li>
+            <li>Zwycięstwa/Franciszkańska</li>
+            <li>Centrum Handlowe Atrium</li>
+            <li>Rondo Solidarności</li>
+            <li>Świętego Wojciecha</li>
+            <ul>
+				<li data-wariant-start><span class="wariant-start"></span>Chełmoniewo 02</li>
+				<ul>
+					<li data-wariant-start><span class="wariant-start"></span>Lubiatowska 02</li>
+					<li>Krawiecka 02 nż</li>
+					<li>Dzierżęcino 02</li>
+					<li>Żurawinowa nż</li>
+					<li>Zielone Wzgórze nż</li>
+					<li>Wioska Indiańska nż</li>
+					<li>Jeziorna nż</li>
+					<li data-wariant-koniec>- Lubiatowo</li>
+				</ul>
+                <li>Westerplatte 02 nż</li>
+                <li data-wariant-koniec>- Sianowska 01</li>
+            </ul>
+			<li data-glowna-koniec>- Chełmoniewo 01</li>
+        </ul>
+    </div>
+    </div>
+
+	<div class="tables-container">
+		<table class="rozklad_miejskie">
+			<tr style="border: 2px solid var(--table-border-widoczny);">
+				<td style="border: 2px solid var(--table-border-widoczny);min-width:155px"><b>Linia<br><div class="ramka_miejskie">2</div></b>dzienna/miejska</td>
+				<td style="border-right: 1px solid var(--table-border-niewidoczny)"></td>
+				<td colspan="18" style="text-align:left; font-size:19px;"><b>Przystanek:</b> <br><br><b>Kierunek:</b> </td>
+			</tr>
+			<tr>
+				<th></th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+			</tr>
+			<tr class="obowiazuje">
+				<td colspan="20">Obowiązuje 01.11.2026</td>
+			</tr>
+			<tr class="objasnienia">
+				<td></td>
+				<th>Objaśnienia:</th>
+			</tr>
+		</table>
+		
+		<div class="ignore-on-mobile">
+		<table class="przystanki_miejskie">
+			<tr>
+				<th>Trasa</th>
+				<th></th>
+			</tr>
+		</table>
+		</div>
+	</div>
+
+	<script>
+		ustawKolorLinii();
+		if (document.fonts) {
+			document.fonts.load('18px CustomFont').then(ustawDlugoscLinii);
+		} else {
+			ustawDlugoscLinii();
+		}
+		ustawObslugePrzystankow();
+	</script>
+	<footer>&copy MZK Opatowice</footer>
+</body>
+</html>
